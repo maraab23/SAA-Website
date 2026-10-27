@@ -1,0 +1,34 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blog/posts/2026-10-16-new-website/index.html",
+      "/blog/posts/2026-10-04-next-webinar/index.html",
+      "/blog/posts/2025-12-21-pre-epc/index.html",
+      "/blog/posts/2025-06-22-linkedin/index.html",
+      "/blog/posts/2024-12-23-ga-results/index.html",
+      "/blog/posts/2023-10-19-validating-typologies/index.html",
+      "/blog/posts/2022-08-30-ssr-article/index.html",
+      "/blog/posts/2022-08-05-ggseqplot/index.html",
+      "/blog/posts/2021-10-10-wikipedia/index.html",
+      "/blog/posts/2021-06-07-software-news/index.html",
+      "/blog/posts/2020-09-01-seqhandbook/index.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/2026-10-16-new-website/index.html",
+      "/blog/posts/2026-10-04-next-webinar/index.html",
+      "/blog/posts/2025-12-21-pre-epc/index.html",
+      "/blog/posts/2025-06-22-linkedin/index.html",
+      "/blog/posts/2024-12-23-ga-results/index.html",
+      "/blog/posts/2023-10-19-validating-typologies/index.html",
+      "/blog/posts/2022-08-30-ssr-article/index.html",
+      "/blog/posts/2022-08-05-ggseqplot/index.html",
+      "/blog/posts/2021-10-10-wikipedia/index.html",
+      "/blog/posts/2021-06-07-software-news/index.html",
+      "/blog/posts/2020-09-01-seqhandbook/index.html"
+    ]
+  }
+]

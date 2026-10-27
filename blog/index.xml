@@ -1,0 +1,1637 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Sequence Analysis Association</title>
+<link>https://maraab23.github.io/SAA-Website/blog/</link>
+<atom:link href="https://maraab23.github.io/SAA-Website/blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Promoting research, teaching and diffusion of sequence analysis and related methods.</description>
+<image>
+<url>https://maraab23.github.io/SAA-Website/social/og-image.png</url>
+<title>Sequence Analysis Association</title>
+<link>https://maraab23.github.io/SAA-Website/blog/</link>
+<height>76</height>
+<width>144</width>
+</image>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Thu, 15 Oct 2026 22:00:00 GMT</lastBuildDate>
+<item>
+  <title>Welcome to the new SAA website</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-16-new-website/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>We are relaunching the website of the Sequence Analysis Association. The new site is built with <a href="https://quarto.org">Quarto</a> and is <strong>open to everyone</strong> — there is no longer a member area, and all content, from the webinar programme to the annual reports, is available to all visitors.</p>
+<p>What’s new:</p>
+<ul>
+<li>A new logo and visual identity: the signet is a small sequence index plot, and colours and fonts are defined once in a brand.yml file that can be reused for slides, reports and other formats.</li>
+<li>A simpler structure: <a href="../../../about.html">About</a>, <a href="../../../events.html">Events</a>, <a href="../../../resources.html">Resources</a> and this blog.</li>
+<li>An <a href="../../index.xml">RSS feed</a> so you can follow SAA news in your favourite reader.</li>
+</ul>
+<p>Feedback is very welcome at <a href="mailto:info@sequenceanalysis.org">info@sequenceanalysis.org</a>.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>association</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-16-new-website/</guid>
+  <pubDate>Thu, 15 Oct 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-16-new-website/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Next webinar: 22 October</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The next session of our Autumn 2026 Webinar Series takes place on <strong>Thursday, 22 October, at 4 PM CET</strong>. Save the date!</p>
+<p>For the full programme, see the <a href="../../../events.html#webinars">SAA Webinar Series</a>.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>events</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/</guid>
+  <pubDate>Sat, 03 Oct 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Pre-EPC meeting 2026: Life Course Dynamics</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>We are happy to announce that the SAA is organising a one-day side meeting before the 2026 European Population Conference (EPC) in Bologna, entitled <strong>“Life Course Dynamics: Insights from Sequence Analysis”</strong>.</p>
+<p>The meeting will take place on <strong>3 June 2026</strong> (approx. 9 am – 5 pm).</p>
+<p>More information on our <a href="../../../events.html">Events</a> page.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>events</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/</guid>
+  <pubDate>Sat, 20 Dec 2025 23:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>SAA now on LinkedIn</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2025-06-22-linkedin/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Follow the SAA on <a href="https://www.linkedin.com/company/sequence-analysis-association">LinkedIn</a>, which is now the preferred forum for SAA-related news and discussion.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>association</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2025-06-22-linkedin/</guid>
+  <pubDate>Sat, 21 Jun 2025 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2025-06-22-linkedin/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>2024 General Assembly: voting results</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Results of the SAA election and vote held in December 2024:</p>
+<table class="table-striped caption-top table">
+<thead>
+<tr class="header">
+<th>Item</th>
+<th style="text-align: right;">Yes</th>
+<th style="text-align: right;">No</th>
+<th style="text-align: right;">Abstain</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Annual Report</strong></td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">52</td>
+</tr>
+<tr class="even">
+<td><strong>President:</strong> Emanuela Struffolino</td>
+<td style="text-align: right;">47</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">52</td>
+</tr>
+<tr class="odd">
+<td><strong>Executive Committee</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td>Danilo Bolano</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="odd">
+<td>Kevin Emery</td>
+<td style="text-align: right;">42</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="even">
+<td>Brendan Halpin</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="odd">
+<td>Satu Helske</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td>Tim F. Liao</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="odd">
+<td>Raffaella Piccarreta</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="even">
+<td>Gilbert Ritschard</td>
+<td style="text-align: right;">46</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="odd">
+<td>Carla Rowold</td>
+<td style="text-align: right;">43</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">47</td>
+</tr>
+<tr class="even">
+<td>Dolores Sesma Carlos</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">46</td>
+</tr>
+<tr class="odd">
+<td>Matthias Studer</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">50</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Draft note:</strong> the No/Abstain split was reconstructed from the flattened table on the old website (ambiguous for the Annual Report row) — please check against the original before publishing.</p>
+</div>
+</div>
+</div>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>association</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/</guid>
+  <pubDate>Sun, 22 Dec 2024 23:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>Validating sequence analysis typologies using parametric bootstrap</title>
+  <dc:creator>Matthias Studer</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This tutorial was first published on the old SAA website in October 2023. It has been re-run in October 2026 with <code>{TraMineR}</code> 2.2.14 and <code>{WeightedCluster}</code> 2.0. Because the bootstrap relies on random draws, the bootstrapped values may differ slightly from the original post.</p>
+</div>
+</div>
+</div>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This document provides a very quick introduction to the <code>R</code> code needed to use parametric bootstraps for typology validation in sequence analysis. Readers interested in the methods and the exact interpretation of the results are referred to:</p>
+<ul>
+<li>Studer, M. (2021). Validating sequence analysis typologies using parametric bootstraps. <em>Sociological Methodology</em>, 51(2), 290–318. <a href="https://doi.org/10.1177/00811750211014232" class="uri">https://doi.org/10.1177/00811750211014232</a></li>
+</ul>
+</section>
+<section id="creating-the-state-sequence-object" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-state-sequence-object">Creating the state sequence object</h2>
+<p>For this example, we will use the <code>mvad</code> dataset. Let’s start with the creation of the state sequence object.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Loading the TraMineR library</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(TraMineR)</span>
+<span id="cb1-3"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Loading the data</span></span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data</span>(mvad)</span>
+<span id="cb1-5"></span>
+<span id="cb1-6"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## State properties</span></span>
+<span id="cb1-7">mvad.alphabet <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb1-8">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"employment"</span>,</span>
+<span id="cb1-9">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FE"</span>,</span>
+<span id="cb1-10">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HE"</span>,</span>
+<span id="cb1-11">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"joblessness"</span>,</span>
+<span id="cb1-12">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"school"</span>,</span>
+<span id="cb1-13">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"training"</span></span>
+<span id="cb1-14">)</span>
+<span id="cb1-15">mvad.lab <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(</span>
+<span id="cb1-16">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"employment"</span>,</span>
+<span id="cb1-17">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"further education"</span>,</span>
+<span id="cb1-18">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"higher education"</span>,</span>
+<span id="cb1-19">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"joblessness"</span>,</span>
+<span id="cb1-20">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"school"</span>,</span>
+<span id="cb1-21">  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"training"</span></span>
+<span id="cb1-22">)</span>
+<span id="cb1-23">mvad.shortlab <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"EM"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"JL"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SC"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"TR"</span>)</span>
+<span id="cb1-24"></span>
+<span id="cb1-25"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Creating the state sequence object</span></span>
+<span id="cb1-26">mvad.seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdef</span>(</span>
+<span id="cb1-27">  mvad,</span>
+<span id="cb1-28">  <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">17</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">86</span>,</span>
+<span id="cb1-29">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alphabet =</span> mvad.alphabet,</span>
+<span id="cb1-30">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">states =</span> mvad.shortlab,</span>
+<span id="cb1-31">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> mvad.lab,</span>
+<span id="cb1-32">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">xtstep =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span></span>
+<span id="cb1-33">)</span></code></pre></div></div>
+</div>
+</section>
+<section id="creating-the-typology" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-typology">Creating the typology</h2>
+<p>We will now create a typology using cluster analysis. Readers interested in more detail are referred to the <code>WeightedCluster</code> library manual, which goes into the details of the creation and computation of cluster quality measures.</p>
+<p>We start by computing dissimilarities with the <code>seqdist</code> function and the Hamming distance. We then use Ward clustering to create a typology of the trajectories. For this step, we recommend the use of the <code>fastcluster</code> library, which considerably speeds up the computations.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Using fastcluster for hierarchical clustering</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(fastcluster)</span>
+<span id="cb2-3"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Distance computation</span></span>
+<span id="cb2-4">diss <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdist</span>(mvad.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>)</span>
+<span id="cb2-5"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## Hierarchical clustering</span></span>
+<span id="cb2-6">hc <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hclust</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.dist</span>(diss), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ward.D"</span>)</span></code></pre></div></div>
+</div>
+<p>We can now compute several cluster quality indices using the <code>as.clustrange</code> function from two to ten groups.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Loading the WeightedCluster library</span></span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(WeightedCluster)</span>
+<span id="cb3-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Computing cluster quality measures.</span></span>
+<span id="cb3-4">clustqual <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as.clustrange</span>(hc, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">diss =</span> diss, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ncluster =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb3-5">clustqual</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>           PBC   HG HGSD  ASW ASWw     CH   R2   CHsq R2sq   HC
+cluster2  0.55 0.71 0.69 0.39 0.39 184.57 0.21 347.47 0.33 0.14
+cluster3  0.49 0.57 0.57 0.27 0.27 139.53 0.28 261.70 0.42 0.22
+cluster4  0.46 0.58 0.57 0.24 0.24 124.40 0.35 228.94 0.49 0.23
+cluster5  0.51 0.68 0.67 0.27 0.28 118.20 0.40 241.78 0.58 0.18
+cluster6  0.52 0.70 0.70 0.28 0.29 117.08 0.45 241.96 0.63 0.17
+cluster7  0.55 0.78 0.78 0.32 0.32 114.14 0.49 245.83 0.68 0.13
+cluster8  0.56 0.82 0.82 0.32 0.33 109.22 0.52 244.85 0.71 0.11
+cluster9  0.57 0.85 0.85 0.34 0.35 105.74 0.55 255.12 0.74 0.09
+cluster10 0.55 0.85 0.84 0.32 0.33 101.81 0.57 244.05 0.76 0.10</code></pre>
+</div>
+</div>
+</section>
+<section id="parametric-bootstrap" class="level2">
+<h2 class="anchored" data-anchor-id="parametric-bootstrap">Parametric bootstrap</h2>
+<p>Parametric bootstrap aims to provide baseline values obtained by clustering <em>similar</em> but <em>non-clustered</em> data. This can be computed using the <code>seqnullcqi</code> function with the following parameters:</p>
+<ul>
+<li><code>R</code>: number of bootstraps.</li>
+<li><code>model</code>: the null model (see the sections below).</li>
+<li><code>seqdist.args</code>: list of arguments passed to <code>seqdist</code> (should be identical to the first call to <code>seqdist</code>).</li>
+<li><code>hclust.method</code>: hierarchical clustering method (should be identical to the original clustering).</li>
+<li><code>kmedoid</code>: if <code>TRUE</code>, use PAM (and the <code>wcKMedRange</code> function) instead of hierarchical clustering.</li>
+<li><code>parallel</code>: if <code>TRUE</code>, use parallel computing to speed up the computations.</li>
+</ul>
+<section id="combined-randomization" class="level3">
+<h3 class="anchored" data-anchor-id="combined-randomization">Combined randomization</h3>
+<p>The following <code>R</code> code estimates expected values of the cluster quality indices when clustering similar sequences that are not clustered according to the <code>"combined"</code> model, using the Hamming distance and Ward hierarchical clustering. We set <code>parallel = TRUE</code> to use parallel computing. You can use <code>progressbar = TRUE</code> to show a progress bar of the computations (not meaningful here within a document).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb5-2">bcq.combined <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqnullcqi</span>(</span>
+<span id="cb5-3">  mvad.seq,</span>
+<span id="cb5-4">  clustqual,</span>
+<span id="cb5-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">R =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>,</span>
+<span id="cb5-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"combined"</span>,</span>
+<span id="cb5-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seqdist.args =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>),</span>
+<span id="cb5-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hclust.method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ward.D"</span>,</span>
+<span id="cb5-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">parallel =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb5-10">)</span></code></pre></div></div>
+</div>
+<p>Once the parametric bootstrap is computed (may take a while…), the results are stored in the <code>bcq.combined</code> object. Printing the object (just by writing its name) already provides several pieces of information: the standardized cluster quality indices and the inconclusive interval (standardized values).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1">bcq.combined</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Parametric bootstrap cluster analysis validation
+Sequence analysis null model: list(model = "combined") 
+Number of bootstraps: 1000 
+Clustering method: hclust with ward.D 
+Seqdist arguments: list(method = "HAM") 
+
+                                   PBC            HG         HGSD           ASW
+cluster2                          6.07          6.01          6.1         15.23
+cluster3                          4.29          4.31          4.4          8.07
+cluster4                          2.31          2.67         2.74          5.31
+cluster5                           2.2          2.52         2.57          6.12
+cluster6                          1.41          1.75         1.78           5.5
+cluster7                           2.4          3.16          3.2          8.44
+cluster8                          3.15          4.15         4.18          9.96
+cluster9                          3.88          4.74         4.77         12.11
+cluster10                          3.3           4.4         4.43         12.04
+                                                                               
+Null Max-T 0.95 interval [-0.13; 2.41] [-0.08; 2.23] [-0.1; 2.24] [-0.22; 2.32]
+                                  ASWw            CH            R2         CHsq
+cluster2                         15.16         27.76         23.55        31.44
+cluster3                          8.03         23.95         19.45        24.36
+cluster4                          5.25         23.43         18.32        20.75
+cluster5                          6.08         24.88          18.7        23.21
+cluster6                          5.45         27.37         19.63        22.99
+cluster7                          8.37         31.69         21.86        27.27
+cluster8                          9.87         34.78          23.4        30.87
+cluster9                         11.99         37.98         24.91        36.88
+cluster10                         11.9         40.41            26        37.98
+                                                                               
+Null Max-T 0.95 interval [-0.21; 2.31] [-1.18; 2.56] [-1.18; 2.49] [-1.1; 2.64]
+                                  R2sq            HC
+cluster2                         23.48         -5.18
+cluster3                         17.19         -4.65
+cluster4                         14.22         -3.23
+cluster5                          14.5         -3.33
+cluster6                         13.69         -2.89
+cluster7                         15.21         -4.91
+cluster8                         16.41         -6.41
+cluster9                         18.21          -7.4
+cluster10                        18.61         -7.42
+                                                    
+Null Max-T 0.95 interval [-1.11; 2.54] [-0.04; 2.69]</code></pre>
+</div>
+</div>
+<p>Looking at the numbers, 2, 9 and 10 groups stand out. To get non-standardized values, use <code>norm = FALSE</code>. Notice that inconclusive ASW intervals are well below the recommended values (over 0.5).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">print</span>(bcq.combined, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">norm =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>)</span></code></pre></div></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Parametric bootstrap cluster analysis validation
+Sequence analysis null model: list(model = "combined") 
+Number of bootstraps: 1000 
+Clustering method: hclust with ward.D 
+Seqdist arguments: list(method = "HAM") 
+
+                                  PBC           HG         HGSD         ASW
+cluster2                         0.55         0.71         0.69        0.39
+cluster3                         0.49         0.57         0.57        0.27
+cluster4                         0.46         0.58         0.57        0.24
+cluster5                         0.51         0.68         0.67        0.27
+cluster6                         0.52          0.7          0.7        0.28
+cluster7                         0.55         0.78         0.78        0.32
+cluster8                         0.56         0.82         0.82        0.32
+cluster9                         0.57         0.85         0.85        0.34
+cluster10                        0.55         0.85         0.84        0.32
+                                                                           
+Null Max-T 0.95 interval [0.45; 0.54] [0.69; 0.78] [0.68; 0.78] [0.14; 0.2]
+                                 ASWw             CH           R2
+cluster2                         0.39         184.57         0.21
+cluster3                         0.27         139.53         0.28
+cluster4                         0.24          124.4         0.35
+cluster5                         0.28          118.2          0.4
+cluster6                         0.29         117.08         0.45
+cluster7                         0.32         114.14         0.49
+cluster8                         0.33         109.22         0.52
+cluster9                         0.35         105.74         0.55
+cluster10                        0.33         101.81         0.57
+                                                                 
+Null Max-T 0.95 interval [0.15; 0.21] [39.84; 57.15] [0.31; 0.34]
+                                    CHsq         R2sq           HC
+cluster2                          347.47         0.33         0.14
+cluster3                           261.7         0.42         0.22
+cluster4                          228.94         0.49         0.23
+cluster5                          241.78         0.58         0.18
+cluster6                          241.96         0.63         0.17
+cluster7                          245.83         0.68         0.13
+cluster8                          244.85         0.71         0.11
+cluster9                          255.12         0.74         0.09
+cluster10                         244.05         0.76          0.1
+                                                                  
+Null Max-T 0.95 interval [74.91; 100.05] [0.48; 0.53] [0.33; 0.44]</code></pre>
+</div>
+</div>
+<p>Several plots can then be used to inspect the results using the <code>plot</code> command and the <code>type</code> argument. First, one can look at the sequences generated by the null model by using <code>type = "seqdplot"</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.combined, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"seqdplot"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-seqdplot-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The overall distribution of the CQI values can be plotted using <code>type = "density"</code>. In this case, one also needs to specify the CQI to be used. All tested numbers of groups are found to be significant. Any CQI computed by <code>as.clustrange()</code> can be used here. To show the density of the average silhouette width (<code>"ASW"</code>), one can use:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.combined, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ASW"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"density"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-density-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      2.5%      97.5% 
+-0.2176533  2.3174904 </code></pre>
+</div>
+</div>
+<p>By using <code>type = "line"</code>, we plot the obtained and bootstrapped CQI values depending on the number of groups.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.combined, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ASW"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"line"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-combined-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="randomized-sequencing" class="level3">
+<h3 class="anchored" data-anchor-id="randomized-sequencing">Randomized sequencing</h3>
+<p>To use another null model, one only needs to change the <code>model</code> argument of the <code>seqnullcqi</code> function. The randomized sequencing keeps the duration attached to each state, but randomizes the ordering of the spells. It can be used to uncover the sequencing structure of the data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb14-2">bcq.seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqnullcqi</span>(</span>
+<span id="cb14-3">  mvad.seq,</span>
+<span id="cb14-4">  clustqual,</span>
+<span id="cb14-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">R =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>,</span>
+<span id="cb14-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sequencing"</span>,</span>
+<span id="cb14-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seqdist.args =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>),</span>
+<span id="cb14-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hclust.method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ward.D"</span>,</span>
+<span id="cb14-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">parallel =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb14-10">)</span></code></pre></div></div>
+</div>
+<p>We can then plot the results as before. Notice that solutions between 3 and 6 are below the critical line.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ASW"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"line"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-sequencing-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="randomized-duration" class="level3">
+<h3 class="anchored" data-anchor-id="randomized-duration">Randomized duration</h3>
+<p>The randomized duration keeps the same ordering of the states, but randomizes the time spent in each spell. It can be used to uncover the duration-related structure of the data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span>
+<span id="cb16-2">bcq.dur <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqnullcqi</span>(</span>
+<span id="cb16-3">  mvad.seq,</span>
+<span id="cb16-4">  clustqual,</span>
+<span id="cb16-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">R =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>,</span>
+<span id="cb16-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"duration"</span>,</span>
+<span id="cb16-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seqdist.args =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>),</span>
+<span id="cb16-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hclust.method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ward.D"</span>,</span>
+<span id="cb16-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">parallel =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb16-10">)</span></code></pre></div></div>
+</div>
+<p>We can then plot the results as before. The 3- and 4-group solutions are below the “significance line”. Otherwise, the ranking of the solutions is the same.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.dur, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ASW"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"line"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-duration-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="state-independence" class="level3">
+<h3 class="anchored" data-anchor-id="state-independence">State independence</h3>
+<p>The state independence null model generates sequences, position by position, independently of the previous state. This is a quite unrealistic assumption for longitudinal data.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>)</span>
+<span id="cb18-2">bcq.stateindep <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqnullcqi</span>(</span>
+<span id="cb18-3">  mvad.seq,</span>
+<span id="cb18-4">  clustqual,</span>
+<span id="cb18-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">R =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>,</span>
+<span id="cb18-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"stateindep"</span>,</span>
+<span id="cb18-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seqdist.args =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>),</span>
+<span id="cb18-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hclust.method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ward.D"</span>,</span>
+<span id="cb18-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">parallel =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb18-10">)</span></code></pre></div></div>
+</div>
+<p>Bootstrapped CQI values are extremely low compared to our clustering, meaning that we have a strong longitudinal structure (not surprising!).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.stateindep, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ASW"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"line"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-stateindep-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="first-order-markov-null-model" class="level3">
+<h3 class="anchored" data-anchor-id="first-order-markov-null-model">First-order Markov null model</h3>
+<p>The first-order Markov null model generates sequences using time-invariant transition rates. As a result, the generated sequences are often quite similar to the observed ones. This model can uncover structure stemming from time-dependent transition rates.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>)</span>
+<span id="cb20-2">bcq.Markov <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqnullcqi</span>(</span>
+<span id="cb20-3">  mvad.seq,</span>
+<span id="cb20-4">  clustqual,</span>
+<span id="cb20-5">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">R =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1000</span>,</span>
+<span id="cb20-6">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Markov"</span>,</span>
+<span id="cb20-7">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seqdist.args =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>),</span>
+<span id="cb20-8">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hclust.method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ward.D"</span>,</span>
+<span id="cb20-9">  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">parallel =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span></span>
+<span id="cb20-10">)</span></code></pre></div></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(bcq.Markov, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">stat =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ASW"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"line"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-markov-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="choosing-a-solution" class="level2">
+<h2 class="anchored" data-anchor-id="choosing-a-solution">Choosing a solution</h2>
+<p>The various null models lead to the same conclusions and ranking of the solutions. Solutions between 3 and 6 groups were not always above the critical lines (in the sequencing null model for instance), and can be avoided. We generally saw good clustering quality for a clustering in 9 groups. The solution is shown below.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdplot</span>(mvad.seq, clustqual<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>clustering<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>cluster9, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">border =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NA</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/final-solution-1.png" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>software</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</guid>
+  <pubDate>Wed, 18 Oct 2023 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/thumbnail.png" medium="image" type="image/png" height="89" width="144"/>
+</item>
+<item>
+  <title>The story of sequence analysis by a dream team of SAA members</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p><img src="https://maraab23.github.io/SAA-Website/resources/covers/ssr-2022.jpg" class="img-fluid" style="float:right; margin: 0 0 1rem 1.5rem;" alt="Cover of the article in Social Science Research" width="140"></p>
+<p><strong>Sequence analysis: Its past, present, and future</strong></p>
+<p>by Tim F. Liao, Danilo Bolano, Christian Brzinsky-Fay, Benjamin Cornwell, Anette Eva Fasang, Satu Helske, Raffaella Piccarreta, Marcel Raab, Gilbert Ritschard, Emanuela Struffolino and Matthias Studer</p>
+<p><em>Social Science Research</em>, <strong>107</strong>, 102772. DOI: <a href="https://doi.org/10.1016/j.ssresearch.2022.102772">10.1016/j.ssresearch.2022.102772</a> (open access)</p>
+<p>The article reviews the development of sequence analysis in the social sciences, takes stock of current methodological practice and outlines directions for future research. See also the <a href="../../../resources.html#overview">overview of community books</a> on our Resources page.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>publications</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/</guid>
+  <pubDate>Mon, 29 Aug 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>ggseqplot: ggplotify sequence plots</title>
+  <dc:creator>Marcel Raab</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This guest post was first published on the old SAA website in August 2022. It has been re-rendered in October 2026 with <code>{ggseqplot}</code> 1.0.0 and <code>{TraMineR}</code> 2.2.14.</p>
+</div>
+</div>
+</div>
+<section id="intro" class="level2">
+<h2 class="anchored" data-anchor-id="intro">Intro</h2>
+<p>We all know that visualization plays an important role when conducting a sequence analysis. Accordingly, <code>{TraMineR}</code> and other sequence analysis libraries provide a rich set of plotting functions. Although the default output of these functions often is almost publication-ready, it is usually necessary to adjust some parameters of the plots to obtain the desired results. In the case of <code>TraMineR::seqplot</code> this requires engaging with base R’s <code>plot</code> environment. Today, however, many R users prefer <code>{ggplot2}</code> over base R’s plot library to produce their visualization and aren’t familiar with <code>plot</code>.</p>
+<p>In view of that, I wrote the little R library <code>{ggseqplot}</code> that uses <code>{ggplot2}</code> to render sequence plots. The package complements the standard <code>{TraMineR}</code> workflow, assuming that you are defining and analyzing your sequence data using <code>{TraMineR}</code> functions. Only the visualization is outsourced to <code>{ggseqplot}</code>. Accordingly, <code>{ggseqplot}</code> functions are structured in a similar fashion as their <code>{TraMineR}</code> counterparts, often using identical function arguments and also relying on sequence data defined by <code>TraMineR::seqdef</code> as starting point. Under the hood, <code>{ggseqplot}</code> functions are reshaping the data into the format required by <code>{ggplot2}</code> and then call <code>{ggplot2}</code> functions to render the plots.</p>
+<p>Apart from a few layout choices, the resulting plots are quite similar to those produced by <code>TraMineR::seqplot</code>. The key difference, however, is that the appearance of those plots can be easily changed by using the <code>+</code> operator and other <code>{ggplot2}</code> functions.</p>
+</section>
+<section id="example-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="example-set-up">Example set up</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># required libraries</span></span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(TraMineR)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggseqplot)</span>
+<span id="cb1-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(colorspace)</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggh4x)</span>
+<span id="cb1-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(patchwork)</span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## The well-known example data from the TraMineR documentation</span></span>
+<span id="cb1-10"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data</span>(actcal)</span>
+<span id="cb1-11"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb1-12">actcal <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> actcal[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(actcal), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span>), ]</span>
+<span id="cb1-13">actcal.lab <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"&gt; 37 hours"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"19-36 hours"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"1-18 hours"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"no work"</span>)</span>
+<span id="cb1-14">actcal.seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdef</span>(actcal, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">13</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">24</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> actcal.lab)</span></code></pre></div></div>
+</div>
+</section>
+<section id="standard-index-plot" class="level2">
+<h2 class="anchored" data-anchor-id="standard-index-plot">Standard index plot</h2>
+<section id="example-1" class="level3">
+<h3 class="anchored" data-anchor-id="example-1">Example 1</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># TraMineR</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqIplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sortv =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"from.end"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex1-traminer-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># ggseqplot</span></span>
+<span id="cb3-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqiplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sortv =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"from.end"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex1-ggseqplot-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="more-index-plots-utilizing-ggplot2-capabilities" class="level2">
+<h2 class="anchored" data-anchor-id="more-index-plots-utilizing-ggplot2-capabilities">More index plots: utilizing ggplot2 capabilities</h2>
+<section id="example-2" class="level3">
+<h3 class="anchored" data-anchor-id="example-2">Example 2</h3>
+<p>In the following example, we illustrate how the plot’s appearance can be dramatically changed using standard <code>{ggplot2}</code> functions and two functions from the <code>{colorspace}</code> library (<code>scale_fill_discrete_sequential</code> and <code>scale_color_discrete_sequential</code>). We use these functions to change the color palette and the overall orientation of the index plot. Following the example of many of Raffaella Piccarreta’s sequence visualizations, the following index plot maps the time dimension on the y-axis.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqiplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sortv =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"from.end"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-2">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Use Built-in Constant (months abbreviations) for axis labels</span></span>
+<span id="cb4-3">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_x_discrete</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> month.abb) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-4">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># change the color palette (fill and border color)</span></span>
+<span id="cb4-5">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_fill_discrete_sequential</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"heat"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_discrete_sequential</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"heat"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-7">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># add a title and a axis title</span></span>
+<span id="cb4-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Month"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Piccarreta-flavored Index Plot"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-9">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># let the time run "bottom-up" instead of "left-right"</span></span>
+<span id="cb4-10">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">coord_flip</span>() <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-11">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Change the position and size of the title and the legend position</span></span>
+<span id="cb4-12">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(</span>
+<span id="cb4-13">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top"</span>,</span>
+<span id="cb4-14">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">22</span>),</span>
+<span id="cb4-15">    <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span></span>
+<span id="cb4-16">  )</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex2-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-3" class="level3">
+<h3 class="anchored" data-anchor-id="example-3">Example 3</h3>
+<p>The following plots illustrate three options for rendering grouped index plots. The first plot resembles the default output of <code>TraMineR::seqIplot</code>. This type of plot might be misleading if it’s not interpreted carefully because it somewhat hides the group size differences. The same amount of <em>ink</em> is devoted to each of the groups.</p>
+<p>The second plot takes care of this, by fixing the y-axis. The group size differences are fully revealed, but there is also a lot of white space.</p>
+<p>The third approach is more parsimonious in the sense that there is less empty space in the plot. By using <code>ggh4x::force_panelsizes</code> the height of the index plots is adjusted to their relative group size.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># generate a group vector</span></span>
+<span id="cb5-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">030583</span>)</span>
+<span id="cb5-3">grp <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">replace =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">prob =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(.<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, .<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">5</span>, .<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>))</span>
+<span id="cb5-4"></span>
+<span id="cb5-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Variations of grouped index plots</span></span>
+<span id="cb5-6"></span>
+<span id="cb5-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># baseline plot</span></span>
+<span id="cb5-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqiplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> grp)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-base-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># internal argument to fix the axis</span></span>
+<span id="cb6-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqiplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> grp, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">facet_scale =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"fixed"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-fixed-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># using ggh4x to get varying plot sizes</span></span>
+<span id="cb7-2"></span>
+<span id="cb7-3"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># a vector storing the heights of the subplots</span></span>
+<span id="cb7-4">rowheight <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">table</span>(grp) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span></span>
+<span id="cb7-5"></span>
+<span id="cb7-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqiplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> grp, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">facet_ncol =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">force_panelsizes</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">rows =</span> rowheight) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.spacing =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">unit</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"lines"</span>))</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-ggh4x-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="additional-features" class="level2">
+<h2 class="anchored" data-anchor-id="additional-features">Additional features</h2>
+<section id="example-4" class="level3">
+<h3 class="anchored" data-anchor-id="example-4">Example 4</h3>
+<p>Following a <a href="https://clauswilke.com/dataviz/visualizing-proportions.html#visualizing-proportions-separately-as-parts-of-the-total">suggestion of Claus Wilke</a>, <code>ggseqdplot</code> provides a feature that eases the comparison of state distributions by disaggregating the standard stacked distribution plot.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqdplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> actcal<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>sex)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex4-stacked-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqdplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> actcal<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>sex, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dissect =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"row"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex4-dissect-1.png" class="img-fluid figure-img" width="1200"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="example-5" class="level3">
+<h3 class="anchored" data-anchor-id="example-5">Example 5</h3>
+<p>In addition to the sequence plots of <code>TraMineR::seqplot</code> and <code>TraMineRextras::seqplot.rf</code>, I added one additional function for plotting transition rate matrices of sequence states.</p>
+<p>By default, the function is visualizing a DSS formatted version of the sequence data. Below, we compare the transition matrices of the same sequence data, first using the STS format and then the DSS format.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">p.sts <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqtrplot</span>(actcal.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">dss =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">FALSE</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-2">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"STS format"</span>)</span>
+<span id="cb10-3">p.dss <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqtrplot</span>(actcal.seq) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb10-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggtitle</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"DSS format"</span>)</span>
+<span id="cb10-5"></span>
+<span id="cb10-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># show side by side using patchwork library</span></span>
+<span id="cb10-7">p.sts <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> p.dss <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">18</span>))</span></code></pre></div></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex5-1.png" class="img-fluid figure-img" width="1500"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="further-information" class="level2">
+<h2 class="anchored" data-anchor-id="further-information">Further information</h2>
+<p>📣 <a href="https://maraab23.github.io/ggseqplot/"><code>{ggseqplot}</code> website</a></p>
+</section>
+<section id="acknowledgment" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgment">Acknowledgment</h2>
+<p>I like to thank Gilbert Ritschard, Tim Liao, and Emanuela Struffolino for their constructive and encouraging comments on earlier versions of this library.</p>
+</section>
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<ul>
+<li>If you find issues, please let me know: <a href="https://github.com/maraab23/ggseqplot/issues" class="uri">https://github.com/maraab23/ggseqplot/issues</a></li>
+</ul>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>software</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</guid>
+  <pubDate>Thu, 04 Aug 2022 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>New Wikipedia page on sequence analysis</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>The Wikipedia page on <a href="https://en.wikipedia.org/wiki/Sequence_analysis_in_social_sciences">Sequence analysis in social sciences</a> has been redesigned and replaces the previous <em>Social sequence analysis</em> page. It provides useful background for sequence analysis studies.</p>
+<p>A link to the page is also listed on our <a href="../../../resources.html">Resources</a> page.</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>publications</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/</guid>
+  <pubDate>Sat, 09 Oct 2021 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>TraMineR and TraMineRextras updates 2020–2021</title>
+  <dc:creator>SAA Executive Committee</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This post brings together three release notes on <a href="https://CRAN.R-project.org/package=TraMineR">TraMineR</a> and <a href="https://CRAN.R-project.org/package=TraMineRextras">TraMineRextras</a> that appeared on the old SAA website between April 2020 and June 2021. For later changes, see the NEWS files of the packages on CRAN.</p>
+<section id="traminer-2.2-2-3-june-2021" class="level2">
+<h2 class="anchored" data-anchor-id="traminer-2.2-2-3-june-2021">TraMineR 2.2-2 (3 June 2021)</h2>
+<ul>
+<li>All new indexes proposed in Ritschard, G. Measuring the nature of individual sequences. <em>Sociological Methods &amp; Research</em>. DOI: <a href="https://doi.org/10.1177/00491241211036156">10.1177/00491241211036156</a> — see function <code>seqindic()</code>.</li>
+<li>Function <code>dissdomassoc()</code>, which computes the measures of association between domains proposed in Piccarreta, R. (2017). Joint sequence analysis: Association and clustering. <em>Sociological Methods &amp; Research</em>, 46(2), 252–287. DOI: <a href="https://doi.org/10.1177/0049124115591013">10.1177/0049124115591013</a>.</li>
+<li>Updated <code>seqdist()</code>, which can now compute pairwise dissimilarities between two (sub)sets of state sequences.</li>
+</ul>
+</section>
+<section id="traminerextras-0.6.1-january-2021" class="level2">
+<h2 class="anchored" data-anchor-id="traminerextras-0.6.1-january-2021">TraMineRextras 0.6.1 (January 2021)</h2>
+<ul>
+<li>Dynamic individual indicators following Pelletier, D., Bignami-Van Assche, S. &amp; Simard-Gendron, A. (2020). Measuring life course complexity with dynamic sequence analysis. <em>Social Indicators Research</em>. DOI: <a href="https://doi.org/10.1007/s11205-020-02464-y">10.1007/s11205-020-02464-y</a></li>
+<li>Polyadic distances and their comparison with distances computed on randomly drawn polyads, as described in Liao, T. F. (2021). Using sequence analysis to quantify how strongly life courses are linked. <em>Sociological Science</em>, 8, 48–72. DOI: <a href="https://doi.org/10.15195/v8.a3">10.15195/v8.a3</a></li>
+</ul>
+</section>
+<section id="traminer-2.2-and-traminerextras-0.6-april-2020" class="level2">
+<h2 class="anchored" data-anchor-id="traminer-2.2-and-traminerextras-0.6-april-2020">TraMineR 2.2 and TraMineRextras 0.6 (April 2020)</h2>
+<p>TraMineR 2.2 improved the <code>seqdist()</code> function:</p>
+<ul>
+<li>vectors of state-dependent indel costs are supported by all distance methods that require an indel value;</li>
+<li><code>indel</code> has a new default <code>"auto"</code>, which derives a suitable indel value from the substitution costs;</li>
+<li><code>refseq</code> (reference sequence) is supported by all distance methods, including a reference given as a sequence object;</li>
+<li>normalization is available for all edit distances.</li>
+</ul>
+<p>In addition, <code>seqdef()</code> assigns a default colour palette for alphabets with more than 12 states, and a new <code>rbind()</code> method for state sequence objects makes it easy to merge sequence data.</p>
+<p>TraMineRextras 0.6 added <code>seqCompare()</code>, which implements the likelihood ratio test (LRT) and the BIC difference proposed in Liao, T. F. &amp; Fasang, A. E. (2021). Comparing groups of life-course sequences using the Bayesian information criterion and the likelihood-ratio test. <em>Sociological Methodology</em>, 51(1), 44–85. DOI: <a href="https://doi.org/10.1177/0081175020959401">10.1177/0081175020959401</a>. Moreover, <code>seqplot.rf()</code> gained the argument <code>which.plot</code>, and <code>seqgranularity()</code> the methods <code>"first.valid"</code> and <code>"last.valid"</code> for sequences with missing values.</p>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>software</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/</guid>
+  <pubDate>Sun, 06 Jun 2021 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>New R package: seqhandbook</title>
+  <dc:creator>Nicolas Robette</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>Hello everyone, I just uploaded a new R package on CRAN, <a href="https://cran.r-project.org/package=seqhandbook">seqhandbook</a>. It is initially intended to accompany a sequence analysis handbook to be published (in French) in 2021 by INED, with some data sets and a tutorial.</p>
+<p>But it also includes functions for</p>
+<ul>
+<li>describing episodes in individual sequences,</li>
+<li>measuring association between domains in multidimensional sequence analysis,</li>
+<li>heat maps of sequence data,</li>
+<li>Globally Interdependent Multidimensional Sequence Analysis (GIMSA),</li>
+<li>smoothing sequences for index plots,</li>
+<li>coding sequences for Qualitative Harmonic Analysis,</li>
+<li>measuring stress from multidimensional scaling factors, and</li>
+<li>symmetrical (or canonical) Partial Least Squares.</li>
+</ul>
+<p>Maybe some of them could be useful for you!</p>
+<p>Best,<br>
+Nicolas</p>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+  <category>software</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/</guid>
+  <pubDate>Mon, 31 Aug 2020 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+</channel>
+</rss>
