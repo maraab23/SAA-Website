@@ -309,6 +309,17 @@ img.sw-logo {
 }
 .consent-revoke { font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8; }
 
+// Tally renders dark text on a transparent background (transparentBackground=1).
+// In dark mode, place the loaded form on a light card so it stays readable.
+@if $is-dark {
+  .tally-form .consent-loaded {
+    background: #FFFFFF;
+    border-radius: 1rem;
+    padding: 1.25rem 1.5rem 0.5rem;
+    max-width: 44rem;
+  }
+}
+
 // --- Literature timeline (resources page) --------------------------------
 .timeline {
   list-style: none;
