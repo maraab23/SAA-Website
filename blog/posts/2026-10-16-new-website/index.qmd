@@ -1,0 +1,19 @@
+---
+title: "Welcome to the new SAA website"
+description: "A fresh look, open to everyone: what changes with the relaunch."
+image: thumbnail.png
+image-alt: "Browser window showing the new SAA website"
+date: 2026-10-16
+categories: [association]
+draft: false
+---
+
+We are relaunching the website of the Sequence Analysis Association. The new site is built with [Quarto](https://quarto.org) and is **open to everyone** — there is no longer a member area, and all content, from the webinar programme to the annual reports, is available to all visitors.
+
+What's new:
+
+- A new logo and visual identity: the signet is a small sequence index plot, and colours and fonts are defined once in a brand.yml file that can be reused for slides, reports and other formats.
+- A simpler structure: [About](../../../about.qmd), [Events](../../../events.qmd), [Resources](../../../resources.qmd) and this blog.
+- An [RSS feed](../../index.xml) so you can follow SAA news in your favourite reader.
+
+Feedback is very welcome at [info@sequenceanalysis.org](mailto:info@sequenceanalysis.org).

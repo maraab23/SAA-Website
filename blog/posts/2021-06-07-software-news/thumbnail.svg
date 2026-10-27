@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Package release tags above a sequence strip">
+  <rect width="400" height="225" fill="#14284B"/>
+  <g font-family="'Fira Code', Consolas, monospace" font-size="15" font-weight="600">
+    <g transform="translate(40 40)"><path d="M0 0h118l18 17-18 17H0z" fill="#4A86C5"/><text x="12" y="23" fill="#fff">TraMineR 2.2</text></g>
+    <g transform="translate(150 86)"><path d="M0 0h176l18 17-18 17H0z" fill="#8A78BE"/><text x="12" y="23" fill="#fff">TraMineRextras 0.6</text></g>
+    <g transform="translate(70 132)"><path d="M0 0h136l18 17-18 17H0z" fill="#9CC9E2"/><text x="12" y="23" fill="#14284B">TraMineR 2.2-2</text></g>
+  </g>
+  <g transform="translate(40 188)">
+    <rect width="70" height="12" fill="#D6E6F3"/><rect x="72" width="54" height="12" fill="#9CC9E2"/><rect x="128" width="80" height="12" fill="#4A86C5"/><rect x="210" width="60" height="12" fill="#8A78BE"/><rect x="272" width="48" height="12" fill="#B3A4E0"/>
+  </g>
+</svg>

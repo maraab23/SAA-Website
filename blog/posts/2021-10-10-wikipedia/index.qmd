@@ -1,0 +1,12 @@
+---
+title: "New Wikipedia page on sequence analysis"
+description: "The redesigned article “Sequence analysis in social sciences” replaces the former “Social sequence analysis” page."
+image: thumbnail.png
+image-alt: "Wikipedia globe made of puzzle pieces next to a sequence strip"
+date: 2021-10-10
+categories: [publications]
+---
+
+The Wikipedia page on [Sequence analysis in social sciences](https://en.wikipedia.org/wiki/Sequence_analysis_in_social_sciences) has been redesigned and replaces the previous *Social sequence analysis* page. It provides useful background for sequence analysis studies.
+
+A link to the page is also listed on our [Resources](../../../resources.qmd) page.

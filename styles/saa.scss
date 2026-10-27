@@ -1,0 +1,433 @@
+/*-- scss:defaults --*/
+// Colours and fonts come from _brand.yml / _brand-dark.yml (SAA brand package),
+// logo sizing and code ligatures from saa-brand.scss. Only layout lives here.
+$navbar-padding-y: 0.7rem;
+$border-radius: 0.5rem;
+$border-radius-lg: 0.8rem;
+$card-border-radius: 0.8rem;
+
+/*-- scss:rules --*/
+
+// The six state colours of the signet, light → deep. On dark backgrounds the
+// deepest states are swapped for their lighter replacements (see brand README).
+$is-dark: lightness($body-bg) < 50%;
+$state-1: #D6E6F3;                                   // sky-50
+$state-2: #9CC9E2;                                   // sky-200
+$state-3: #4A86C5;                                   // blue-500
+$state-4: #8A78BE;                                   // violet-400
+$state-5: if($is-dark, #6F9FD6, #1F4E8C);            // blue-700 / blue-400
+$state-6: if($is-dark, #B3A4E0, #3E2470);            // violet-800 / violet-300
+$muted:   if($is-dark, rgba($body-color, 0.72), #5A6478);  // gray-600
+
+// --- Navbar --------------------------------------------------------------
+.navbar {
+  border-bottom: 1px solid rgba($primary, 0.12);
+  box-shadow: none;
+}
+.navbar .nav-link {
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
+// --- Headings ------------------------------------------------------------
+h2 { margin-top: 2.5rem; }
+.quarto-title .subtitle { color: $muted; }
+
+// "Sequence strip": echoes the timeline under the wordmark of the logo —
+// five episodes with small gaps, from the lightest to the deepest state.
+.seq-strip {
+  height: 8px;
+  width: 10rem;
+  margin: 0.75rem 0 1.75rem;
+  background: linear-gradient(90deg,
+    $state-1 0 16%,     transparent 16% 18%,
+    $state-2 18% 38%,   transparent 38% 40%,
+    $state-3 40% 59%,   transparent 59% 61%,
+    $state-4 61% 80%,   transparent 80% 82%,
+    $state-6 82% 100%);
+  border-radius: 2px;
+}
+
+// --- Hero (home page) ----------------------------------------------------
+.hero {
+  position: relative;
+  padding: 4.5rem 0 3.5rem;
+  margin-bottom: 1rem;
+}
+.hero .eyebrow {
+  font-family: $headings-font-family;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $secondary;
+}
+.hero h1 {
+  font-size: clamp(2.3rem, 5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.05;
+  margin: 0.5rem 0 1.25rem;
+  border: none;
+}
+.hero .lead { font-size: 1.25rem; max-width: 42rem; color: $muted; }
+.hero .btn { margin: 0.5rem 0.5rem 0 0; font-family: $headings-font-family; font-weight: 600; padding: 0.6rem 1.3rem; }
+
+// Decorative index plot in the hero, drawn like the signet:
+// rounded episodes separated by small gaps.
+.hero-plot {
+  display: grid;
+  gap: 8px;
+  margin-top: 3rem;
+}
+.hero-plot .seq {
+  display: flex;
+  gap: 5px;
+  height: 16px;
+}
+.hero-plot .seq span { display: block; height: 100%; border-radius: 3px; flex-shrink: 1; }
+.s-a { background: $state-5; }
+.s-b { background: $state-3; }
+.s-c { background: $state-2; }
+.s-d { background: $state-4; }
+.s-e { background: $state-6; }
+.s-f { background: $state-1; }
+
+// --- Cards ---------------------------------------------------------------
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  @media (max-width: 576px) { grid-template-columns: 1fr; }
+  gap: 1.25rem;
+  margin: 1.5rem 0 2.5rem;
+}
+.feature {
+  border: 1px solid rgba($primary, 0.15);
+  border-radius: 1rem;
+  padding: 1.4rem 1.4rem 1.1rem;
+  background: rgba($primary, 0.03);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.feature:hover { transform: translateY(-2px); border-color: rgba($primary, 0.45); }
+.feature h3 { font-size: 1.15rem; margin-top: 0.6rem; }
+.feature p { font-size: 0.95rem; margin-bottom: 0.6rem; }
+.feature .bi { font-size: 1.6rem; color: $primary; }
+.feature a { font-weight: 600; text-decoration: none; }
+
+// Light-weight people list: plain columns separated by hairlines, no boxes
+.people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  column-gap: 2rem;
+  margin: 0.5rem 0 2rem;
+}
+.person {
+  padding: 0.45rem 0;
+  border-top: 1px solid rgba($primary, 0.12);
+  line-height: 1.35;
+}
+.person strong { display: block; font-weight: 600; font-size: 0.95rem; }
+.person span { font-size: 0.8rem; color: $muted; }
+// Presidents / honorary president: spans the full row, small accent dot
+.person.highlight { grid-column: 1 / -1; border-top: none; padding-bottom: 0.9rem; }
+.person.highlight strong::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem; height: 0.5rem;
+  border-radius: 50%;
+  background: $secondary;
+  margin-right: 0.5rem;
+  vertical-align: 0.12em;
+}
+
+// --- Event list ----------------------------------------------------------
+.event {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba($primary, 0.12);
+}
+.event .date {
+  text-align: center;
+  font-family: $headings-font-family;
+  border-radius: 0.8rem;
+  background: rgba($primary, 0.08);
+  padding: 0.6rem 0.2rem;
+  align-self: start;
+}
+.event .date .d { display: block; font-size: 1.8rem; font-weight: 600; line-height: 1; }
+.event .date .m { display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: .1em; }
+.event h3 { margin-top: 0; font-size: 1.15rem; }
+.event .tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.1rem 0.55rem;
+  border-radius: 1rem;
+  background: rgba($secondary, 0.15);
+  margin-bottom: 0.4rem;
+}
+
+// --- Brand page swatches -------------------------------------------------
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+.swatch { border-radius: 0.8rem; overflow: hidden; border: 1px solid rgba(0,0,0,.08); font-size: .85rem; }
+.swatch .chip { height: 72px; }
+.swatch div:last-child { padding: .5rem .7rem; }
+.swatch code { font-size: .8rem; }
+.logo-stage {
+  border-radius: 1rem;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba($primary, .15);
+  margin-bottom: 1rem;
+}
+.logo-stage.on-light { background: #fff; }
+.logo-stage.on-dark { background: #0F1F3A; }
+.logo-stage.on-blue { background: #1F4E8C; }
+.logo-stage img { max-width: 100%; }
+
+// Listing tweaks
+.quarto-listing .listing-title { font-family: $headings-font-family; font-weight: 600; }
+
+// --- Icons & link cards --------------------------------------------------
+// Letter badge for services without a Bootstrap icon (currently Zotero).
+// Simple lettermarks rather than copies of the official logos.
+.badge-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.4em;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 0.85em;
+  line-height: 1;
+  color: #fff;
+  vertical-align: -0.3em;
+  margin-right: 0.45em;
+  letter-spacing: -0.02em;
+  &.zotero { background: #CC2936; }
+}
+h3 .badge-icon { font-size: 0.8em; }
+
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 2rem;
+}
+.link-card {
+  position: relative;
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba($primary, 0.15);
+  border-radius: 0.9rem;
+  transition: border-color .15s ease, transform .15s ease;
+  &:hover { border-color: rgba($primary, 0.5); transform: translateY(-2px); }
+  p { margin: 0; font-size: 0.9rem; }
+  > p { margin: 0; flex: none; }
+  > div > p:first-child { margin-bottom: 0.15rem; font-size: 1rem; }
+  a { font-weight: 600; text-decoration: none; }
+  .badge-icon { font-size: 1.15rem; width: 2.26em; height: 2.26em; border-radius: 0.6rem; margin: 0; flex: none; vertical-align: 0; }
+  > .bi, > p > .bi:only-child {
+    font-size: 1.4rem;
+    width: 2.6rem; height: 2.6rem;
+    flex: none;
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 0.6rem;
+    background: rgba($primary, 0.08);
+    color: $primary;
+  }
+}
+
+// inline icon before a link or label
+.ico { color: $primary; margin-right: 0.35em; }
+
+ul.icon-list { list-style: none; padding-left: 0; }
+ul.icon-list li { padding-left: 1.8em; position: relative; margin-bottom: 0.35rem; }
+ul.icon-list li > .bi:first-child { position: absolute; left: 0; top: 0.1em; color: $primary; }
+
+// icon-list wrapper div (markdown list inside .icon-list)
+.icon-list ul { list-style: none; padding-left: 0; }
+.icon-list li { padding-left: 2em; position: relative; margin-bottom: 0.45rem; }
+.icon-list li > .bi:first-child, .icon-list li > p > .bi:first-child { position: absolute; left: 0; top: 0.1em; color: $primary; font-size: 1.1em; }
+
+// Annual reports as compact chips
+.report-list { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1rem 0 1.5rem; }
+.report-list a {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid rgba($primary, 0.2);
+  border-radius: 2rem;
+  font-weight: 600; text-decoration: none;
+  &:hover { background: rgba($primary, 0.06); }
+  .bi { color: #B33A3A; }
+}
+
+// Software logos in headings (resources page)
+img.sw-logo {
+  height: 1.25em;
+  width: auto;
+  vertical-align: -0.22em;
+  margin-right: 0.4em;
+}
+// keep them small in the table of contents
+#TOC img.sw-logo, nav[role="doc-toc"] img.sw-logo { height: 1em; vertical-align: -0.15em; margin-right: 0.3em; }
+
+// --- Consent placeholder for third-party embeds --------------------------
+.consent-placeholder {
+  border: 1px dashed rgba($primary, 0.35);
+  border-radius: 1rem;
+  padding: 2rem 1.75rem;
+  background: rgba($primary, 0.04);
+  max-width: 44rem;
+  > .bi { font-size: 1.8rem; color: $primary; }
+  .consent-title {
+    font-family: $headings-font-family;
+    font-weight: 600;
+    font-size: 1.15rem;
+    margin: 0.4rem 0 0.5rem;
+  }
+  p { font-size: 0.95rem; }
+  label { display: block; font-size: 0.9rem; margin: 0.75rem 0 1rem; cursor: pointer; }
+  label input { margin-right: 0.4rem; }
+  .consent-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
+  .consent-actions .btn { font-weight: 600; }
+  .consent-actions a { font-size: 0.9rem; }
+}
+.consent-revoke { font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.8; }
+
+// --- Literature timeline (resources page) --------------------------------
+.timeline {
+  list-style: none;
+  margin: 1.5rem 0 1.5rem;
+  padding: 0 0 0 6.5rem;
+  position: relative;
+  // vertical line, drawn like an episode bar of the signet
+  &::before {
+    content: "";
+    position: absolute;
+    left: 4.6rem;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 4px;
+    border-radius: 2px;
+    background: linear-gradient(180deg, $state-5, $state-3 40%, $state-4 70%, $state-2);
+    opacity: 0.6;
+  }
+}
+.tl-item {
+  position: relative;
+  margin: 0 0 1.4rem;
+  // dot on the line
+  &::before {
+    content: "";
+    position: absolute;
+    left: calc(-1.9rem - 6px);
+    top: 0.55rem;
+    width: 16px; height: 16px;
+    border-radius: 4px;
+    background: $state-5;
+    box-shadow: 0 0 0 4px $body-bg;
+  }
+}
+.tl-year {
+  position: absolute;
+  left: -6.5rem;
+  top: 0.15rem;
+  width: 3.6rem;
+  text-align: right;
+  font-family: $headings-font-family;
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: $primary;
+}
+// second entry of the same year: no repeated label, smaller dot
+.tl-same-year {
+  .tl-year { visibility: hidden; }
+  &::before { width: 10px; height: 10px; left: calc(-1.9rem - 3px); top: 0.75rem; background: $state-3; }
+}
+.tl-card {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1.1rem 1.2rem;
+  border: 1px solid rgba($primary, 0.14);
+  border-radius: 0.8rem;
+  background: rgba($primary, 0.025);
+}
+.tl-cover {
+  flex: none;
+  width: 92px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+  margin: 0.2rem 0 0;
+}
+.tl-body { min-width: 0; font-size: 0.92rem; }
+.tl-body p { margin-bottom: 0.45rem; }
+.tl-kind {
+  display: flex; flex-wrap: wrap; gap: 0.35rem;
+  margin-bottom: 0.35rem !important;
+  span {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    background: rgba($primary, 0.08);
+    color: $primary;
+  }
+  .tl-oa  { background: rgba(#2E8B6E, 0.12); color: if($is-dark, #7FD1B3, #23705A); }
+  .tl-saa { background: rgba($secondary, 0.16); color: if($is-dark, #CFC5EE, #4F3F86); }
+}
+h3.tl-title { font-size: 1.15rem; margin: 0 0 0.35rem; line-height: 1.25; }
+.tl-ref { color: $muted; font-size: 0.85rem; }
+.tl-lead { font-size: 0.95rem; }
+.tl-body details {
+  margin: 0.2rem 0 0.5rem;
+  summary { cursor: pointer; font-weight: 600; color: $primary; font-size: 0.85rem; }
+  p { margin: 0.4rem 0 0; font-size: 0.88rem; }
+}
+.tl-links { font-size: 0.85rem; margin-bottom: 0 !important; }
+
+@media (max-width: 576px) {
+  .timeline { padding-left: 1.4rem; &::before { left: 0.25rem; } }
+  .tl-item::before { left: calc(-1.15rem - 6px); }
+  .tl-same-year::before { left: calc(-1.15rem - 3px); }
+  .tl-year { position: static; width: auto; text-align: left; margin-bottom: 0.3rem; }
+  .tl-same-year .tl-year { display: none; }
+  .tl-card { flex-direction: column; }
+  .tl-cover { width: 72px; }
+}
+
+// --- Software tables: slightly smaller type --------------------------------
+.software table { font-size: 0.875rem; }
+.software table td:first-child { white-space: nowrap; }
+
+// Past conferences (events page): compact table, narrow year column
+table.past-events { font-size: 0.875rem; }
+table.past-events td:first-child, table.past-events th:first-child { white-space: nowrap; font-weight: 600; }
+
+// Statutes page: compact article headings
+h3.article, .article > h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: $secondary;
+  margin: 1.6rem 0 0.4rem;
+}
+

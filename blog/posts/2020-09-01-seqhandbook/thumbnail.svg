@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Open handbook with sequence strips on its pages">
+  <rect width="400" height="225" fill="#8A78BE"/>
+  <path d="M200 58 C160 44 104 44 64 56 V182 C104 170 160 170 200 184z" fill="#fff"/>
+  <path d="M200 58 C240 44 296 44 336 56 V182 C296 170 240 170 200 184z" fill="#F3F5F9"/>
+  <line x1="200" y1="58" x2="200" y2="184" stroke="#3E2470" stroke-width="2"/>
+  <g transform="translate(84 76)">
+    <rect width="34" height="9" fill="#9CC9E2"/><rect x="36" width="24" height="9" fill="#4A86C5"/><rect x="62" width="38" height="9" fill="#1F4E8C"/>
+    <rect y="18" width="20" height="9" fill="#9CC9E2"/><rect x="22" y="18" width="50" height="9" fill="#8A78BE"/><rect x="74" y="18" width="26" height="9" fill="#4A86C5"/>
+    <rect y="36" width="62" height="9" fill="#4A86C5"/><rect x="64" y="36" width="36" height="9" fill="#3E2470"/>
+    <rect y="54" width="44" height="9" fill="#1F4E8C"/><rect x="46" y="54" width="54" height="9" fill="#9CC9E2"/>
+  </g>
+  <g fill="#B3A4E0"><rect x="220" y="80" width="96" height="5"/><rect x="220" y="94" width="84" height="5"/><rect x="220" y="108" width="92" height="5"/><rect x="220" y="122" width="70" height="5"/><rect x="220" y="136" width="88" height="5"/></g>
+  <text x="200" y="210" text-anchor="middle" font-family="'Fira Code', Consolas, monospace" font-size="15" font-weight="600" fill="#fff">seqhandbook</text>
+</svg>

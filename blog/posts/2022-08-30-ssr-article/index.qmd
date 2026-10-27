@@ -1,0 +1,18 @@
+---
+title: "The story of sequence analysis by a dream team of SAA members"
+description: "Sequence analysis: Its past, present, and future — an open-access article in Social Science Research."
+image: thumbnail.png
+image-alt: "Article cover with a timeline of sequence episodes"
+date: 2022-08-30
+categories: [publications]
+---
+
+![](../../../resources/covers/ssr-2022.jpg){fig-alt="Cover of the article in Social Science Research" width="140px" style="float:right; margin: 0 0 1rem 1.5rem;"}
+
+**Sequence analysis: Its past, present, and future**
+
+by Tim F. Liao, Danilo Bolano, Christian Brzinsky-Fay, Benjamin Cornwell, Anette Eva Fasang, Satu Helske, Raffaella Piccarreta, Marcel Raab, Gilbert Ritschard, Emanuela Struffolino and Matthias Studer
+
+*Social Science Research*, **107**, 102772. DOI: [10.1016/j.ssresearch.2022.102772](https://doi.org/10.1016/j.ssresearch.2022.102772) (open access)
+
+The article reviews the development of sequence analysis in the social sciences, takes stock of current methodological practice and outlines directions for future research. See also the [overview of community books](../../../resources.qmd#overview) on our Resources page.

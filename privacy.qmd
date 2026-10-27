@@ -1,0 +1,80 @@
+---
+title: "Privacy policy"
+subtitle: "How the SAA handles personal data on this website"
+toc: true
+toc-location: right
+---
+
+<!--
+DRAFT — to be reviewed by the Executive Committee before going live.
+Points to confirm are marked with "TODO" comments (not shown on the page):
+hosting provider, newsletter tool, retention periods.
+This text is not legal advice.
+-->
+
+::: {.seq-strip}
+:::
+
+*Last updated: October 2026*
+
+## Who we are
+
+The Sequence Analysis Association (SAA) is a non-profit association under Swiss law (Articles 60 et seq. of the Swiss Civil Code) with headquarters in Geneva, Switzerland (see our [statutes](statutes.qmd)). The SAA is responsible for the processing of personal data described on this page.
+
+Contact for all privacy questions: [info@sequenceanalysis.org](mailto:info@sequenceanalysis.org)
+
+## Visiting this website
+
+This website is a static site. It has **no user accounts, no comment function, no analytics and no advertising**, and it does not set cookies.
+
+### Hosting and server logs
+
+<!-- TODO: confirm hosting provider (currently planned: GitHub Pages). -->
+The website is hosted by GitHub, Inc. (GitHub Pages). When you visit a page, your browser transmits technical data to the hosting provider's servers, in particular your IP address, the date and time of the request, the requested page and your browser's user agent. The provider processes this data to deliver the website and to keep it secure. See the [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+### Fonts
+
+The fonts used on this website (Saira, Noto Sans, Fira Code) are hosted on this website itself. No connection to Google Fonts or other font services is made.
+
+### Display of mathematical formulas
+
+Pages that display mathematical formulas use the open-source library MathJax, which is loaded from the content delivery network jsDelivr (cdn.jsdelivr.net), together with a small compatibility script from cdnjs (cdnjs.cloudflare.com). When such a page is opened, your browser connects to these servers, which receive your IP address and browser information. See the privacy policies of [jsDelivr](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net) and [Cloudflare](https://www.cloudflare.com/privacypolicy/).
+
+### Data stored in your browser
+
+The website stores two small settings in your browser's local storage, only on your device and never sent to us:
+
+- your choice between light and dark mode, if you use the toggle in the navigation bar;
+- your consent to load the external membership form, if you tick “Always load Tally forms on this website”. You can withdraw it with the link shown below the form, or by clearing your browser's site data.
+
+### Links to other websites
+
+Pages contain links to external websites (e.g. LinkedIn, Zotero, CRAN, publishers). Their privacy policies apply once you follow such a link.
+
+## Membership requests
+
+The [membership request form](membership.qmd#form) is provided by Tally (Tally BV, Belgium). The form is only loaded after you click “Load form”, or you can open it directly on tally.so. When it loads, Tally receives technical data such as your IP address; see [Tally's privacy policy](https://tally.so/help/privacy-policy).
+
+To protect the form against spam and automated submissions, it uses Google reCAPTCHA (Google Ireland Ltd. / Google LLC). reCAPTCHA is only loaded together with the form. It analyses technical data such as your IP address, browser information and interactions with the page to tell humans from bots, and this data may be transferred to the USA. See [Google's privacy policy](https://policies.google.com/privacy) and [terms of service](https://policies.google.com/terms).
+
+The data you enter in the form (such as your name, email address, affiliation and your interest in sequence analysis) is used only to
+
+- decide on your membership request (Article 5 of the statutes),
+- administer your membership, including invitations to the General Assembly and elections, and
+- send you the SAA newsletter and information about SAA activities.
+
+Membership data is not shared with third parties beyond the service providers we use for these purposes.
+
+<!-- TODO: name the newsletter tool (old newsletters were sent via Mailchimp) and how members can unsubscribe. -->
+
+## How long we keep your data
+
+We keep membership data for as long as you are a member. After the end of your membership (see Article 5 of the statutes) we delete it, unless we are legally required to keep it longer, e.g. for accounting records.
+
+<!-- TODO: confirm retention period for rejected requests. -->
+
+## Your rights
+
+Under the Swiss Federal Act on Data Protection (FADP) and, where applicable, the EU General Data Protection Regulation (GDPR), you have the right to request access to the personal data we hold about you, to have it corrected or deleted, to restrict or object to its processing, and to receive it in a portable format. Where processing is based on your consent, you can withdraw it at any time.
+
+To exercise these rights, write to [info@sequenceanalysis.org](mailto:info@sequenceanalysis.org). You also have the right to lodge a complaint with a data protection authority, in Switzerland the [Federal Data Protection and Information Commissioner (FDPIC)](https://www.edoeb.admin.ch/).

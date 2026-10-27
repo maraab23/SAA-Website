@@ -1,0 +1,82 @@
+# Sequence Analysis Association — OPTIONAL dark theme for Quarto (brand.yml)
+# Use together with _brand.yml, e.g. in _quarto.yml:
+#   brand:
+#     light: _brand.yml
+#     dark: _brand-dark.yml
+# (requires a Quarto version with light/dark brand support)
+
+meta:
+  name:
+    short: SAA
+    full: Sequence Analysis Association
+  link:
+    home: https://sequenceanalysis.org/
+    linkedin: https://www.linkedin.com/company/sequence-analysis-association
+
+logo:
+  images:
+    logo-dark:
+      path: logos/saa-logo-dark.svg
+      alt: Sequence Analysis Association
+    signet-dark:
+      path: logos/saa-signet-dark.svg
+      alt: Sequence Analysis Association signet
+    favicon:
+      path: favicons/favicon.svg
+      alt: SAA
+  small: favicon
+  medium: signet-dark
+  large: logo-dark
+
+color:
+  palette:
+    navy-950: "#0F1F3A"
+    navy-800: "#1A2C4E"
+    sky-200: "#9CC9E2"
+    sky-50: "#D6E6F3"
+    blue-400: "#6F9FD6"
+    violet-300: "#B3A4E0"
+    text-dark: "#E6ECF5"
+  foreground: text-dark
+  background: navy-950
+  primary: sky-200
+  secondary: violet-300
+  info: blue-400
+  light: navy-800
+  dark: navy-950
+
+typography:
+  fonts:
+    - family: Noto Sans
+      source: system   # self-hosted: fonts/fonts.css (web), fonts/ttf (PDF)
+      weight: [400, 600, 700]
+      style: [normal, italic]
+    - family: Saira
+      source: system   # self-hosted: fonts/fonts.css (web), fonts/ttf (PDF)
+      weight: [400, 600]
+      style: normal
+    - family: Fira Code
+      source: system   # self-hosted: fonts/fonts.css (web), fonts/ttf (PDF)
+      weight: [400, 500]
+      style: normal
+  base:
+    family: Noto Sans
+    weight: 400
+    size: 1.125rem   # site deviation: 18px to suit the wider 960px content column
+    line-height: 1.6
+  headings:
+    family: Saira
+    weight: 600
+    color: "#FFFFFF"
+  monospace:
+    family: Fira Code
+    size: 0.9em
+  monospace-inline:
+    color: violet-300
+    background-color: navy-800
+  monospace-block:
+    size: 0.8em   # code blocks a bit smaller than inline code (0.9em)
+    background-color: navy-800
+  link:
+    color: primary
+    decoration: underline

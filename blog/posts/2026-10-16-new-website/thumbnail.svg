@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Illustration of a browser window showing the new SAA website">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1F4E8C"/><stop offset="1" stop-color="#3E2470"/></linearGradient></defs>
+  <rect width="400" height="225" fill="url(#g)"/>
+  <g transform="translate(70 34)">
+    <rect width="260" height="170" rx="10" fill="#fff"/>
+    <path d="M10 0h240a10 10 0 0 1 10 10v12H0V10A10 10 0 0 1 10 0z" fill="#E8EFF7"/>
+    <circle cx="14" cy="11" r="4" fill="#8A78BE"/><circle cx="27" cy="11" r="4" fill="#9CC9E2"/><circle cx="40" cy="11" r="4" fill="#4A86C5"/>
+    <g transform="translate(18 36)">
+      <rect width="22" height="4" rx="2" fill="#1F4E8C"/><rect y="6" width="22" height="4" rx="2" fill="#4A86C5"/><rect y="12" width="22" height="4" rx="2" fill="#8A78BE"/>
+      <rect x="30" y="4" width="90" height="8" rx="4" fill="#14284B"/>
+      <rect x="150" y="5" width="22" height="6" rx="3" fill="#D6E6F3"/><rect x="178" y="5" width="22" height="6" rx="3" fill="#D6E6F3"/><rect x="206" y="5" width="18" height="6" rx="3" fill="#D6E6F3"/>
+    </g>
+    <rect x="18" y="68" width="150" height="12" rx="6" fill="#14284B"/>
+    <rect x="18" y="86" width="110" height="12" rx="6" fill="#14284B"/>
+    <rect x="18" y="106" width="170" height="6" rx="3" fill="#C9D6E6"/>
+    <rect x="18" y="122" width="44" height="12" rx="6" fill="#1F4E8C"/>
+    <rect x="68" y="122" width="44" height="12" rx="6" fill="none" stroke="#1F4E8C" stroke-width="1.5"/>
+    <g transform="translate(18 146)">
+      <rect width="80" height="7" fill="#1F4E8C"/><rect x="80" width="70" height="7" fill="#4A86C5"/><rect x="150" width="74" height="7" fill="#9CC9E2"/>
+      <rect y="11" width="50" height="7" fill="#4A86C5"/><rect x="50" y="11" width="90" height="7" fill="#1F4E8C"/><rect x="140" y="11" width="84" height="7" fill="#8A78BE"/>
+    </g>
+  </g>
+</svg>

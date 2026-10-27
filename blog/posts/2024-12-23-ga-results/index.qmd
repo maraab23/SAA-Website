@@ -1,0 +1,32 @@
+---
+title: "2024 General Assembly: voting results"
+description: "Results of the December 2024 elections and votes."
+image: thumbnail.png
+image-alt: "Bar chart and ballot box"
+date: 2024-12-23
+categories: [association]
+---
+
+Results of the SAA election and vote held in December 2024:
+
+| Item | Yes | No | Abstain | Total |
+|------|----:|---:|--------:|------:|
+| **Annual Report** | 51 | 1 | | 52 |
+| **President:** Emanuela Struffolino | 47 | 1 | 4 | 52 |
+| **Executive Committee** | | | | |
+| Danilo Bolano | 40 | 1 | 8 | 49 |
+| Kevin Emery | 42 | | 5 | 47 |
+| Brendan Halpin | 44 | 1 | 3 | 48 |
+| Satu Helske | 46 | | 3 | 49 |
+| Tim F. Liao | 48 | | 2 | 50 |
+| Raffaella Piccarreta | 45 | | 2 | 47 |
+| Gilbert Ritschard | 46 | | 4 | 50 |
+| Carla Rowold | 43 | | 4 | 47 |
+| Dolores Sesma Carlos | 35 | 3 | 8 | 46 |
+| Matthias Studer | 48 | | 2 | 50 |
+
+: {.striped}
+
+::: {.callout-warning appearance="simple"}
+**Draft note:** the No/Abstain split was reconstructed from the flattened table on the old website (ambiguous for the Annual Report row) — please check against the original before publishing.
+:::

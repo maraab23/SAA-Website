@@ -1,0 +1,174 @@
+---
+title: "About the SAA"
+subtitle: "An international network for sequence analysis and related methods"
+toc: true
+toc-location: right
+---
+
+::: {.seq-strip}
+:::
+
+## Our mission
+
+The Sequence Analysis Association (SAA) aims to promote research, teaching and diffusion of sequence analysis (SA) and its relationships with related methods. To this end, the SAA
+
+- organises events such as symposia, webinars and training courses,
+- collects and shares information on SA-related events, and
+- provides links to SA resources — software, books, articles and a shared bibliography.
+
+## History
+
+The SAA was founded during the *International Symposium on Sequence Analysis and Related Methods* (ISSA), held on 10–12 October 2018 at Monte Verità, Ticino, Switzerland. The symposium continued a series of meetings that began with the *Lausanne Conference on Sequence Analysis* (LaCOSA) in 2012 and LaCOSA II in 2016.
+
+![Participants of the 2018 symposium at Monte Verità, where the SAA was founded.](https://sequenceanalysis.org/wp-content/uploads/2018/12/ISSAGroup_s.jpg){fig-alt="Group photo of the participants of the International Symposium on Sequence Analysis 2018 at Monte Verità."}
+
+## Executive Committee
+
+::: {.people}
+::: {.person .highlight}
+**Emanuela Struffolino**
+[University of Milan (IT) · President]{}
+:::
+::: {.person}
+**Danilo Bolano**
+[Bocconi University (IT)]{}
+:::
+::: {.person}
+**Kevin Emery**
+[University of Geneva (CH)]{}
+:::
+::: {.person}
+**Brendan Halpin**
+[University of Limerick (IE)]{}
+:::
+::: {.person}
+**Satu Helske**
+[University of Turku (FI)]{}
+:::
+::: {.person}
+**Tim F. Liao**
+[University of Illinois Urbana-Champaign (US) · President 2023–2024]{}
+:::
+::: {.person}
+**Raffaella Piccarreta**
+[Bocconi University, Milan (IT)]{}
+:::
+::: {.person}
+**Gilbert Ritschard**
+[University of Geneva (CH) · President 2018–2020]{}
+:::
+::: {.person}
+**Carla Rowold**
+[University of Oxford (UK)]{}
+:::
+::: {.person}
+**Dolores Sesma Carlos**
+[University of Valencia (ES)]{}
+:::
+::: {.person}
+**Matthias Studer**
+[University of Geneva (CH) · President 2021–2022]{}
+:::
+:::
+
+## Advisory Board
+
+::: {.people}
+::: {.person .highlight}
+**Andrew Abbott**
+[University of Chicago (US) · Honorary President]{}
+:::
+::: {.person}
+**Silke Aisenbrey**
+[Yeshiva University, New York (US)]{}
+:::
+::: {.person}
+**Torsten Biemann**
+[University of Mannheim (DE)]{}
+:::
+::: {.person}
+**Francesco Billari**
+[Bocconi University, Milan (IT)]{}
+:::
+::: {.person}
+**Benjamin Cornwell**
+[Cornell University (US)]{}
+:::
+::: {.person}
+**Cees Elzinga**
+[VU Amsterdam (NL)]{}
+:::
+::: {.person}
+**Anette Fasang**
+[Humboldt University Berlin (DE)]{}
+:::
+::: {.person}
+**Jacques-Antoine Gauthier**
+[University of Lausanne (CH)]{}
+:::
+::: {.person}
+**Laurent Lesnard**
+[CNRS, Sciences Po, Paris (FR)]{}
+:::
+::: {.person}
+**Marcel Raab**
+[University of Bamberg (DE)]{}
+:::
+::: {.person}
+**Jeroen K. Vermunt**
+[Tilburg University (NL)]{}
+:::
+:::
+
+## Annual reports
+
+::: {.report-list}
+[[]{.bi .bi-file-earmark-pdf}2025](https://sequenceanalysis.org/wp-content/uploads/2025/12/SAA-Annual-Report-2025-1.pdf)
+[[]{.bi .bi-file-earmark-pdf}2024](https://sequenceanalysis.org/wp-content/uploads/2024/12/SAA-Annual-Report-2024.pdf)
+[[]{.bi .bi-file-earmark-pdf}2023](https://sequenceanalysis.org/wp-content/uploads/2023/12/SAA-Annual-Report-2023.pdf)
+[[]{.bi .bi-file-earmark-pdf}2022](https://sequenceanalysis.org/wp-content/uploads/2022/12/SAA-Annual-report-2022.pdf)
+[[]{.bi .bi-file-earmark-pdf}2020](https://sequenceanalysis.org/wp-content/uploads/2020/11/SAA-Annual-report-2020.pdf)
+[[]{.bi .bi-file-earmark-pdf}2019](https://sequenceanalysis.org/wp-content/uploads/2020/01/SAA-Annual-report-2019.pdf)
+:::
+
+## Statutes {#statutes}
+
+The SAA is a non-profit association under Swiss law with headquarters in Geneva. Its aims, membership rules and organs — General Assembly, Executive Committee, auditors and Advisory Board — are set out in the statutes.
+
+[[]{.bi .bi-journal-text} Read the statutes](statutes.qmd){.btn .btn-outline-primary .btn-sm}
+[[]{.bi .bi-file-earmark-pdf} PDF](saa-statutes.pdf){.btn .btn-outline-primary .btn-sm}
+
+## Get involved & contact {#contact}
+
+[]{.bi .bi-person-plus .ico} **Interested in joining?** See [how to become a member](membership.qmd).
+
+You can support the SAA community in several ways:
+
+::: {.icon-list}
+- []{.bi .bi-journal-bookmark} **Share publications** on sequence analysis or related methods — we add them to our [Zotero bibliography](https://www.zotero.org/groups/2268769/saa_bibliography/items/).
+- []{.bi .bi-code-square} **Tell us about software** — new packages and functions in R, Stata, Python or elsewhere that are useful to SA practitioners.
+- []{.bi .bi-people} **Propose an event** — symposia and workshops can be organised with the support of the SAA; send requests to the Executive Committee.
+- []{.bi .bi-megaphone} **Announce events** of interest to the community so we can post them on the [blog](blog/index.qmd).
+:::
+
+::: {.link-cards}
+::: {.link-card}
+[]{.bi .bi-envelope}
+
+::: {}
+[info@sequenceanalysis.org](mailto:info@sequenceanalysis.org){.stretched-link}
+
+Questions, news and event announcements.
+:::
+:::
+
+::: {.link-card}
+[]{.bi .bi-linkedin}
+
+::: {}
+[SAA on LinkedIn](https://www.linkedin.com/company/sequence-analysis-association){.stretched-link}
+
+Our preferred forum for SAA-related discussion.
+:::
+:::
+:::

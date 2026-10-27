@@ -1,0 +1,27 @@
+# R / RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# Quarto: build output and internal files
+# (_freeze/ must stay in the repository: it holds the R results of the blog posts)
+.quarto/
+_site/
+*_cache/
+
+# Working material (presentation, brand package sources): not published
+material/
+
+# Local tooling (launch configs with machine-specific paths)
+.claude/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb
+.Rproj.user
+.httr-oauth
+.quarto

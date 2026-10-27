@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Arcades of Bologna drawn above a sequence strip">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1F4E8C"/><stop offset="1" stop-color="#14284B"/></linearGradient></defs>
+  <rect width="400" height="225" fill="url(#g)"/>
+  <g fill="none" stroke="#9CC9E2" stroke-width="3">
+    <path d="M40 150 V98 a26 26 0 0 1 52 0 V150"/><path d="M92 150 V98 a26 26 0 0 1 52 0 V150"/><path d="M144 150 V98 a26 26 0 0 1 52 0 V150"/>
+    <path d="M196 150 V98 a26 26 0 0 1 52 0 V150"/><path d="M248 150 V98 a26 26 0 0 1 52 0 V150"/><path d="M300 150 V98 a26 26 0 0 1 52 0 V150"/>
+    <line x1="34" y1="66" x2="358" y2="66"/><line x1="34" y1="150" x2="358" y2="150"/>
+  </g>
+  <text x="200" y="50" text-anchor="middle" font-family="Saira, Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" fill="#fff" letter-spacing="2">BOLOGNA · 3 JUNE 2026</text>
+  <g transform="translate(40 172)">
+    <rect width="60" height="14" fill="#D6E6F3"/><rect x="62" width="80" height="14" fill="#9CC9E2"/><rect x="144" width="50" height="14" fill="#8A78BE"/><rect x="196" width="76" height="14" fill="#4A86C5"/><rect x="274" width="38" height="14" fill="#B3A4E0"/>
+  </g>
+</svg>

@@ -1,0 +1,93 @@
+# Sequence Analysis Association — brand definition for Quarto (brand.yml)
+# Light theme. An optional dark theme lives in _brand-dark.yml.
+
+meta:
+  name:
+    short: SAA
+    full: Sequence Analysis Association
+  link:
+    home: https://sequenceanalysis.org/
+    linkedin: https://www.linkedin.com/company/sequence-analysis-association
+
+logo:
+  images:
+    logo:
+      path: logos/saa-logo.svg
+      alt: Sequence Analysis Association
+    logo-dark:
+      path: logos/saa-logo-dark.svg
+      alt: Sequence Analysis Association
+    signet:
+      path: logos/saa-signet.svg
+      alt: Sequence Analysis Association signet
+    signet-dark:
+      path: logos/saa-signet-dark.svg
+      alt: Sequence Analysis Association signet
+    favicon:
+      path: favicons/favicon.svg
+      alt: SAA
+  small: favicon
+  # Quarto 1.10 does not accept light/dark pairs here; the dark variants are
+  # selected through _brand-dark.yml instead.
+  medium: signet
+  large: logo
+
+color:
+  palette:
+    navy-950: "#0F1F3A"    # dark backgrounds
+    navy-900: "#14284B"    # text, headings, logo wordmark
+    blue-700: "#1F4E8C"    # primary / links  (8.3:1 on white)
+    blue-500: "#4A86C5"    # accents, "Association"  (3.8:1 — large text only)
+    blue-400: "#6F9FD6"    # blue-700 replacement on dark backgrounds
+    sky-200: "#9CC9E2"     # light accent; link colour on dark backgrounds
+    sky-50: "#D6E6F3"      # lightest state colour, tints
+    violet-400: "#8A78BE"  # secondary accent
+    violet-300: "#B3A4E0"  # violet-800 replacement on dark backgrounds
+    violet-800: "#3E2470"  # deepest state colour
+    gray-600: "#5A6478"    # muted text (6.0:1 on white)
+    gray-50: "#F3F5F9"     # subtle surfaces
+    white: "#FFFFFF"
+  foreground: navy-900
+  background: white
+  primary: blue-700
+  secondary: violet-400
+  tertiary: sky-200
+  info: blue-500
+  light: gray-50
+  dark: navy-950
+
+typography:
+  fonts:
+    - family: Noto Sans
+      source: system   # self-hosted: fonts/fonts.css (web), fonts/ttf (PDF)
+      weight: [400, 600, 700]
+      style: [normal, italic]
+    - family: Saira
+      source: system   # self-hosted: fonts/fonts.css (web), fonts/ttf (PDF)
+      weight: [400, 600]
+      style: normal
+    - family: Fira Code
+      source: system   # self-hosted: fonts/fonts.css (web), fonts/ttf (PDF)
+      weight: [400, 500]
+      style: normal
+  base:
+    family: Noto Sans
+    weight: 400
+    size: 1.125rem   # site deviation: 18px to suit the wider 960px content column
+    line-height: 1.6
+  headings:
+    family: Saira
+    weight: 600
+    color: navy-900
+  monospace:
+    family: Fira Code
+    size: 0.9em
+  monospace-inline:
+    color: violet-800
+    background-color: "#EEF3F9"
+  monospace-block:
+    size: 0.8em   # code blocks a bit smaller than inline code (0.9em)
+    background-color: gray-50
+  link:
+    color: primary
+    decoration: underline

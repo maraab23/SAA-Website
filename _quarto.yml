@@ -1,0 +1,90 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - logos/
+    - favicons/
+    - social/
+    - resources/covers/
+    - fonts/woff2/       # self-hosted web fonts (fonts/ttf is only for the PDF)
+  render:
+    - "*.qmd"
+    - "!material/"
+
+website:
+  title: "Sequence Analysis Association"
+  description: "Promoting research, teaching and diffusion of sequence analysis and related methods."
+  site-url: https://maraab23.github.io/SAA-Website   # test deployment; later: https://sequenceanalysis.org
+  favicon: favicons/favicon.svg
+  image: social/og-image.png
+  page-navigation: true
+  back-to-top-navigation: true
+  open-graph: true
+  twitter-card: true
+  navbar:
+    logo:
+      light: logos/saa-logo.svg
+      dark: logos/saa-logo-dark.svg
+    logo-alt: "Sequence Analysis Association"
+    title: false   # the logo already contains the name
+    left:
+      - href: about.qmd
+        text: About
+      - href: events.qmd
+        text: Events
+      - href: resources.qmd
+        text: Resources
+      - href: blog/index.qmd
+        text: Blog
+      - href: membership.qmd
+        text: Join
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/company/sequence-analysis-association
+        aria-label: SAA on LinkedIn
+      - icon: rss
+        href: blog/index.xml
+        aria-label: Blog RSS feed
+      - icon: envelope
+        href: mailto:info@sequenceanalysis.org
+        aria-label: Email the SAA
+  page-footer:
+    background: light
+    left: |
+      © 2026 Sequence Analysis Association
+    center:
+      - text: Contact
+        href: about.qmd#contact
+      - text: Statutes
+        href: statutes.qmd
+      - text: Privacy
+        href: privacy.qmd
+    right: |
+      Built with [Quarto](https://quarto.org)
+
+brand:
+  light: _brand.yml
+  dark: _brand-dark.yml
+
+execute:
+  freeze: auto   # R code in blog posts runs only when the post changes (no R needed in CI)
+
+format:
+  html:
+    theme:
+      light: [brand, styles/saa-brand.scss, styles/saa.scss, styles/navbar-light.scss]
+      dark: [brand, styles/saa-brand.scss, styles/saa.scss, styles/navbar-dark.scss]
+    respect-user-color-scheme: true
+    grid:
+      body-width: 960px    # Quarto default: 800px
+      margin-width: 240px
+      sidebar-width: 240px
+    toc: false
+    smooth-scroll: true
+    link-external-newwindow: true
+    lang: en
+    css: fonts/fonts.css   # self-hosted brand fonts (see _brand.yml)
+    include-in-header:
+      - favicons/head-snippet.html
+      - text: |   # TEST PHASE: keep search engines out; remove before going live
+          <meta name="robots" content="noindex, nofollow">

@@ -1,0 +1,5 @@
+# Defaults for all blog posts
+author: "SAA Executive Committee"
+toc: false
+title-block-banner: false
+citation: false

@@ -1,0 +1,10 @@
+---
+title: "SAA now on LinkedIn"
+description: "LinkedIn is now the preferred forum for SAA-related discussion."
+image: thumbnail.png
+image-alt: "Network of connected people with the LinkedIn symbol"
+date: 2025-06-22
+categories: [association]
+---
+
+Follow the SAA on [LinkedIn](https://www.linkedin.com/company/sequence-analysis-association), which is now the preferred forum for SAA-related news and discussion.

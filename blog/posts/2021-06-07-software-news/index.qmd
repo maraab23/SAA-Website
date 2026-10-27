@@ -1,0 +1,34 @@
+---
+title: "TraMineR and TraMineRextras updates 2020–2021"
+description: "New dissimilarity options, sequence indicators, domain association, polyadic distances and group comparison tests."
+image: thumbnail.png
+image-alt: "Package release tags on a sequence strip"
+date: 2021-06-07
+categories: [software]
+---
+
+This post brings together three release notes on [TraMineR](https://CRAN.R-project.org/package=TraMineR) and [TraMineRextras](https://CRAN.R-project.org/package=TraMineRextras) that appeared on the old SAA website between April 2020 and June 2021. For later changes, see the NEWS files of the packages on CRAN.
+
+## TraMineR 2.2-2 (3 June 2021)
+
+- All new indexes proposed in Ritschard, G. Measuring the nature of individual sequences. *Sociological Methods & Research*. DOI: [10.1177/00491241211036156](https://doi.org/10.1177/00491241211036156) — see function `seqindic()`.
+- Function `dissdomassoc()`, which computes the measures of association between domains proposed in Piccarreta, R. (2017). Joint sequence analysis: Association and clustering. *Sociological Methods & Research*, 46(2), 252–287. DOI: [10.1177/0049124115591013](https://doi.org/10.1177/0049124115591013).
+- Updated `seqdist()`, which can now compute pairwise dissimilarities between two (sub)sets of state sequences.
+
+## TraMineRextras 0.6.1 (January 2021)
+
+- Dynamic individual indicators following Pelletier, D., Bignami-Van Assche, S. & Simard-Gendron, A. (2020). Measuring life course complexity with dynamic sequence analysis. *Social Indicators Research*. DOI: [10.1007/s11205-020-02464-y](https://doi.org/10.1007/s11205-020-02464-y)
+- Polyadic distances and their comparison with distances computed on randomly drawn polyads, as described in Liao, T. F. (2021). Using sequence analysis to quantify how strongly life courses are linked. *Sociological Science*, 8, 48–72. DOI: [10.15195/v8.a3](https://doi.org/10.15195/v8.a3)
+
+## TraMineR 2.2 and TraMineRextras 0.6 (April 2020)
+
+TraMineR 2.2 improved the `seqdist()` function:
+
+- vectors of state-dependent indel costs are supported by all distance methods that require an indel value;
+- `indel` has a new default `"auto"`, which derives a suitable indel value from the substitution costs;
+- `refseq` (reference sequence) is supported by all distance methods, including a reference given as a sequence object;
+- normalization is available for all edit distances.
+
+In addition, `seqdef()` assigns a default colour palette for alphabets with more than 12 states, and a new `rbind()` method for state sequence objects makes it easy to merge sequence data.
+
+TraMineRextras 0.6 added `seqCompare()`, which implements the likelihood ratio test (LRT) and the BIC difference proposed in Liao, T. F. & Fasang, A. E. (2021). Comparing groups of life-course sequences using the Bayesian information criterion and the likelihood-ratio test. *Sociological Methodology*, 51(1), 44–85. DOI: [10.1177/0081175020959401](https://doi.org/10.1177/0081175020959401). Moreover, `seqplot.rf()` gained the argument `which.plot`, and `seqgranularity()` the methods `"first.valid"` and `"last.valid"` for sequences with missing values.

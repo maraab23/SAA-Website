@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Bar chart and ballot box illustrating voting results">
+  <rect width="400" height="225" fill="#EAF3F8"/>
+  <g transform="translate(40 40)">
+    <g fill="#D6E6F3"><rect width="210" height="14" rx="7"/><rect y="26" width="210" height="14" rx="7"/><rect y="52" width="210" height="14" rx="7"/><rect y="78" width="210" height="14" rx="7"/><rect y="104" width="210" height="14" rx="7"/><rect y="130" width="210" height="14" rx="7"/></g>
+    <rect width="206" height="14" rx="7" fill="#1F4E8C"/>
+    <rect y="26" width="190" height="14" rx="7" fill="#4A86C5"/>
+    <rect y="52" width="196" height="14" rx="7" fill="#1F4E8C"/>
+    <rect y="78" width="172" height="14" rx="7" fill="#4A86C5"/>
+    <rect y="104" width="201" height="14" rx="7" fill="#8A78BE"/>
+    <rect y="130" width="160" height="14" rx="7" fill="#4A86C5"/>
+  </g>
+  <g transform="translate(278 60)">
+    <g transform="rotate(-8 45 20)">
+      <rect x="22" y="-10" width="46" height="56" rx="4" fill="#fff" stroke="#C9D6E6"/>
+      <path d="M33 16l8 8 16-18" fill="none" stroke="#2E8B6E" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <rect x="0" y="40" width="90" height="70" rx="8" fill="#14284B"/>
+    <rect x="18" y="46" width="54" height="6" rx="3" fill="#0B1424"/>
+    <text x="45" y="88" text-anchor="middle" font-family="Saira, Segoe UI, Arial, sans-serif" font-size="15" font-weight="800" fill="#9CC9E2" letter-spacing="1.5">2024</text>
+  </g>
+</svg>

@@ -1,0 +1,69 @@
+<script>
+// Two-click consent for third-party embeds (Tally, YouTube, ...).
+//
+// Markup:
+//   <div class="consent-embed" data-consent-key="tally">
+//     <div class="consent-placeholder"> ... <button class="consent-accept">Load</button> ... </div>
+//     <template> original embed code (iframe + scripts) </template>
+//   </div>
+//
+// Nothing from the third party is requested until the visitor clicks the button.
+// If "remember" is ticked, the choice is stored in localStorage under
+// "consent:<key>" and the embed loads automatically on later visits.
+(function () {
+  function store(key, value) {
+    try {
+      if (value) localStorage.setItem('consent:' + key, 'yes');
+      else localStorage.removeItem('consent:' + key);
+    } catch (e) { /* storage blocked: consent simply isn't remembered */ }
+  }
+  function stored(key) {
+    try { return localStorage.getItem('consent:' + key) === 'yes'; } catch (e) { return false; }
+  }
+
+  function load(box, remembered) {
+    var tpl = box.querySelector('template');
+    if (!tpl) return;
+    var content = tpl.content.cloneNode(true);
+    // Scripts inside a <template> are inert; recreate them so they run.
+    content.querySelectorAll('script').forEach(function (old) {
+      var s = document.createElement('script');
+      Array.prototype.forEach.call(old.attributes, function (a) { s.setAttribute(a.name, a.value); });
+      s.text = old.text;
+      old.replaceWith(s);
+    });
+    var holder = document.createElement('div');
+    holder.className = 'consent-loaded';
+    holder.appendChild(content);
+    box.querySelector('.consent-placeholder').replaceWith(holder);
+
+    if (remembered) {
+      var p = document.createElement('p');
+      p.className = 'consent-revoke';
+      var a = document.createElement('a');
+      a.href = '#';
+      a.textContent = 'Stop loading this content automatically';
+      a.addEventListener('click', function (ev) {
+        ev.preventDefault();
+        store(box.dataset.consentKey, false);
+        p.textContent = 'Done: you will be asked again on your next visit.';
+      });
+      p.appendChild(a);
+      box.appendChild(p);
+    }
+  }
+
+  document.querySelectorAll('.consent-embed').forEach(function (box) {
+    var key = box.dataset.consentKey || 'embed';
+    if (stored(key)) { load(box, true); return; }
+    var btn = box.querySelector('.consent-accept');
+    if (!btn) return;
+    btn.addEventListener('click', function () {
+      var cb = box.querySelector('.consent-remember');
+      var remember = !!(cb && cb.checked);
+      if (remember) store(key, true);
+      load(box, remember);
+    });
+  });
+})();
+</script>

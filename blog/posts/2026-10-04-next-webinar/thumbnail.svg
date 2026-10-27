@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Illustration of an online webinar with two speakers and the date 22 October">
+  <rect width="400" height="225" fill="#EEF4FA"/>
+  <g transform="translate(36 40)">
+    <rect width="224" height="146" rx="10" fill="#14284B"/>
+    <rect x="10" y="10" width="98" height="96" rx="6" fill="#1F4E8C"/>
+    <rect x="116" y="10" width="98" height="96" rx="6" fill="#8A78BE"/>
+    <circle cx="59" cy="48" r="16" fill="#D6E6F3"/><path d="M31 106c4-22 18-32 28-32s24 10 28 32z" fill="#D6E6F3"/>
+    <circle cx="165" cy="48" r="16" fill="#E9E4F5"/><path d="M137 106c4-22 18-32 28-32s24 10 28 32z" fill="#E9E4F5"/>
+    <circle cx="86" cy="126" r="9" fill="#B33A3A"/><circle cx="112" cy="126" r="9" fill="#4A86C5"/><circle cx="138" cy="126" r="9" fill="#4A86C5"/>
+  </g>
+  <g transform="translate(284 52)">
+    <rect width="84" height="96" rx="12" fill="#fff" stroke="#D6E6F3" stroke-width="2"/>
+    <path d="M12 0h60a12 12 0 0 1 12 12v16H0V12A12 12 0 0 1 12 0z" fill="#1F4E8C"/>
+    <text x="42" y="19" text-anchor="middle" font-family="Saira, Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#fff" letter-spacing="1.5">OCT</text>
+    <text x="42" y="72" text-anchor="middle" font-family="Saira, Segoe UI, Arial, sans-serif" font-size="40" font-weight="800" fill="#14284B">22</text>
+    <text x="42" y="88" text-anchor="middle" font-family="Noto Sans, Segoe UI, Arial, sans-serif" font-size="10" fill="#4A86C5">4 PM CET</text>
+  </g>
+</svg>

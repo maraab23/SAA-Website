@@ -1,0 +1,102 @@
+---
+title: "Events"
+subtitle: "Webinars, conferences and training in sequence analysis"
+toc: true
+toc-location: right
+---
+
+::: {.seq-strip}
+:::
+
+## SAA Webinar Series {#webinars}
+
+The SAA webinar series is an online platform for everyone interested in the development of sequence analysis and related methods in the social sciences. Sessions feature newly published articles as well as work in progress. The series is organised by Emanuela Struffolino and Carla Rowold.
+
+::: {.icon-list}
+- []{.bi .bi-calendar3} Approximately **monthly, on Thursdays at 4 PM CET**, lasting 60–75 minutes.
+- []{.bi .bi-easel} Two 20-minute presentations on a shared topic, each followed by 5–10 minutes of discussion, plus 15 minutes of general discussion.
+- []{.bi .bi-record-circle} Recordings are made only when speakers agree and are available for one month; work-in-progress sessions are not recorded.
+:::
+
+### Autumn 2026 programme
+
+::: {.event}
+[[24]{.d}[Sep 2026]{.m}]{.date}
+
+::: {}
+[Work in progress]{.tag}
+
+### Two work-in-progress applications
+
+- Emanuela Struffolino & Hannah Zagel — *Mapping pathways of reproduction policies across time and space: a sequence analysis application*
+- Ottavio Khalifa — *Clustering methods for categorical time series and sequences: a scoping review*
+:::
+:::
+
+::: {.event}
+[[22]{.d}[Oct 2026]{.m}]{.date}
+
+::: {}
+[Work in progress]{.tag}
+
+### Careers, progression and turnover
+
+- Martin Russell — *Segregated careers in UK-Defra: an intersectional study of progression and turnover*
+- Second presentation to be confirmed
+:::
+:::
+
+::: {.event}
+[[19]{.d}[Nov 2026]{.m}]{.date}
+
+::: {}
+[Methods webinar]{.tag}
+
+### Multichannel sequence analysis
+
+Good practices, advances and open issues — presentations by Tim F. Liao, Raffaella Piccarreta and Gilbert Ritschard.
+:::
+:::
+
+[]{.bi .bi-camera-video .ico} All sessions start at 4 PM CET via [Zoom](https://unige.zoom.us/j/96355670430).
+
+## Conferences {#conferences}
+
+### 2026
+
+[]{.bi .bi-geo-alt .ico}**Pre-EPC meeting — "Life Course Dynamics: Insights from Sequence Analysis"**
+3 June 2026, Bologna (IT). One-day side meeting before the European Population Conference, organised by Danilo Bolano, Kevin Emery, Carla Rowold, Dolores Sesma Carlos and Emanuela Struffolino. Participation was free of charge; supported by the ERC project WIDOW (G.A. 101117173).
+
+[]{.bi .bi-geo-alt .ico}**SER workshop — "Sequence Analysis: a novel methodology for the analysis of life-course trajectories in social epidemiology"**
+23 June 2026, Phoenix (US), at the Society for Epidemiological Research meeting. Instructors: Lucia Pacca, Jilly Hebert and Anusha Vable.
+
+[]{.bi .bi-geo-alt .ico}**Pre-PAA workshop**
+6 May 2026, St. Louis (US), run by Tim Liao in collaboration with Ting-Syuan Lin.
+
+### Past conferences
+
+| Year | Event |
+|------|-------|
+| 2025 | Pre-PAA conference, Washington DC (US), 9 April |
+| 2021 | SAA Symposium at the SLLS International Conference (online), 22 September |
+| 2020 | SAA Conference at Bocconi University, Milan — *cancelled due to the pandemic* |
+| 2019 | SAA Symposium at the SLLS International Conference, Potsdam (DE), 25–27 September |
+| 2018 | ISSA — International Symposium on Sequence Analysis and Related Methods, Monte Verità (CH), 10–12 October |
+| 2016 | LaCOSA II — International Conference on Sequence Analysis and Related Methods, Lausanne (CH), 8–10 June |
+| 2012 | LaCOSA — Lausanne Conference on Sequence Analysis, Lausanne (CH), 6–8 June |
+
+: {.past-events tbl-colwidths="[10,90]"}
+
+## Training {#training}
+
+::: {.icon-list}
+- []{.bi .bi-mortarboard} **GESIS Training Course: Sequence Analysis in the Social Sciences** — Marcel Raab & Emanuela Struffolino, 19–27 November 2025, online. [Details](https://training.gesis.org/?site=pDetails&pID=0x1ED6835CBD8C484C96E90D8F497AF7CD)
+- []{.bi .bi-mortarboard} **SLLS Summer School** — including one day on sequence analysis by Matthias Studer, 26–30 August 2024, LIfBi, Bamberg (DE).
+- []{.bi .bi-mortarboard} **Sequence Analysis Workshop**, 9 February 2022.
+- []{.bi .bi-mortarboard} **Sequence Analysis in the Social Sciences — online workshop**, 2021.
+:::
+
+::: {.callout-tip}
+## Organising an SA event?
+Send the details to [info@sequenceanalysis.org](mailto:info@sequenceanalysis.org) and we will list it here and on the [blog](blog/index.qmd).
+:::

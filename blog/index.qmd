@@ -1,0 +1,17 @@
+---
+title: "Blog"
+subtitle: "News from the Sequence Analysis Association"
+listing:
+  contents: posts
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: true
+  feed: true
+  image-placeholder: ../logos/placeholder.png
+  date-format: "D MMMM YYYY"
+  fields: [image, date, title, description, categories, author]
+page-layout: full
+title-block-banner: false
+---

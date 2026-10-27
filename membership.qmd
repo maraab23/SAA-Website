@@ -1,0 +1,55 @@
+---
+title: "Become a member"
+subtitle: "Join the Sequence Analysis Association"
+toc: true
+toc-location: right
+include-after-body: assets/consent-embed.html
+---
+
+::: {.seq-strip}
+:::
+
+## Why join?
+
+Membership in the SAA is open to everyone interested in sequence analysis and related methods — researchers, teachers, students and practitioners. As a member you
+
+::: {.icon-list}
+- []{.bi .bi-check2-square} have the right to vote at the SAA **General Assembly** (see the [statutes](statutes.qmd)),
+- []{.bi .bi-envelope-paper} receive the **newsletter** with news about SAA activities, webinars and events,
+- []{.bi .bi-people} help shape the association's events, webinars and training activities.
+:::
+
+## How to join
+
+::: {.icon-list}
+- []{.bi .bi-1-circle} Read the [SAA statutes](statutes.qmd) — they describe the structure, purposes and functioning of the association.
+- []{.bi .bi-2-circle} Fill in the membership request form below. Please tell us briefly about your interest in sequence analysis.
+- []{.bi .bi-3-circle} The Executive Committee reviews your request; this may take a few days. You will receive an email once it has been approved.
+:::
+
+## Membership request {#form}
+
+```{=html}
+<div class="consent-embed tally-form" data-consent-key="tally">
+  <div class="consent-placeholder">
+    <i class="bi bi-shield-lock" aria-hidden="true"></i>
+    <p class="consent-title">External content: membership form by Tally (with Google reCAPTCHA)</p>
+    <p>The form is hosted by the external service Tally (tally.so). It is only loaded after you click the button below. When it loads, data such as your IP address is transmitted to Tally and, for spam protection, to Google reCAPTCHA. See <a href="privacy.qmd#membership-requests">our privacy policy</a>, <a href="https://tally.so/help/privacy-policy">Tally's</a> and <a href="https://policies.google.com/privacy">Google's</a>.</p>
+    <label><input type="checkbox" class="consent-remember"> Always load Tally forms on this website</label>
+    <div class="consent-actions">
+      <button type="button" class="btn btn-primary consent-accept">Load form</button>
+      <a href="https://tally.so/r/e5q2aJ">or open the form on tally.so <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <template>
+    <iframe data-tally-src="https://tally.so/embed/e5q2aJ?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="461" frameborder="0" marginheight="0" marginwidth="0" title="SAA membership request form"></iframe>
+    <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+  </template>
+  <noscript><p>The form needs JavaScript. You can also <a href="https://tally.so/r/e5q2aJ">open the form directly on tally.so</a>.</p></noscript>
+</div>
+```
+
+::: {.callout-note appearance="simple"}
+## Data protection
+The form is provided by [Tally](https://tally.so). The information you enter is used only to process your membership request and to contact you about SAA activities. Details are in our [privacy policy](privacy.qmd); questions to [info@sequenceanalysis.org](mailto:info@sequenceanalysis.org).
+:::

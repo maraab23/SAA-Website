@@ -1,0 +1,238 @@
+---
+title: "Statutes"
+subtitle: "By-laws of the Sequence Analysis Association"
+toc-depth: 2
+format:
+  html:
+    toc: true
+    toc-location: right
+  typst:
+    output-file: saa-statutes.pdf
+    papersize: a4
+    margin:
+      x: 2.4cm
+      top: 3.4cm
+      bottom: 2.4cm
+    fontsize: 10.5pt
+    font-paths: [fonts/ttf]   # self-hosted brand fonts for Typst
+    toc: false
+    logo:
+      path: logos/saa-logo.svg
+      location: left-top
+      width: 4.2cm
+      padding-left: 2.4cm
+      padding-top: 1.1cm
+    include-in-header:
+      - text: |
+          #set par(justify: true)
+          #show heading.where(level: 2): it => block(above: 1.1em, below: 0.5em,
+            text(size: 0.82em, weight: 600, tracking: 0.08em, fill: rgb("#8A78BE"), upper(it.body)))
+          #show heading.where(level: 1): it => block(above: 1.8em, below: 0.6em, text(size: 1.15em, it.body))
+          #set page(header: [
+            #line(length: 100%, stroke: 0.6pt + rgb("#D6E6F3"))
+          ], header-ascent: 0.9cm)
+          #set page(footer: context [
+            #set text(size: 8pt, fill: rgb("#5A6478"))
+            Sequence Analysis Association · Statutes
+            #h(1fr)
+            #counter(page).display("1 / 1", both: true)
+          ])
+format-links: false
+---
+
+::: {.content-visible when-format="html"}
+::: {.seq-strip}
+:::
+
+The SAA is a non-profit association under Swiss law (Articles 60 et seq. of the Swiss Civil Code), with headquarters in Geneva. Its statutes set out the aims, membership rules and organs of the association.
+
+::: {.callout-note appearance="simple" icon=false}
+[[]{.bi .bi-file-earmark-pdf} Download the statutes as PDF](saa-statutes.pdf){.btn .btn-outline-primary .btn-sm}
+:::
+:::
+
+## Name, aims and headquarters {#name-aims-headquarters}
+
+### Article 1 {#article-1 .article}
+
+Sequence analysis association (SAA) is a non-profit association governed by the present statutes and, secondly, by Articles 60 et seq. of the Swiss Civil Code. It is neutral politically, and non-denominational.
+
+### Article 2 {#article-2 .article}
+
+The Association aims to promote research, teaching and diffusion of sequence analysis and its relationships with related methods.
+
+### Article 3 {#article-3 .article}
+
+The Organization’s headquarters are located in the State of Geneva. The Association shall be of unlimited duration.
+
+## Resources {#resources}
+
+### Article 4 {#article-4 .article}
+
+The Association’s resources are derived from:
+
+- donations and legacies;
+- sponsorship;
+- public subsidies;
+- membership fees;
+- any other resources authorized by the law.
+
+The funds shall be used in accordance with the Association’s aims.
+
+## Members {#members}
+
+### Article 5 {#article-5 .article}
+
+Membership in the Association is open to individuals and institutions. Any person having a demonstrable professional or scholarly interest in the study or use of sequence analysis shall be eligible to be a Member of the Association.
+
+An individual member in good standing is eligible to:
+
+- Vote in nominating and electing the Executive Committee Members, and in the transaction of business at the general assembly of the Association, and in referenda conducted by the Association;
+- Be elected as an Executive Committee Member;
+- Participate to the general assemblies.
+
+Institutional Members. An institution such as a library, museum, or other scholarly or educational institutions shall be eligible for institutional membership. Institutional members shall be non‐voting, but shall receive the Association newsletter and communications from the Executive Committee.
+
+Requests to become a member must be addressed to the Executive Committee. The Executive Committee admits new members and informs the General Assembly accordingly.
+
+Membership ceases:
+
+- On death;
+- By written resignation thereby notifying the Executive Committee at least three months before the end of the financial year;
+- By exclusion ordered by the Executive Committee, for just cause, with a right of appeal to the General Assembly. Appeals must be lodged within 30 days of the Executive Committee’s decision being notified;
+- For non-payment of dues for more than one year.
+
+In all cases, the membership fee for the current year remains due. Members who have resigned or who are excluded have no rights to any part of the Association’s assets.
+
+Only the Association’s assets may be used for obligations/commitments contracted in its name. Members have no personal liability.
+
+## Organs {#organs}
+
+### Article 6 {#article-6 .article}
+
+The Association shall include the following organs:
+
+- General Assembly,
+- Executive Committee,
+- Auditor.
+- Advisory Board.
+
+## General Assembly {#general-assembly}
+
+### Article 7 {#article-7 .article}
+
+The General Assembly is the Association’s supreme authority. It is composed of all the individual members.
+
+It shall hold an Ordinary Meeting at least once every two years. It may also hold an extraordinary session whenever necessary, at the request of the Executive Committee or at least of one fifth of its individual members.
+
+The General Assembly shall be considered valid regardless of the number of the individual members present.
+
+The Executive Committee shall inform the members in writing of the date of the General Assembly at least six weeks in advance. The notification, including the proposed agenda, shall be sent to each member at least 30 days, for physically held meeting, or 10 days for online meetings, prior to the date of the meeting.
+
+General Assemblies can be organized in any country or using an online platform.
+
+### Article 8 {#article-8 .article}
+
+The General Assembly:
+
+- Appoints the members of the Executive Committee and elects, at a minimum, the President;
+- Notes the contents of the reports and financial statements for the year and votes on their adoption;
+- Approves the annual budget;
+- Supervises the activity of other organs, which it may dismiss, stating the grounds therefore;
+- Appoints the auditors for the Organization’s accounts;
+- Decides on any modification of statutes;
+- Decides on the dissolution of the Association;
+- Fixes the annual membership fees, if any.
+
+### Article 9 {#article-9 .article}
+
+The General Assembly is presided over by the President of the Association or any other member of the Executive Committee.
+
+### Article 10 {#article-10 .article}
+
+Decisions of the General Assembly shall be taken by a majority vote of the individual members present. In case of deadlock, the President shall have the casting vote.
+
+Decisions concerning the amendment of the Statutes and the dissolution of the Association must be approved by a two-third majority of the individual members present.
+
+### Article 11 {#article-11 .article}
+
+Votes are by a show of hands. Voting can also take place by secret ballot, if at least five individual members request it. Ballots shall be conducted electronically by e‐mail or any other relevant and secure online platform.
+
+### Article 12 {#article-12 .article}
+
+The agenda of the ordinary annual session of the General Assembly must include:
+
+- Approval of the Minutes of the previous General Assembly
+- Approval of the Executive Committee’s annual Activity Report
+- Approval of the report of the Auditors
+- Setting of membership fees
+- Approval of the budget
+- Approval of reports and accounts
+- Election of Executive Committee members and Auditor
+- Miscellaneous business
+
+## Executive Committee {#executive-committee}
+
+### Article 13 {#article-13 .article}
+
+The Executive Committee is authorized to carry out all acts that further the purposes of the Association. It has the most extensive powers to manage the Association’s day-to-day affairs.
+
+### Article 14 {#article-14 .article}
+
+The Executive Committee is composed of the President, chairing the Executive Committee, and at least two other members elected by the General Assembly. Each member’s term of office shall last for two years. The Executive Committee meets as often as the Association’s business requires.
+
+### Article 15 {#article-15 .article}
+
+The Executive Committee members work on a volunteer basis and as such can only be reimbursed for their actual expenses and travel costs. Potential attendance fees cannot exceed those paid for official commissions. For activities beyond the usual function, each Executive Committee member is eligible for appropriate compensation.
+
+The paid employees of the Association have only a consultative vote on the Executive Committee.
+
+### Article 16 {#article-16 .article}
+
+The functions of the Executive Committee are:
+
+- To take the appropriate measures to achieve the goals of the Association;
+- To convene the ordinary and extraordinary General Assemblies;
+- To take decisions with regard to the admission of new members as well as the resignation and possible expulsion of members;
+- To ensure that Statutes are applied, to draft rules of procedure, and to administer the assets of the Association.
+
+## Auditor {#auditor}
+
+### Article 17 {#article-17 .article}
+
+Each year the General Assembly appoints two auditors. It may also entrust this task to a fiduciary company.
+
+The auditors shall check the operating and annual accounts prepared by the Executive Committee and present a written and detailed report to the annual ordinary general meeting.
+
+## Advisory Board {#advisory-board}
+
+### Article 18 {#article-18 .article}
+
+The Advisory Board is composed of person(s) nominated by the Executive Committee. Advisory Board members can be consulted by the Executive Committee on any relevant scientific topic.
+
+A member of the Advisory Board shall not be a member of the Executive Committee nor an auditor.
+
+The Executive Committee can nominate one Advisory Member as Honorary president.
+
+## Signature and representation {#signature-representation}
+
+### Article 19 {#article-19 .article}
+
+The Association is legally bound by the joint signature of two members of the Executive Committee.
+
+## Various provisions {#various-provisions}
+
+### Article 20 {#article-20 .article}
+
+The financial year shall begin on 1 January and end on 31 December of each year.
+
+### Article 21 {#article-21 .article}
+
+Should the Association be dissolved, the available assets should be transferred to a non-profit organization pursuing public interest goals similar to those of the Association and likewise benefiting from tax exemption. Under no circumstances should the assets be returned to the founders or members. Nor should they use a part or a total of assets for their own benefit.
+
+
+---
+
+The present Statutes have been approved by an online ballot conducted on the 13th of November and following a mandate given to the Executive Committee by the Constituent General Assembly of the 10th of October 2018 at Monte Vérita, Ticino, Switzerland.
+
+*For the Association — the President and the other Executive Committee members.*

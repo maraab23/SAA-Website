@@ -1,0 +1,27 @@
+---
+title: "New R package: seqhandbook"
+description: "Data sets, a tutorial and a toolbox of functions accompanying a French-language handbook on sequence analysis."
+image: thumbnail.png
+image-alt: "Open handbook with sequence strips on its pages"
+date: 2020-09-01
+author: "Nicolas Robette"
+categories: [software]
+---
+
+Hello everyone, I just uploaded a new R package on CRAN, [seqhandbook](https://cran.r-project.org/package=seqhandbook). It is initially intended to accompany a sequence analysis handbook to be published (in French) in 2021 by INED, with some data sets and a tutorial.
+
+But it also includes functions for
+
+- describing episodes in individual sequences,
+- measuring association between domains in multidimensional sequence analysis,
+- heat maps of sequence data,
+- Globally Interdependent Multidimensional Sequence Analysis (GIMSA),
+- smoothing sequences for index plots,
+- coding sequences for Qualitative Harmonic Analysis,
+- measuring stress from multidimensional scaling factors, and
+- symmetrical (or canonical) Partial Least Squares.
+
+Maybe some of them could be useful for you!
+
+Best,\
+Nicolas

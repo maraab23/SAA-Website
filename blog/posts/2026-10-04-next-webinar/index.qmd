@@ -1,0 +1,12 @@
+---
+title: "Next webinar: 22 October"
+description: "Autumn 2026 Webinar Series — save the date."
+image: thumbnail.png
+image-alt: "Video call with two speakers and the date 22 October"
+date: 2026-10-04
+categories: [events]
+---
+
+The next session of our Autumn 2026 Webinar Series takes place on **Thursday, 22 October, at 4 PM CET**. Save the date!
+
+For the full programme, see the [SAA Webinar Series](../../../events.qmd#webinars).

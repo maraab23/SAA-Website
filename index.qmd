@@ -1,0 +1,134 @@
+---
+pagetitle: "Sequence Analysis Association"
+description: "The Sequence Analysis Association (SAA) promotes research, teaching and diffusion of sequence analysis and related methods."
+page-layout: article
+image: social/og-image.png
+title-block-banner: false
+listing:
+  id: latest-posts
+  contents: blog/posts
+  sort: "date desc"
+  type: grid
+  max-items: 3
+  image-placeholder: logos/placeholder.png
+  fields: [image, date, title, description]
+  date-format: "D MMMM YYYY"
+---
+
+<!-- TEST PHASE: remove this callout (and the noindex meta in _quarto.yml) before going live -->
+::: {.callout-warning appearance="simple"}
+**Test version.** This is a preview of the new SAA website and not yet the official site. Content may be incomplete or change. The current website is [sequenceanalysis.org](https://sequenceanalysis.org); feedback is welcome at [info@sequenceanalysis.org](mailto:info@sequenceanalysis.org).
+:::
+
+::: {.hero}
+[International association · founded 2018]{.eyebrow}
+
+# Advancing sequence analysis and related methods across disciplines
+
+[The Sequence Analysis Association (SAA) promotes research, teaching and diffusion of sequence analysis and its relationships with related methods.]{.lead}
+
+[Upcoming webinars](events.qmd){.btn .btn-primary}
+[Software & literature](resources.qmd){.btn .btn-outline-primary}
+
+```{=html}
+<div class="hero-plot" aria-hidden="true">
+  <div class="seq"><span class="s-a" style="width:30%"></span><span class="s-b" style="width:22%"></span><span class="s-c" style="width:28%"></span><span class="s-d" style="width:20%"></span></div>
+  <div class="seq"><span class="s-b" style="width:18%"></span><span class="s-a" style="width:32%"></span><span class="s-d" style="width:26%"></span><span class="s-e" style="width:24%"></span></div>
+  <div class="seq"><span class="s-c" style="width:12%"></span><span class="s-b" style="width:26%"></span><span class="s-a" style="width:34%"></span><span class="s-f" style="width:28%"></span></div>
+  <div class="seq"><span class="s-d" style="width:10%"></span><span class="s-c" style="width:20%"></span><span class="s-b" style="width:28%"></span><span class="s-a" style="width:42%"></span></div>
+  <div class="seq"><span class="s-f" style="width:16%"></span><span class="s-d" style="width:24%"></span><span class="s-e" style="width:18%"></span><span class="s-a" style="width:42%"></span></div>
+</div>
+```
+:::
+
+## What we do
+
+::: {.seq-strip}
+:::
+
+::: {.feature-grid}
+
+::: {.feature}
+[]{.bi .bi-camera-video}
+
+### Webinars
+
+Monthly online sessions on Thursdays, 4 PM CET, with new research and work in progress.
+
+[Programme →](events.qmd#webinars)
+:::
+
+::: {.feature}
+[]{.bi .bi-people}
+
+### Conferences
+
+Symposia and pre-conference meetings at EPC, PAA, SLLS and beyond.
+
+[Events →](events.qmd#conferences)
+:::
+
+::: {.feature}
+[]{.bi .bi-mortarboard}
+
+### Training
+
+Workshops, summer schools and courses for newcomers and experienced users.
+
+[Training →](events.qmd#training)
+:::
+
+::: {.feature}
+[]{.bi .bi-box-seam}
+
+### Resources
+
+Curated software for R, Stata and Python plus a shared Zotero bibliography.
+
+[Resources →](resources.qmd)
+:::
+
+:::
+
+## Latest news
+
+::: {#latest-posts}
+:::
+
+[All blog posts →](blog/index.qmd){.btn .btn-sm .btn-outline-primary}
+
+## New to sequence analysis?
+
+Sequence analysis studies ordered series of states or events — such as employment careers, family trajectories or daily time use — as whole units. It describes, compares and classifies these trajectories, and links them to their antecedents and consequences.
+
+::: {.link-cards}
+::: {.link-card}
+[]{.bi .bi-wikipedia}
+
+::: {}
+[Read the introduction](https://en.wikipedia.org/wiki/Sequence_analysis_in_social_sciences){.stretched-link}
+
+Wikipedia article on sequence analysis in the social sciences.
+:::
+:::
+
+::: {.link-card}
+[Z]{.badge-icon .zotero}
+
+::: {}
+[Browse the literature](https://www.zotero.org/groups/2268769/saa_bibliography/items/){.stretched-link}
+
+The SAA's open Zotero bibliography.
+:::
+:::
+
+::: {.link-card}
+[]{.bi .bi-box-seam}
+
+::: {}
+[Find software](resources.qmd#software){.stretched-link}
+
+Packages for R, Stata and Python.
+:::
+:::
+:::
