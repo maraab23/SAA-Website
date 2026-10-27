@@ -312,6 +312,18 @@ img.sw-logo {
 // Tally renders dark text on a transparent background (transparentBackground=1).
 // In dark mode, place the loaded form on a light card so it stays readable.
 @if $is-dark {
+  // Listing filter: Bootstrap keeps a light addon background, which hides the light search icon.
+  .quarto-listing-filter .input-group-text,
+  .input-group > .input-group-text {
+    background-color: $body-bg;
+    color: rgba($body-color, 0.75);
+    border-color: rgba($body-color, 0.3);
+  }
+  .quarto-listing-filter .form-control,
+  .input-group > .form-control {
+    border-color: rgba($body-color, 0.3);
+  }
+
   .tally-form .consent-loaded {
     background: #FFFFFF;
     border-radius: 1rem;
