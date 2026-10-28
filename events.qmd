@@ -90,7 +90,8 @@ Good practices, advances and open issues — presentations by Tim F. Liao, Raffa
 ## Training {#training}
 
 ::: {.icon-list}
-- []{.bi .bi-mortarboard} **GESIS Training Course: Sequence Analysis in the Social Sciences** — Marcel Raab & Emanuela Struffolino, 19–27 November 2025, online. [Details](https://training.gesis.org/?site=pDetails&pID=0x1ED6835CBD8C484C96E90D8F497AF7CD)
+- []{.bi .bi-mortarboard} **GESIS Training Course: Sequence Analysis in the Social Sciences** — Marcel Raab & Emanuela Struffolino, 21–29 October 2026, online. [Details](https://training.gesis.org/?site=pDetails&pID=0x6866E1D9B5444D5EBFB968288B664154)
+- []{.bi .bi-mortarboard} **GESIS Training Course: Sequence Analysis in the Social Sciences** — Marcel Raab & Emanuela Struffolino, 19–27 November 2025, online.
 - []{.bi .bi-mortarboard} **SLLS Summer School** — including one day on sequence analysis by Matthias Studer, 26–30 August 2024, LIfBi, Bamberg (DE).
 - []{.bi .bi-mortarboard} **Sequence Analysis Workshop**, 9 February 2022.
 - []{.bi .bi-mortarboard} **Sequence Analysis in the Social Sciences — online workshop**, 2021.
