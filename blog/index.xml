@@ -17,12 +17,13 @@
 <width>144</width>
 </image>
 <generator>quarto-1.10.18</generator>
-<lastBuildDate>Thu, 15 Oct 2026 22:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 27 Oct 2026 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Welcome to the new SAA website</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-16-new-website/</link>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-28-new-website/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -41,15 +42,779 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>association</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-16-new-website/</guid>
-  <pubDate>Thu, 15 Oct 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-16-new-website/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-28-new-website/</guid>
+  <pubDate>Tue, 27 Oct 2026 23:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-28-new-website/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>ggseqplot 1.0.0 on CRAN</title>
+  <dc:creator>Marcel Raab</dc:creator>
+  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+
+<p>For several years now, Emanuela Struffolino and I have been teaching “Sequence Analysis” in the amazing GESIS Workshops program. Before each course, we send the participants instructions on which software to install in advance. One part of this setup is GraphViz, which <code>TraMineR::seqtreedisplay</code> requires to render tree-structured plots. Quite regularly, installing GraphViz, and sometimes also getting it to work with R, causes some hiccups. For this reason, I had long planned to add a GraphViz-free function for this type of plot to <code>{ggseqplot}</code>. However, the package is just a small side project, and I am not a very skilled programmer. So this plot type, like a few others I wanted to add, never made it into the package. Over the years, the package was maintained but not really improved. AI tools, on the other hand, have improved quite dramatically during the same time.</p>
+<p>Nudged by this year’s iteration of our course, I therefore decided to use Claude Code to help me implement the missing plot functions. This was the first time I used AI tools to work on the package, and I have to admit it was a very pleasant experience. I am pretty sure that without this powerful tool, I would not have added these long-missing functions to the package.</p>
+<p>Version 1.0.0 of <a href="https://maraab23.github.io/ggseqplot/"><code>{ggseqplot}</code></a> is now on CRAN and adds three new plot types:</p>
+<ul>
+<li><code>ggseqtreeplot()</code> renders regression trees of sequences (<code>TraMineR::seqtree</code>) — <strong>without requiring GraphViz</strong>, which <code>TraMineR::seqtreedisplay</code> needs.</li>
+<li><code>ggseqpcplot()</code> draws decorated parallel coordinate plots, reproducing <code>TraMineR::seqpcplot</code>.</li>
+<li><code>ggseqimplicplot()</code> plots the implicative statistic computed with <code>TraMineRextras::seqimplic</code>.</li>
+</ul>
+<p>This post briefly shows the three functions and how their appearance can be adjusted. See the <a href="https://maraab23.github.io/ggseqplot/news/">NEWS file</a> for all changes.</p>
+<section id="example-data" class="level2">
+<h2 class="anchored" data-anchor-id="example-data">Example data</h2>
+<p>We use a sample of 300 school-to-work trajectories from the well-known <code>mvad</code> data in <code>{TraMineR}</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(TraMineR)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggseqplot)</span>
+<span id="cb1-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(ggplot2)</span>
+<span id="cb1-4"></span>
+<span id="cb1-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data</span>(mvad)</span>
+<span id="cb1-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">set.seed</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb1-7">mvad <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> mvad[<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">sample</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">nrow</span>(mvad), <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">300</span>), ]</span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## State properties: alphabet, short and long labels,</span></span>
+<span id="cb1-10"><span class="do" style="color: #5E5E5E;
+background-color: null;
+font-style: italic;">## ordered from education via training to the labor market</span></span>
+<span id="cb1-11">mvad.alphabet <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"school"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"training"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"employment"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"joblessness"</span>)</span>
+<span id="cb1-12">mvad.lab <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"school"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"further education"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"higher education"</span>,</span>
+<span id="cb1-13">              <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"training"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"employment"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"joblessness"</span>)</span>
+<span id="cb1-14">mvad.shortlab <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"SC"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"FE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HE"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"TR"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"EM"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"JL"</span>)</span>
+<span id="cb1-15"></span>
+<span id="cb1-16">mvad.seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdef</span>(mvad[, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">17</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">86</span>], <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">alphabet =</span> mvad.alphabet,</span>
+<span id="cb1-17">                   <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">states =</span> mvad.shortlab, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> mvad.lab, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">xtstep =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>)</span></code></pre></div></div>
+</div>
+</section>
+<section id="regression-tree-plots" class="level2">
+<h2 class="anchored" data-anchor-id="regression-tree-plots">Regression tree plots</h2>
+<p>First, we grow a regression tree of the sequences with <code>TraMineR::seqtree</code>, using Hamming distances and four covariates.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1">mvad.diss <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdist</span>(mvad.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"HAM"</span>)</span>
+<span id="cb2-2">mvad.tree <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqtree</span>(mvad.seq <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> male <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> Grammar <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> funemp <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> gcse5eq,</span>
+<span id="cb2-3">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> mvad, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">diss =</span> mvad.diss, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">R =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">max.depth =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span></code></pre></div></div>
+</div>
+<section id="default-output" class="level3">
+<h3 class="anchored" data-anchor-id="default-output">Default output</h3>
+<p>By default, every node of the tree shows a state distribution plot (<code>type = "d"</code>), and the legend and the global quality measures of the tree are placed below the tree.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqtreeplot</span>(mvad.tree)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/tree-default-1.png" class="img-fluid figure-img" width="1500"></p>
+<figcaption>ggseqtreeplot() with default settings</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Other node plots are available via <code>type</code>, e.g.&nbsp;index plots (<code>"i"</code>), sequence frequency plots (<code>"f"</code>), modal state plots (<code>"ms"</code>) or mean time plots (<code>"mt"</code>).</p>
+</section>
+<section id="adjusting-the-node-plots" class="level3">
+<h3 class="anchored" data-anchor-id="adjusting-the-node-plots">Adjusting the node plots</h3>
+<p>The node plots are drawn as images onto the tree. Hence, they cannot be changed afterwards with <code>+</code>. Instead, scales, themes and other ggplot components for <strong>all</strong> node plots are passed to the <code>node.layers</code> argument. The tree as a whole — legend, title, quality measures — can be adjusted with the usual <code>{ggplot2}</code> functions.</p>
+<p>The following plot comes closer to the look of <code>TraMineR::seqtreedisplay</code>: the node plots have no axis labels, the legend is placed in the upper left corner, and the goodness-of-fit measures (printed in separate lines with <code>quality.multiline = TRUE</code>) in the upper right corner. Since the axis labels are removed, <code>plot.margin</code> is required to even out the space around the node plots.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqtreeplot</span>(mvad.tree, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">quality.multiline =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">TRUE</span>,</span>
+<span id="cb4-2">              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">node.layers =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb4-3">                                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.ticks =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb4-4">                                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">axis.line =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb4-5">                                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.margin =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">margin</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">6</span>))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb4-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># global quality measures (rendered as plot tag) in the upper right corner</span></span>
+<span id="cb4-7">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.tag.location =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"panel"</span>,</span>
+<span id="cb4-8">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.tag.position =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>),</span>
+<span id="cb4-9">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.tag =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">vjust =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>),</span>
+<span id="cb4-10">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># legend in the upper left corner, one entry per line</span></span>
+<span id="cb4-11">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"inside"</span>,</span>
+<span id="cb4-12">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position.inside =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>),</span>
+<span id="cb4-13">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.justification =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>),</span>
+<span id="cb4-14">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.direction =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"vertical"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/tree-traminer-style-1.png" class="img-fluid figure-img" width="1500"></p>
+<figcaption>ggseqtreeplot() adjusted to resemble TraMineR::seqtreedisplay</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>For large trees, I recommend saving the plot with a generous size, e.g.&nbsp;<code>ggsave("tree.png", width = 14, height = 9)</code>.</p>
+</section>
+</section>
+<section id="decorated-parallel-coordinate-plots" class="level2">
+<h2 class="anchored" data-anchor-id="decorated-parallel-coordinate-plots">Decorated parallel coordinate plots</h2>
+<p>Decorated parallel coordinate plots (Bürgin &amp; Ritschard, 2014, <a href="https://doi.org/10.1080/00031305.2014.887591">doi:10.1080/00031305.2014.887591</a>) draw each distinct sequence as a line connecting its successive states. The size of the squares and the width of the lines are proportional to the (weighted) number of sequences following a pattern. As in the <code>TraMineR::seqpcplot</code> examples, we use the first 20 weighted family-life sequences of the <code>biofam</code> data (ages 15 to 30; sum of weights = 18).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data</span>(biofam)</span>
+<span id="cb5-2">lab <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Parent"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Left"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Married"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Left+Marr"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Child"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Left+Child"</span>,</span>
+<span id="cb5-3">         <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Left+Marr+Child"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Divorced"</span>)</span>
+<span id="cb5-4">biofam.seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seqdef</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> biofam[, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span>], <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> lab,</span>
+<span id="cb5-5">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">weights =</span> biofam<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>wp00tbgs)</span>
+<span id="cb5-6">biofam.seq <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> biofam.seq[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>, ]</span></code></pre></div></div>
+</div>
+<section id="default-output-1" class="level3">
+<h3 class="anchored" data-anchor-id="default-output-1">Default output</h3>
+<p>With <code>order.align = "time"</code>, the x-axis shows the sequence position at which a state is observed. In the example, the position corresponds to the respondent’s age.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqpcplot</span>(biofam.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">order.align =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"time"</span>)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/pc-default-1.png" class="img-fluid figure-img" width="1500"></p>
+<figcaption>ggseqpcplot() with default settings</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="distinct-successive-states-and-highlighted-patterns" class="level3">
+<h3 class="anchored" data-anchor-id="distinct-successive-states-and-highlighted-patterns">Distinct successive states and highlighted patterns</h3>
+<p>All arguments of <code>TraMineR::seqpcplot</code> that affect the computation can be passed on via <code>...</code>. Below, <code>order.align = "first"</code> aligns the distinct successive states (DSS) instead of time, <code>group</code> produces one plot per sex, and the <code>filter</code> argument colors only the most frequent patterns that together cover 50% of the sequences, while the remaining ones are grayed out. Titles and labels are changed with the usual <code>{ggplot2}</code> functions.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqpcplot</span>(biofam.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">order.align =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"first"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> biofam<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>sex[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">20</span>],</span>
+<span id="cb7-2">            <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">filter =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"function"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">value =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cumfreq"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">level =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>),</span>
+<span id="cb7-3">            <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">seed =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.5</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Family-life trajectories by sex"</span>,</span>
+<span id="cb7-5">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">subtitle =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"colored: most frequent patterns covering 50% of the (weighted) sequences"</span>,</span>
+<span id="cb7-6">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Order of distinct successive states"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb7-7">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span>,</span>
+<span id="cb7-8">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">14</span>),</span>
+<span id="cb7-9">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">strip.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">11</span>))</span></code></pre></div></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/pc-adjusted-1.png" class="img-fluid figure-img" width="1500"></p>
+<figcaption>ggseqpcplot() with distinct successive states, groups and highlighted patterns</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="implicative-statistic" class="level2">
+<h2 class="anchored" data-anchor-id="implicative-statistic">Implicative statistic</h2>
+<p>The implicative statistic (<code>TraMineRextras::seqimplic</code>) shows how strongly membership in a group implies being in a certain state at a given position. Here we compare young people with and without five or more GCSE passes at grade C or higher (<code>gcse5eq</code>) using the <code>mvad.seq</code> defined above.</p>
+<section id="default-output-2" class="level3">
+<h3 class="anchored" data-anchor-id="default-output-2">Default output</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqimplicplot</span>(mvad.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> mvad<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>gcse5eq)</span></code></pre></div></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/implic-default-1.png" class="img-fluid figure-img" width="1500"></p>
+<figcaption>ggseqimplicplot() with default settings</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Values above the dotted reference line indicate that the implication is significant at the 95% level.</p>
+</section>
+<section id="design-adjustments" class="level3">
+<h3 class="anchored" data-anchor-id="design-adjustments">Design adjustments</h3>
+<p>Because the result is a regular ggplot, its appearance can be changed with common <code>{ggplot2}</code> commands. In the example, we specify yearly axis labels, add more informative facet titles, apply the colorblind-friendly Okabe-Ito palette (via <code>{paletteer}</code>), request a one-row legend with thicker keys, and use a larger base font size (<code>theme_minimal()</code> is already the default theme of the function).</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(paletteer)</span>
+<span id="cb9-2"></span>
+<span id="cb9-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">ggseqimplicplot</span>(mvad.seq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">group =</span> mvad<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>gcse5eq, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.8</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-4">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_x_continuous</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">breaks =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">70</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">by =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labels =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1993</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1998</span>,</span>
+<span id="cb9-5">                     <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">expand =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">expansion</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">mult =</span> <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.01</span>)) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-6">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">scale_color_paletteer_d</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"colorblindr::OkabeIto"</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-7">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># legend in one row; thicker lines in the legend keys</span></span>
+<span id="cb9-8">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guides</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">guide_legend</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">nrow =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">override.aes =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">list</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">linewidth =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span>))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-9">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">facet_wrap</span>(<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span>group, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">labeller =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">as_labeller</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">no =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Fewer than 5 GCSEs"</span>,</span>
+<span id="cb9-10">                                              <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">yes =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"5 or more GCSEs"</span>))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-11">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">labs</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">title =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Which states are implied by school performance?"</span>,</span>
+<span id="cb9-12">       <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Implicative statistic"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">color =</span> <span class="cn" style="color: #8f5902;
+background-color: null;
+font-style: inherit;">NULL</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-13">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme_minimal</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">base_size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span></span>
+<span id="cb9-14">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">theme</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">legend.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"top"</span>,</span>
+<span id="cb9-15">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">panel.grid.minor =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_blank</span>(),</span>
+<span id="cb9-16">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">strip.text =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">hjust =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">size =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">12</span>),</span>
+<span id="cb9-17">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title.position =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"plot"</span>,</span>
+<span id="cb9-18">        <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">plot.title =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">element_text</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">face =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bold"</span>))</span></code></pre></div></div>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/implic-styled-1.png" class="img-fluid figure-img" width="1500"></p>
+<figcaption>ggseqimplicplot() with ggplot2 design adjustments</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="further-information" class="level2">
+<h2 class="anchored" data-anchor-id="further-information">Further information</h2>
+<ul>
+<li><a href="https://maraab23.github.io/ggseqplot/"><code>{ggseqplot}</code> website</a> with reference pages and a vignette (which does not yet cover the new functions)</li>
+<li>Issues and feature requests: <a href="https://github.com/maraab23/ggseqplot/issues" class="uri">https://github.com/maraab23/ggseqplot/issues</a></li>
+</ul>
+</section>
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="about-the-author" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">About the author</h2><div class="quarto-appendix-contents">
+
+<p><strong>Marcel Raab</strong> is a senior researcher at the State Institute for Family Research at the University of Bamberg and co-editor of the <em>Journal of Family Research</em>. He develops and maintains the R package <a href="https://maraab23.github.io/ggseqplot/"><code>{ggseqplot}</code></a> and, together with Emanuela Struffolino, wrote the book <em>Sequence Analysis</em> (SAGE, Quantitative Applications in the Social Sciences).</p>
+</div></section><section id="copyright-and-license" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Copyright and license</h2><div class="quarto-appendix-contents">
+
+<p>© 2026 Marcel Raab<br>
+<a class="cc-icons" href="https://creativecommons.org/licenses/by/4.0/" rel="license" title="CC BY 4.0"></a> This post is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.</p>
+
+
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">How to cite</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{raab2026,
+  author = {Raab, Marcel},
+  title = {Ggseqplot 1.0.0 on {CRAN}},
+  date = {2026-10-23},
+  url = {https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Please cite this post as:</div><div id="ref-raab2026" class="csl-entry quarto-appendix-citeas">
+Raab, M. (2026, October 23). ggseqplot 1.0.0 on CRAN. <em>Sequence
+Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/">https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/</a>
+</div></div></section></div> ]]></description>
+  <category>software</category>
+  <category>tutorials</category>
+  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/</guid>
+  <pubDate>Thu, 22 Oct 2026 22:00:00 GMT</pubDate>
+  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Next webinar: 22 October</title>
   <dc:creator>SAA Executive Committee</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -71,6 +836,7 @@
   <dc:creator>SAA Executive Committee</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -98,6 +864,7 @@
 
 
 
+
 <p>Follow the SAA on <a href="https://www.linkedin.com/company/sequence-analysis-association">LinkedIn</a>, which is now the preferred forum for SAA-related news and discussion.</p>
 
 
@@ -113,6 +880,7 @@
   <dc:creator>SAA Executive Committee</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -247,6 +1015,7 @@
   <dc:creator>Matthias Studer</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -986,12 +1755,34 @@ font-style: inherit;">NA</span>)</span></code></pre></div></div>
 </div>
 </div>
 </div>
-
-
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="about-the-author" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">About the author</h2><div class="quarto-appendix-contents">
+
+<p><strong>Matthias Studer</strong> is an associate professor of statistics for the social sciences at the Faculty of Social Sciences of the University of Geneva and at the LIVES Centre (“LIVES – Overcoming vulnerability: Life course perspectives”). He is the developer of the R package <code>{WeightedCluster}</code> and one of the developers of <code>{TraMineR}</code>.</p>
+</div></section><section id="copyright-and-license" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Copyright and license</h2><div class="quarto-appendix-contents">
+
+<p>© 2023 Matthias Studer<br>
+<a class="cc-icons" href="https://creativecommons.org/licenses/by/4.0/" rel="license" title="CC BY 4.0"></a> This post is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.</p>
+
+
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">How to cite</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{studer2023,
+  author = {Studer, Matthias},
+  title = {Validating Sequence Analysis Typologies Using Parametric
+    Bootstrap},
+  date = {2023-10-19},
+  url = {https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Please cite this post as:</div><div id="ref-studer2023" class="csl-entry quarto-appendix-citeas">
+Studer, M. (2023, October 19). Validating sequence analysis typologies
+using parametric bootstrap. <em>Sequence Analysis Association Blog</em>.
+<a href="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/">https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</a>
+</div></div></section></div> ]]></description>
   <category>software</category>
+  <category>tutorials</category>
   <guid>https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</guid>
   <pubDate>Wed, 18 Oct 2023 22:00:00 GMT</pubDate>
   <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/thumbnail.png" medium="image" type="image/png" height="89" width="144"/>
@@ -1001,6 +1792,7 @@ font-style: inherit;">NA</span>)</span></code></pre></div></div>
   <dc:creator>SAA Executive Committee</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1025,6 +1817,7 @@ font-style: inherit;">NA</span>)</span></code></pre></div></div>
   <dc:creator>Marcel Raab</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1521,12 +2314,32 @@ font-style: inherit;">18</span>))</span></code></pre></div></div>
 <ul>
 <li>If you find issues, please let me know: <a href="https://github.com/maraab23/ggseqplot/issues" class="uri">https://github.com/maraab23/ggseqplot/issues</a></li>
 </ul>
-
-
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
+
+
+<a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="about-the-author" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">About the author</h2><div class="quarto-appendix-contents">
+
+<p><strong>Marcel Raab</strong> is a senior researcher at the State Institute for Family Research at the University of Bamberg and co-editor of the <em>Journal of Family Research</em>. He develops and maintains the R package <a href="https://maraab23.github.io/ggseqplot/"><code>{ggseqplot}</code></a> and, together with Emanuela Struffolino, wrote the book <em>Sequence Analysis</em> (SAGE, Quantitative Applications in the Social Sciences).</p>
+</div></section><section id="copyright-and-license" class="level2 appendix"><h2 class="anchored quarto-appendix-heading">Copyright and license</h2><div class="quarto-appendix-contents">
+
+<p>© 2022 Marcel Raab<br>
+<a class="cc-icons" href="https://creativecommons.org/licenses/by/4.0/" rel="license" title="CC BY 4.0"></a> This post is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License (CC BY 4.0)</a>.</p>
+
+
+</div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">How to cite</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@misc{raab2022,
+  author = {Raab, Marcel},
+  title = {Ggseqplot: Ggplotify Sequence Plots},
+  date = {2022-08-05},
+  url = {https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/},
+  langid = {en}
+}
+</code></pre><div class="quarto-appendix-secondary-label">Please cite this post as:</div><div id="ref-raab2022" class="csl-entry quarto-appendix-citeas">
+Raab, M. (2022, August 5). ggseqplot: ggplotify sequence plots.
+<em>Sequence Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/">https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</a>
+</div></div></section></div> ]]></description>
   <category>software</category>
+  <category>tutorials</category>
   <guid>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</guid>
   <pubDate>Thu, 04 Aug 2022 22:00:00 GMT</pubDate>
   <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
@@ -1536,6 +2349,7 @@ font-style: inherit;">18</span>))</span></code></pre></div></div>
   <dc:creator>SAA Executive Committee</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1557,6 +2371,7 @@ font-style: inherit;">18</span>))</span></code></pre></div></div>
   <dc:creator>SAA Executive Committee</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/</link>
   <description><![CDATA[ 
+
 
 
 
@@ -1604,6 +2419,7 @@ font-style: inherit;">18</span>))</span></code></pre></div></div>
   <dc:creator>Nicolas Robette</dc:creator>
   <link>https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/</link>
   <description><![CDATA[ 
+
 
 
 

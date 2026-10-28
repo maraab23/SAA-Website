@@ -137,7 +137,7 @@
     "href": "index.html#latest-news",
     "title": "Advancing sequence analysis and related methods across disciplines",
     "section": "Latest news",
-    "text": "Latest news\n\n\n\n\n\n\n\n\n\n\nWelcome to the new SAA website\n\n\nA fresh look, open to everyone: what changes with the relaunch.\n\n\n\n16 October 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nNext webinar: 22 October\n\n\nAutumn 2026 Webinar Series — save the date.\n\n\n\n4 October 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPre-EPC meeting 2026: Life Course Dynamics\n\n\nA one-day SAA side meeting before the European Population Conference 2026 in Bologna.\n\n\n\n21 December 2025\n\n\n\n\n\n\nNo matching items\n\nAll blog posts →"
+    "text": "Latest news\n\n\n\n\n\n\n\n\n\n\nWelcome to the new SAA website\n\n\nA fresh look, open to everyone: what changes with the relaunch.\n\n\n\n28 October 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nggseqplot 1.0.0 on CRAN\n\n\nRegression trees of sequences without GraphViz, decorated parallel coordinate plots, and implicative statistics.\n\n\n\n23 October 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nNext webinar: 22 October\n\n\nAutumn 2026 Webinar Series — save the date.\n\n\n\n4 October 2026\n\n\n\n\n\n\nNo matching items\n\nAll blog posts →"
   },
   {
     "objectID": "index.html#new-to-sequence-analysis",
@@ -147,60 +147,179 @@
     "text": "New to sequence analysis?\nSequence analysis studies ordered series of states or events — such as employment careers, family trajectories or daily time use — as whole units. It describes, compares and classifies these trajectories, and links them to their antecedents and consequences.\n\n\n\n\nRead the introduction\nWikipedia article on sequence analysis in the social sciences.\n\n\n\nZ\n\nBrowse the literature\nThe SAA’s open Zotero bibliography.\n\n\n\n\n\nFind software\nPackages for R, Stata and Python."
   },
   {
-    "objectID": "blog/posts/2026-10-04-next-webinar/index.html",
-    "href": "blog/posts/2026-10-04-next-webinar/index.html",
-    "title": "Next webinar: 22 October",
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html",
+    "title": "ggseqplot 1.0.0 on CRAN",
     "section": "",
-    "text": "The next session of our Autumn 2026 Webinar Series takes place on Thursday, 22 October, at 4 PM CET. Save the date!\nFor the full programme, see the SAA Webinar Series.\n\n\n\n Back to top"
+    "text": "For several years now, Emanuela Struffolino and I have been teaching “Sequence Analysis” in the amazing GESIS Workshops program. Before each course, we send the participants instructions on which software to install in advance. One part of this setup is GraphViz, which TraMineR::seqtreedisplay requires to render tree-structured plots. Quite regularly, installing GraphViz, and sometimes also getting it to work with R, causes some hiccups. For this reason, I had long planned to add a GraphViz-free function for this type of plot to {ggseqplot}. However, the package is just a small side project, and I am not a very skilled programmer. So this plot type, like a few others I wanted to add, never made it into the package. Over the years, the package was maintained but not really improved. AI tools, on the other hand, have improved quite dramatically during the same time.\nNudged by this year’s iteration of our course, I therefore decided to use Claude Code to help me implement the missing plot functions. This was the first time I used AI tools to work on the package, and I have to admit it was a very pleasant experience. I am pretty sure that without this powerful tool, I would not have added these long-missing functions to the package.\nVersion 1.0.0 of {ggseqplot} is now on CRAN and adds three new plot types:\nThis post briefly shows the three functions and how their appearance can be adjusted. See the NEWS file for all changes."
   },
   {
-    "objectID": "blog/posts/2025-06-22-linkedin/index.html",
-    "href": "blog/posts/2025-06-22-linkedin/index.html",
-    "title": "SAA now on LinkedIn",
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#example-data",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#example-data",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "Example data",
+    "text": "Example data\nWe use a sample of 300 school-to-work trajectories from the well-known mvad data in {TraMineR}.\n\nlibrary(TraMineR)\nlibrary(ggseqplot)\nlibrary(ggplot2)\n\ndata(mvad)\nset.seed(1)\nmvad &lt;- mvad[sample(nrow(mvad), 300), ]\n\n## State properties: alphabet, short and long labels,\n## ordered from education via training to the labor market\nmvad.alphabet &lt;- c(\"school\", \"FE\", \"HE\", \"training\", \"employment\", \"joblessness\")\nmvad.lab &lt;- c(\"school\", \"further education\", \"higher education\",\n              \"training\", \"employment\", \"joblessness\")\nmvad.shortlab &lt;- c(\"SC\", \"FE\", \"HE\", \"TR\", \"EM\", \"JL\")\n\nmvad.seq &lt;- seqdef(mvad[, 17:86], alphabet = mvad.alphabet,\n                   states = mvad.shortlab, labels = mvad.lab, xtstep = 6)"
+  },
+  {
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#regression-tree-plots",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#regression-tree-plots",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "Regression tree plots",
+    "text": "Regression tree plots\nFirst, we grow a regression tree of the sequences with TraMineR::seqtree, using Hamming distances and four covariates.\n\nmvad.diss &lt;- seqdist(mvad.seq, method = \"HAM\")\nmvad.tree &lt;- seqtree(mvad.seq ~ male + Grammar + funemp + gcse5eq,\n                     data = mvad, diss = mvad.diss, R = 100, max.depth = 3)\n\n\nDefault output\nBy default, every node of the tree shows a state distribution plot (type = \"d\"), and the legend and the global quality measures of the tree are placed below the tree.\n\nggseqtreeplot(mvad.tree)\n\n\n\n\nggseqtreeplot() with default settings\n\n\n\n\nOther node plots are available via type, e.g. index plots (\"i\"), sequence frequency plots (\"f\"), modal state plots (\"ms\") or mean time plots (\"mt\").\n\n\nAdjusting the node plots\nThe node plots are drawn as images onto the tree. Hence, they cannot be changed afterwards with +. Instead, scales, themes and other ggplot components for all node plots are passed to the node.layers argument. The tree as a whole — legend, title, quality measures — can be adjusted with the usual {ggplot2} functions.\nThe following plot comes closer to the look of TraMineR::seqtreedisplay: the node plots have no axis labels, the legend is placed in the upper left corner, and the goodness-of-fit measures (printed in separate lines with quality.multiline = TRUE) in the upper right corner. Since the axis labels are removed, plot.margin is required to even out the space around the node plots.\n\nggseqtreeplot(mvad.tree, quality.multiline = TRUE,\n              node.layers = theme(axis.text = element_blank(),\n                                  axis.ticks = element_blank(),\n                                  axis.line = element_blank(),\n                                  plot.margin = margin(4, 6, 4, 6))) +\n  theme(# global quality measures (rendered as plot tag) in the upper right corner\n        plot.tag.location = \"panel\",\n        plot.tag.position = c(1, 1),\n        plot.tag = element_text(size = 10, hjust = 1, vjust = 1),\n        # legend in the upper left corner, one entry per line\n        legend.position = \"inside\",\n        legend.position.inside = c(0, 1),\n        legend.justification = c(0, 1),\n        legend.direction = \"vertical\")\n\n\n\n\nggseqtreeplot() adjusted to resemble TraMineR::seqtreedisplay\n\n\n\n\nFor large trees, I recommend saving the plot with a generous size, e.g. ggsave(\"tree.png\", width = 14, height = 9)."
+  },
+  {
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#decorated-parallel-coordinate-plots",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#decorated-parallel-coordinate-plots",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "Decorated parallel coordinate plots",
+    "text": "Decorated parallel coordinate plots\nDecorated parallel coordinate plots (Bürgin & Ritschard, 2014, doi:10.1080/00031305.2014.887591) draw each distinct sequence as a line connecting its successive states. The size of the squares and the width of the lines are proportional to the (weighted) number of sequences following a pattern. As in the TraMineR::seqpcplot examples, we use the first 20 weighted family-life sequences of the biofam data (ages 15 to 30; sum of weights = 18).\n\ndata(biofam)\nlab &lt;- c(\"Parent\", \"Left\", \"Married\", \"Left+Marr\", \"Child\", \"Left+Child\",\n         \"Left+Marr+Child\", \"Divorced\")\nbiofam.seq &lt;- seqdef(data = biofam[, 10:25], labels = lab,\n                     weights = biofam$wp00tbgs)\nbiofam.seq &lt;- biofam.seq[1:20, ]\n\n\nDefault output\nWith order.align = \"time\", the x-axis shows the sequence position at which a state is observed. In the example, the position corresponds to the respondent’s age.\n\nggseqpcplot(biofam.seq, order.align = \"time\")\n\n\n\n\nggseqpcplot() with default settings\n\n\n\n\n\n\nDistinct successive states and highlighted patterns\nAll arguments of TraMineR::seqpcplot that affect the computation can be passed on via .... Below, order.align = \"first\" aligns the distinct successive states (DSS) instead of time, group produces one plot per sex, and the filter argument colors only the most frequent patterns that together cover 50% of the sequences, while the remaining ones are grayed out. Titles and labels are changed with the usual {ggplot2} functions.\n\nggseqpcplot(biofam.seq, order.align = \"first\", group = biofam$sex[1:20],\n            filter = list(type = \"function\", value = \"cumfreq\", level = 0.5),\n            seed = 2, linewidth = 1.5) +\n  labs(title = \"Family-life trajectories by sex\",\n       subtitle = \"colored: most frequent patterns covering 50% of the (weighted) sequences\",\n       x = \"Order of distinct successive states\") +\n  theme(plot.title.position = \"plot\",\n        plot.title = element_text(face = \"bold\", size = 14),\n        strip.text = element_text(face = \"bold\", size = 11))\n\n\n\n\nggseqpcplot() with distinct successive states, groups and highlighted patterns"
+  },
+  {
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#implicative-statistic",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#implicative-statistic",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "Implicative statistic",
+    "text": "Implicative statistic\nThe implicative statistic (TraMineRextras::seqimplic) shows how strongly membership in a group implies being in a certain state at a given position. Here we compare young people with and without five or more GCSE passes at grade C or higher (gcse5eq) using the mvad.seq defined above.\n\nDefault output\n\nggseqimplicplot(mvad.seq, group = mvad$gcse5eq)\n\n\n\n\nggseqimplicplot() with default settings\n\n\n\n\nValues above the dotted reference line indicate that the implication is significant at the 95% level.\n\n\nDesign adjustments\nBecause the result is a regular ggplot, its appearance can be changed with common {ggplot2} commands. In the example, we specify yearly axis labels, add more informative facet titles, apply the colorblind-friendly Okabe-Ito palette (via {paletteer}), request a one-row legend with thicker keys, and use a larger base font size (theme_minimal() is already the default theme of the function).\n\nlibrary(paletteer)\n\nggseqimplicplot(mvad.seq, group = mvad$gcse5eq, linewidth = 0.8) +\n  scale_x_continuous(breaks = seq(1, 70, by = 12), labels = 1993:1998,\n                     expand = expansion(mult = 0.01)) +\n  scale_color_paletteer_d(\"colorblindr::OkabeIto\") +\n  # legend in one row; thicker lines in the legend keys\n  guides(color = guide_legend(nrow = 1, override.aes = list(linewidth = 4))) +\n  facet_wrap(~group, labeller = as_labeller(c(no = \"Fewer than 5 GCSEs\",\n                                              yes = \"5 or more GCSEs\"))) +\n  labs(title = \"Which states are implied by school performance?\",\n       x = NULL, y = \"Implicative statistic\", color = NULL) +\n  theme_minimal(base_size = 12) +\n  theme(legend.position = \"top\",\n        panel.grid.minor = element_blank(),\n        strip.text = element_text(face = \"bold\", hjust = 0, size = 12),\n        plot.title.position = \"plot\",\n        plot.title = element_text(face = \"bold\"))\n\n\n\n\nggseqimplicplot() with ggplot2 design adjustments"
+  },
+  {
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#further-information",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#further-information",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "Further information",
+    "text": "Further information\n\n{ggseqplot} website with reference pages and a vignette (which does not yet cover the new functions)\nIssues and feature requests: https://github.com/maraab23/ggseqplot/issues"
+  },
+  {
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#about-the-author",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#about-the-author",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "About the author",
+    "text": "About the author\n\nMarcel Raab is a senior researcher at the State Institute for Family Research at the University of Bamberg and co-editor of the Journal of Family Research. He develops and maintains the R package {ggseqplot} and, together with Emanuela Struffolino, wrote the book Sequence Analysis (SAGE, Quantitative Applications in the Social Sciences)."
+  },
+  {
+    "objectID": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#copyright-and-license",
+    "href": "blog/posts/2026-10-23-ggseqplot-1-0-0/index.html#copyright-and-license",
+    "title": "ggseqplot 1.0.0 on CRAN",
+    "section": "Copyright and license",
+    "text": "Copyright and license\n\n© 2026 Marcel Raab\n This post is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)."
+  },
+  {
+    "objectID": "blog/posts/2025-12-21-pre-epc/index.html",
+    "href": "blog/posts/2025-12-21-pre-epc/index.html",
+    "title": "Pre-EPC meeting 2026: Life Course Dynamics",
     "section": "",
-    "text": "Follow the SAA on LinkedIn, which is now the preferred forum for SAA-related news and discussion.\n\n\n\n Back to top"
+    "text": "We are happy to announce that the SAA is organising a one-day side meeting before the 2026 European Population Conference (EPC) in Bologna, entitled “Life Course Dynamics: Insights from Sequence Analysis”.\nThe meeting will take place on 3 June 2026 (approx. 9 am – 5 pm).\nMore information on our Events page.\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html",
-    "href": "blog/posts/2023-10-19-validating-typologies/index.html",
-    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "objectID": "blog/posts/2024-12-23-ga-results/index.html",
+    "href": "blog/posts/2024-12-23-ga-results/index.html",
+    "title": "2024 General Assembly: voting results",
     "section": "",
-    "text": "This tutorial was first published on the old SAA website in October 2023. It has been re-run in October 2026 with {TraMineR} 2.2.14 and {WeightedCluster} 2.0. Because the bootstrap relies on random draws, the bootstrapped values may differ slightly from the original post."
+    "text": "Results of the SAA election and vote held in December 2024:\n\n\n\nItem\nYes\nNo\nAbstain\nTotal\n\n\n\n\nAnnual Report\n51\n1\n\n52\n\n\nPresident: Emanuela Struffolino\n47\n1\n4\n52\n\n\nExecutive Committee\n\n\n\n\n\n\nDanilo Bolano\n40\n1\n8\n49\n\n\nKevin Emery\n42\n\n5\n47\n\n\nBrendan Halpin\n44\n1\n3\n48\n\n\nSatu Helske\n46\n\n3\n49\n\n\nTim F. Liao\n48\n\n2\n50\n\n\nRaffaella Piccarreta\n45\n\n2\n47\n\n\nGilbert Ritschard\n46\n\n4\n50\n\n\nCarla Rowold\n43\n\n4\n47\n\n\nDolores Sesma Carlos\n35\n3\n8\n46\n\n\nMatthias Studer\n48\n\n2\n50\n\n\n\n\n\n\n\n\n\nDraft note: the No/Abstain split was reconstructed from the flattened table on the old website (ambiguous for the Annual Report row) — please check against the original before publishing.\n\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#introduction",
-    "href": "blog/posts/2023-10-19-validating-typologies/index.html#introduction",
-    "title": "Validating sequence analysis typologies using parametric bootstrap",
-    "section": "Introduction",
-    "text": "Introduction\nThis document provides a very quick introduction to the R code needed to use parametric bootstraps for typology validation in sequence analysis. Readers interested in the methods and the exact interpretation of the results are referred to:\n\nStuder, M. (2021). Validating sequence analysis typologies using parametric bootstraps. Sociological Methodology, 51(2), 290–318. https://doi.org/10.1177/00811750211014232"
+    "objectID": "blog/posts/2022-08-30-ssr-article/index.html",
+    "href": "blog/posts/2022-08-30-ssr-article/index.html",
+    "title": "The story of sequence analysis by a dream team of SAA members",
+    "section": "",
+    "text": "Sequence analysis: Its past, present, and future\nby Tim F. Liao, Danilo Bolano, Christian Brzinsky-Fay, Benjamin Cornwell, Anette Eva Fasang, Satu Helske, Raffaella Piccarreta, Marcel Raab, Gilbert Ritschard, Emanuela Struffolino and Matthias Studer\nSocial Science Research, 107, 102772. DOI: 10.1016/j.ssresearch.2022.102772 (open access)\nThe article reviews the development of sequence analysis in the social sciences, takes stock of current methodological practice and outlines directions for future research. See also the overview of community books on our Resources page.\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-state-sequence-object",
-    "href": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-state-sequence-object",
-    "title": "Validating sequence analysis typologies using parametric bootstrap",
-    "section": "Creating the state sequence object",
-    "text": "Creating the state sequence object\nFor this example, we will use the mvad dataset. Let’s start with the creation of the state sequence object.\n\n## Loading the TraMineR library\nlibrary(TraMineR)\n## Loading the data\ndata(mvad)\n\n## State properties\nmvad.alphabet &lt;- c(\n  \"employment\",\n  \"FE\",\n  \"HE\",\n  \"joblessness\",\n  \"school\",\n  \"training\"\n)\nmvad.lab &lt;- c(\n  \"employment\",\n  \"further education\",\n  \"higher education\",\n  \"joblessness\",\n  \"school\",\n  \"training\"\n)\nmvad.shortlab &lt;- c(\"EM\", \"FE\", \"HE\", \"JL\", \"SC\", \"TR\")\n\n## Creating the state sequence object\nmvad.seq &lt;- seqdef(\n  mvad,\n  17:86,\n  alphabet = mvad.alphabet,\n  states = mvad.shortlab,\n  labels = mvad.lab,\n  xtstep = 6\n)"
+    "objectID": "blog/posts/2021-10-10-wikipedia/index.html",
+    "href": "blog/posts/2021-10-10-wikipedia/index.html",
+    "title": "New Wikipedia page on sequence analysis",
+    "section": "",
+    "text": "The Wikipedia page on Sequence analysis in social sciences has been redesigned and replaces the previous Social sequence analysis page. It provides useful background for sequence analysis studies.\nA link to the page is also listed on our Resources page.\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-typology",
-    "href": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-typology",
-    "title": "Validating sequence analysis typologies using parametric bootstrap",
-    "section": "Creating the typology",
-    "text": "Creating the typology\nWe will now create a typology using cluster analysis. Readers interested in more detail are referred to the WeightedCluster library manual, which goes into the details of the creation and computation of cluster quality measures.\nWe start by computing dissimilarities with the seqdist function and the Hamming distance. We then use Ward clustering to create a typology of the trajectories. For this step, we recommend the use of the fastcluster library, which considerably speeds up the computations.\n\n## Using fastcluster for hierarchical clustering\nlibrary(fastcluster)\n## Distance computation\ndiss &lt;- seqdist(mvad.seq, method = \"HAM\")\n## Hierarchical clustering\nhc &lt;- hclust(as.dist(diss), method = \"ward.D\")\n\nWe can now compute several cluster quality indices using the as.clustrange function from two to ten groups.\n\n# Loading the WeightedCluster library\nlibrary(WeightedCluster)\n# Computing cluster quality measures.\nclustqual &lt;- as.clustrange(hc, diss = diss, ncluster = 10)\nclustqual\n\n           PBC   HG HGSD  ASW ASWw     CH   R2   CHsq R2sq   HC\ncluster2  0.55 0.71 0.69 0.39 0.39 184.57 0.21 347.47 0.33 0.14\ncluster3  0.49 0.57 0.57 0.27 0.27 139.53 0.28 261.70 0.42 0.22\ncluster4  0.46 0.58 0.57 0.24 0.24 124.40 0.35 228.94 0.49 0.23\ncluster5  0.51 0.68 0.67 0.27 0.28 118.20 0.40 241.78 0.58 0.18\ncluster6  0.52 0.70 0.70 0.28 0.29 117.08 0.45 241.96 0.63 0.17\ncluster7  0.55 0.78 0.78 0.32 0.32 114.14 0.49 245.83 0.68 0.13\ncluster8  0.56 0.82 0.82 0.32 0.33 109.22 0.52 244.85 0.71 0.11\ncluster9  0.57 0.85 0.85 0.34 0.35 105.74 0.55 255.12 0.74 0.09\ncluster10 0.55 0.85 0.84 0.32 0.33 101.81 0.57 244.05 0.76 0.10"
+    "objectID": "blog/posts/2020-09-01-seqhandbook/index.html",
+    "href": "blog/posts/2020-09-01-seqhandbook/index.html",
+    "title": "New R package: seqhandbook",
+    "section": "",
+    "text": "Hello everyone, I just uploaded a new R package on CRAN, seqhandbook. It is initially intended to accompany a sequence analysis handbook to be published (in French) in 2021 by INED, with some data sets and a tutorial.\nBut it also includes functions for\n\ndescribing episodes in individual sequences,\nmeasuring association between domains in multidimensional sequence analysis,\nheat maps of sequence data,\nGlobally Interdependent Multidimensional Sequence Analysis (GIMSA),\nsmoothing sequences for index plots,\ncoding sequences for Qualitative Harmonic Analysis,\nmeasuring stress from multidimensional scaling factors, and\nsymmetrical (or canonical) Partial Least Squares.\n\nMaybe some of them could be useful for you!\nBest,\nNicolas\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#parametric-bootstrap",
-    "href": "blog/posts/2023-10-19-validating-typologies/index.html#parametric-bootstrap",
-    "title": "Validating sequence analysis typologies using parametric bootstrap",
-    "section": "Parametric bootstrap",
-    "text": "Parametric bootstrap\nParametric bootstrap aims to provide baseline values obtained by clustering similar but non-clustered data. This can be computed using the seqnullcqi function with the following parameters:\n\nR: number of bootstraps.\nmodel: the null model (see the sections below).\nseqdist.args: list of arguments passed to seqdist (should be identical to the first call to seqdist).\nhclust.method: hierarchical clustering method (should be identical to the original clustering).\nkmedoid: if TRUE, use PAM (and the wcKMedRange function) instead of hierarchical clustering.\nparallel: if TRUE, use parallel computing to speed up the computations.\n\n\nCombined randomization\nThe following R code estimates expected values of the cluster quality indices when clustering similar sequences that are not clustered according to the \"combined\" model, using the Hamming distance and Ward hierarchical clustering. We set parallel = TRUE to use parallel computing. You can use progressbar = TRUE to show a progress bar of the computations (not meaningful here within a document).\n\nset.seed(1)\nbcq.combined &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"combined\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nOnce the parametric bootstrap is computed (may take a while…), the results are stored in the bcq.combined object. Printing the object (just by writing its name) already provides several pieces of information: the standardized cluster quality indices and the inconclusive interval (standardized values).\n\nbcq.combined\n\nParametric bootstrap cluster analysis validation\nSequence analysis null model: list(model = \"combined\") \nNumber of bootstraps: 1000 \nClustering method: hclust with ward.D \nSeqdist arguments: list(method = \"HAM\") \n\n                                   PBC            HG         HGSD           ASW\ncluster2                          6.07          6.01          6.1         15.23\ncluster3                          4.29          4.31          4.4          8.07\ncluster4                          2.31          2.67         2.74          5.31\ncluster5                           2.2          2.52         2.57          6.12\ncluster6                          1.41          1.75         1.78           5.5\ncluster7                           2.4          3.16          3.2          8.44\ncluster8                          3.15          4.15         4.18          9.96\ncluster9                          3.88          4.74         4.77         12.11\ncluster10                          3.3           4.4         4.43         12.04\n                                                                               \nNull Max-T 0.95 interval [-0.13; 2.41] [-0.08; 2.23] [-0.1; 2.24] [-0.22; 2.32]\n                                  ASWw            CH            R2         CHsq\ncluster2                         15.16         27.76         23.55        31.44\ncluster3                          8.03         23.95         19.45        24.36\ncluster4                          5.25         23.43         18.32        20.75\ncluster5                          6.08         24.88          18.7        23.21\ncluster6                          5.45         27.37         19.63        22.99\ncluster7                          8.37         31.69         21.86        27.27\ncluster8                          9.87         34.78          23.4        30.87\ncluster9                         11.99         37.98         24.91        36.88\ncluster10                         11.9         40.41            26        37.98\n                                                                               \nNull Max-T 0.95 interval [-0.21; 2.31] [-1.18; 2.56] [-1.18; 2.49] [-1.1; 2.64]\n                                  R2sq            HC\ncluster2                         23.48         -5.18\ncluster3                         17.19         -4.65\ncluster4                         14.22         -3.23\ncluster5                          14.5         -3.33\ncluster6                         13.69         -2.89\ncluster7                         15.21         -4.91\ncluster8                         16.41         -6.41\ncluster9                         18.21          -7.4\ncluster10                        18.61         -7.42\n                                                    \nNull Max-T 0.95 interval [-1.11; 2.54] [-0.04; 2.69]\n\n\nLooking at the numbers, 2, 9 and 10 groups stand out. To get non-standardized values, use norm = FALSE. Notice that inconclusive ASW intervals are well below the recommended values (over 0.5).\n\nprint(bcq.combined, norm = FALSE)\n\nParametric bootstrap cluster analysis validation\nSequence analysis null model: list(model = \"combined\") \nNumber of bootstraps: 1000 \nClustering method: hclust with ward.D \nSeqdist arguments: list(method = \"HAM\") \n\n                                  PBC           HG         HGSD         ASW\ncluster2                         0.55         0.71         0.69        0.39\ncluster3                         0.49         0.57         0.57        0.27\ncluster4                         0.46         0.58         0.57        0.24\ncluster5                         0.51         0.68         0.67        0.27\ncluster6                         0.52          0.7          0.7        0.28\ncluster7                         0.55         0.78         0.78        0.32\ncluster8                         0.56         0.82         0.82        0.32\ncluster9                         0.57         0.85         0.85        0.34\ncluster10                        0.55         0.85         0.84        0.32\n                                                                           \nNull Max-T 0.95 interval [0.45; 0.54] [0.69; 0.78] [0.68; 0.78] [0.14; 0.2]\n                                 ASWw             CH           R2\ncluster2                         0.39         184.57         0.21\ncluster3                         0.27         139.53         0.28\ncluster4                         0.24          124.4         0.35\ncluster5                         0.28          118.2          0.4\ncluster6                         0.29         117.08         0.45\ncluster7                         0.32         114.14         0.49\ncluster8                         0.33         109.22         0.52\ncluster9                         0.35         105.74         0.55\ncluster10                        0.33         101.81         0.57\n                                                                 \nNull Max-T 0.95 interval [0.15; 0.21] [39.84; 57.15] [0.31; 0.34]\n                                    CHsq         R2sq           HC\ncluster2                          347.47         0.33         0.14\ncluster3                           261.7         0.42         0.22\ncluster4                          228.94         0.49         0.23\ncluster5                          241.78         0.58         0.18\ncluster6                          241.96         0.63         0.17\ncluster7                          245.83         0.68         0.13\ncluster8                          244.85         0.71         0.11\ncluster9                          255.12         0.74         0.09\ncluster10                         244.05         0.76          0.1\n                                                                  \nNull Max-T 0.95 interval [74.91; 100.05] [0.48; 0.53] [0.33; 0.44]\n\n\nSeveral plots can then be used to inspect the results using the plot command and the type argument. First, one can look at the sequences generated by the null model by using type = \"seqdplot\".\n\nplot(bcq.combined, type = \"seqdplot\")\n\n\n\n\n\n\n\n\nThe overall distribution of the CQI values can be plotted using type = \"density\". In this case, one also needs to specify the CQI to be used. All tested numbers of groups are found to be significant. Any CQI computed by as.clustrange() can be used here. To show the density of the average silhouette width (\"ASW\"), one can use:\n\nplot(bcq.combined, stat = \"ASW\", type = \"density\")\n\n\n\n\n\n\n\n\n      2.5%      97.5% \n-0.2176533  2.3174904 \n\n\nBy using type = \"line\", we plot the obtained and bootstrapped CQI values depending on the number of groups.\n\nplot(bcq.combined, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nRandomized sequencing\nTo use another null model, one only needs to change the model argument of the seqnullcqi function. The randomized sequencing keeps the duration attached to each state, but randomizes the ordering of the spells. It can be used to uncover the sequencing structure of the data.\n\nset.seed(2)\nbcq.seq &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"sequencing\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nWe can then plot the results as before. Notice that solutions between 3 and 6 are below the critical line.\n\nplot(bcq.seq, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nRandomized duration\nThe randomized duration keeps the same ordering of the states, but randomizes the time spent in each spell. It can be used to uncover the duration-related structure of the data.\n\nset.seed(3)\nbcq.dur &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"duration\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nWe can then plot the results as before. The 3- and 4-group solutions are below the “significance line”. Otherwise, the ranking of the solutions is the same.\n\nplot(bcq.dur, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nState independence\nThe state independence null model generates sequences, position by position, independently of the previous state. This is a quite unrealistic assumption for longitudinal data.\n\nset.seed(4)\nbcq.stateindep &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"stateindep\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nBootstrapped CQI values are extremely low compared to our clustering, meaning that we have a strong longitudinal structure (not surprising!).\n\nplot(bcq.stateindep, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nFirst-order Markov null model\nThe first-order Markov null model generates sequences using time-invariant transition rates. As a result, the generated sequences are often quite similar to the observed ones. This model can uncover structure stemming from time-dependent transition rates.\n\nset.seed(5)\nbcq.Markov &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"Markov\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\n\nplot(bcq.Markov, stat = \"ASW\", type = \"line\")"
+    "objectID": "about.html#our-mission",
+    "href": "about.html#our-mission",
+    "title": "About the SAA",
+    "section": "Our mission",
+    "text": "Our mission\nThe Sequence Analysis Association (SAA) aims to promote research, teaching and diffusion of sequence analysis (SA) and its relationships with related methods. To this end, the SAA\n\norganises events such as symposia, webinars and training courses,\ncollects and shares information on SA-related events, and\nprovides links to SA resources — software, books, articles and a shared bibliography."
   },
   {
-    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#choosing-a-solution",
-    "href": "blog/posts/2023-10-19-validating-typologies/index.html#choosing-a-solution",
-    "title": "Validating sequence analysis typologies using parametric bootstrap",
-    "section": "Choosing a solution",
-    "text": "Choosing a solution\nThe various null models lead to the same conclusions and ranking of the solutions. Solutions between 3 and 6 groups were not always above the critical lines (in the sequencing null model for instance), and can be avoided. We generally saw good clustering quality for a clustering in 9 groups. The solution is shown below.\n\nseqdplot(mvad.seq, clustqual$clustering$cluster9, border = NA)"
+    "objectID": "about.html#history",
+    "href": "about.html#history",
+    "title": "About the SAA",
+    "section": "History",
+    "text": "History\nThe SAA was founded during the International Symposium on Sequence Analysis and Related Methods (ISSA), held on 10–12 October 2018 at Monte Verità, Ticino, Switzerland. The symposium continued a series of meetings that began with the Lausanne Conference on Sequence Analysis (LaCOSA) in 2012 and LaCOSA II in 2016.\n\n\n\nParticipants of the 2018 symposium at Monte Verità, where the SAA was founded."
+  },
+  {
+    "objectID": "about.html#executive-committee",
+    "href": "about.html#executive-committee",
+    "title": "About the SAA",
+    "section": "Executive Committee",
+    "text": "Executive Committee\n\n\nEmanuela Struffolino University of Milan (IT) · President\n\n\nDanilo Bolano Bocconi University (IT)\n\n\nKevin Emery University of Geneva (CH)\n\n\nBrendan Halpin University of Limerick (IE)\n\n\nSatu Helske University of Turku (FI)\n\n\nTim F. Liao University of Illinois Urbana-Champaign (US) · President 2023–2024\n\n\nRaffaella Piccarreta Bocconi University, Milan (IT)\n\n\nGilbert Ritschard University of Geneva (CH) · President 2018–2020\n\n\nCarla Rowold University of Oxford (UK)\n\n\nDolores Sesma Carlos University of Valencia (ES)\n\n\nMatthias Studer University of Geneva (CH) · President 2021–2022"
+  },
+  {
+    "objectID": "about.html#advisory-board",
+    "href": "about.html#advisory-board",
+    "title": "About the SAA",
+    "section": "Advisory Board",
+    "text": "Advisory Board\n\n\nAndrew Abbott University of Chicago (US) · Honorary President\n\n\nSilke Aisenbrey Yeshiva University, New York (US)\n\n\nTorsten Biemann University of Mannheim (DE)\n\n\nFrancesco Billari Bocconi University, Milan (IT)\n\n\nBenjamin Cornwell Cornell University (US)\n\n\nCees Elzinga VU Amsterdam (NL)\n\n\nAnette Fasang Humboldt University Berlin (DE)\n\n\nJacques-Antoine Gauthier University of Lausanne (CH)\n\n\nLaurent Lesnard CNRS, Sciences Po, Paris (FR)\n\n\nMarcel Raab University of Bamberg (DE)\n\n\nJeroen K. Vermunt Tilburg University (NL)"
+  },
+  {
+    "objectID": "about.html#annual-reports",
+    "href": "about.html#annual-reports",
+    "title": "About the SAA",
+    "section": "Annual reports",
+    "text": "Annual reports\n\n2025 2024 2023 2022 2020 2019"
+  },
+  {
+    "objectID": "about.html#statutes",
+    "href": "about.html#statutes",
+    "title": "About the SAA",
+    "section": "Statutes",
+    "text": "Statutes\nThe SAA is a non-profit association under Swiss law with headquarters in Geneva. Its aims, membership rules and organs — General Assembly, Executive Committee, auditors and Advisory Board — are set out in the statutes.\n Read the statutes  PDF"
+  },
+  {
+    "objectID": "about.html#contact",
+    "href": "about.html#contact",
+    "title": "About the SAA",
+    "section": "Get involved & contact",
+    "text": "Get involved & contact\n Interested in joining? See how to become a member.\nYou can support the SAA community in several ways:\n\n\n Share publications on sequence analysis or related methods — we add them to our Zotero bibliography.\n Tell us about software — new packages and functions in R, Stata, Python or elsewhere that are useful to SA practitioners.\n Propose an event — symposia and workshops can be organised with the support of the SAA; send requests to the Executive Committee.\n Announce events of interest to the community so we can post them on the blog.\n\n\n\n\n\n\ninfo@sequenceanalysis.org\nQuestions, news and event announcements.\n\n\n\n\n\nSAA on LinkedIn\nOur preferred forum for SAA-related discussion."
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Welcome to the new SAA website\n\n\n\nassociation\n\n\n\nA fresh look, open to everyone: what changes with the relaunch.\n\n\n\n\n\n28 October 2026\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nggseqplot 1.0.0 on CRAN\n\n\n\nsoftware\n\ntutorials\n\n\n\nRegression trees of sequences without GraphViz, decorated parallel coordinate plots, and implicative statistics.\n\n\n\n\n\n23 October 2026\n\n\nMarcel Raab\n\n\n\n\n\n\n\n\n\n\n\n\nNext webinar: 22 October\n\n\n\nevents\n\n\n\nAutumn 2026 Webinar Series — save the date.\n\n\n\n\n\n4 October 2026\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nPre-EPC meeting 2026: Life Course Dynamics\n\n\n\nevents\n\n\n\nA one-day SAA side meeting before the European Population Conference 2026 in Bologna.\n\n\n\n\n\n21 December 2025\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nSAA now on LinkedIn\n\n\n\nassociation\n\n\n\nLinkedIn is now the preferred forum for SAA-related discussion.\n\n\n\n\n\n22 June 2025\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\n2024 General Assembly: voting results\n\n\n\nassociation\n\n\n\nResults of the December 2024 elections and votes.\n\n\n\n\n\n23 December 2024\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nValidating sequence analysis typologies using parametric bootstrap\n\n\n\nsoftware\n\ntutorials\n\n\n\nA quick introduction to the R code for typology validation with WeightedCluster’s seqnullcqi().\n\n\n\n\n\n19 October 2023\n\n\nMatthias Studer\n\n\n\n\n\n\n\n\n\n\n\n\nThe story of sequence analysis by a dream team of SAA members\n\n\n\npublications\n\n\n\nSequence analysis: Its past, present, and future — an open-access article in Social Science Research.\n\n\n\n\n\n30 August 2022\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nggseqplot: ggplotify sequence plots\n\n\n\nsoftware\n\ntutorials\n\n\n\nRendering TraMineR sequence plots with ggplot2 — and customising them with the + operator.\n\n\n\n\n\n5 August 2022\n\n\nMarcel Raab\n\n\n\n\n\n\n\n\n\n\n\n\nNew Wikipedia page on sequence analysis\n\n\n\npublications\n\n\n\nThe redesigned article “Sequence analysis in social sciences” replaces the former “Social sequence analysis” page.\n\n\n\n\n\n10 October 2021\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nTraMineR and TraMineRextras updates 2020–2021\n\n\n\nsoftware\n\n\n\nNew dissimilarity options, sequence indicators, domain association, polyadic distances and group comparison tests.\n\n\n\n\n\n7 June 2021\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nNew R package: seqhandbook\n\n\n\nsoftware\n\n\n\nData sets, a tutorial and a toolbox of functions accompanying a French-language handbook on sequence analysis.\n\n\n\n\n\n1 September 2020\n\n\nNicolas Robette\n\n\n\n\n\nNo matching items\n Back to top"
+  },
+  {
+    "objectID": "blog/posts/2021-06-07-software-news/index.html",
+    "href": "blog/posts/2021-06-07-software-news/index.html",
+    "title": "TraMineR and TraMineRextras updates 2020–2021",
+    "section": "",
+    "text": "This post brings together three release notes on TraMineR and TraMineRextras that appeared on the old SAA website between April 2020 and June 2021. For later changes, see the NEWS files of the packages on CRAN."
+  },
+  {
+    "objectID": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-2-3-june-2021",
+    "href": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-2-3-june-2021",
+    "title": "TraMineR and TraMineRextras updates 2020–2021",
+    "section": "TraMineR 2.2-2 (3 June 2021)",
+    "text": "TraMineR 2.2-2 (3 June 2021)\n\nAll new indexes proposed in Ritschard, G. Measuring the nature of individual sequences. Sociological Methods & Research. DOI: 10.1177/00491241211036156 — see function seqindic().\nFunction dissdomassoc(), which computes the measures of association between domains proposed in Piccarreta, R. (2017). Joint sequence analysis: Association and clustering. Sociological Methods & Research, 46(2), 252–287. DOI: 10.1177/0049124115591013.\nUpdated seqdist(), which can now compute pairwise dissimilarities between two (sub)sets of state sequences."
+  },
+  {
+    "objectID": "blog/posts/2021-06-07-software-news/index.html#traminerextras-0.6.1-january-2021",
+    "href": "blog/posts/2021-06-07-software-news/index.html#traminerextras-0.6.1-january-2021",
+    "title": "TraMineR and TraMineRextras updates 2020–2021",
+    "section": "TraMineRextras 0.6.1 (January 2021)",
+    "text": "TraMineRextras 0.6.1 (January 2021)\n\nDynamic individual indicators following Pelletier, D., Bignami-Van Assche, S. & Simard-Gendron, A. (2020). Measuring life course complexity with dynamic sequence analysis. Social Indicators Research. DOI: 10.1007/s11205-020-02464-y\nPolyadic distances and their comparison with distances computed on randomly drawn polyads, as described in Liao, T. F. (2021). Using sequence analysis to quantify how strongly life courses are linked. Sociological Science, 8, 48–72. DOI: 10.15195/v8.a3"
+  },
+  {
+    "objectID": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-and-traminerextras-0.6-april-2020",
+    "href": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-and-traminerextras-0.6-april-2020",
+    "title": "TraMineR and TraMineRextras updates 2020–2021",
+    "section": "TraMineR 2.2 and TraMineRextras 0.6 (April 2020)",
+    "text": "TraMineR 2.2 and TraMineRextras 0.6 (April 2020)\nTraMineR 2.2 improved the seqdist() function:\n\nvectors of state-dependent indel costs are supported by all distance methods that require an indel value;\nindel has a new default \"auto\", which derives a suitable indel value from the substitution costs;\nrefseq (reference sequence) is supported by all distance methods, including a reference given as a sequence object;\nnormalization is available for all edit distances.\n\nIn addition, seqdef() assigns a default colour palette for alphabets with more than 12 states, and a new rbind() method for state sequence objects makes it easy to merge sequence data.\nTraMineRextras 0.6 added seqCompare(), which implements the likelihood ratio test (LRT) and the BIC difference proposed in Liao, T. F. & Fasang, A. E. (2021). Comparing groups of life-course sequences using the Bayesian information criterion and the likelihood-ratio test. Sociological Methodology, 51(1), 44–85. DOI: 10.1177/0081175020959401. Moreover, seqplot.rf() gained the argument which.plot, and seqgranularity() the methods \"first.valid\" and \"last.valid\" for sequences with missing values."
   },
   {
     "objectID": "blog/posts/2022-08-05-ggseqplot/index.html",
@@ -266,127 +385,92 @@
     "text": "Notes\n\nIf you find issues, please let me know: https://github.com/maraab23/ggseqplot/issues"
   },
   {
-    "objectID": "blog/posts/2021-06-07-software-news/index.html",
-    "href": "blog/posts/2021-06-07-software-news/index.html",
-    "title": "TraMineR and TraMineRextras updates 2020–2021",
+    "objectID": "blog/posts/2022-08-05-ggseqplot/index.html#about-the-author",
+    "href": "blog/posts/2022-08-05-ggseqplot/index.html#about-the-author",
+    "title": "ggseqplot: ggplotify sequence plots",
+    "section": "About the author",
+    "text": "About the author\n\nMarcel Raab is a senior researcher at the State Institute for Family Research at the University of Bamberg and co-editor of the Journal of Family Research. He develops and maintains the R package {ggseqplot} and, together with Emanuela Struffolino, wrote the book Sequence Analysis (SAGE, Quantitative Applications in the Social Sciences)."
+  },
+  {
+    "objectID": "blog/posts/2022-08-05-ggseqplot/index.html#copyright-and-license",
+    "href": "blog/posts/2022-08-05-ggseqplot/index.html#copyright-and-license",
+    "title": "ggseqplot: ggplotify sequence plots",
+    "section": "Copyright and license",
+    "text": "Copyright and license\n\n© 2022 Marcel Raab\n This post is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)."
+  },
+  {
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
     "section": "",
-    "text": "This post brings together three release notes on TraMineR and TraMineRextras that appeared on the old SAA website between April 2020 and June 2021. For later changes, see the NEWS files of the packages on CRAN."
+    "text": "This tutorial was first published on the old SAA website in October 2023. It has been re-run in October 2026 with {TraMineR} 2.2.14 and {WeightedCluster} 2.0. Because the bootstrap relies on random draws, the bootstrapped values may differ slightly from the original post."
   },
   {
-    "objectID": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-2-3-june-2021",
-    "href": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-2-3-june-2021",
-    "title": "TraMineR and TraMineRextras updates 2020–2021",
-    "section": "TraMineR 2.2-2 (3 June 2021)",
-    "text": "TraMineR 2.2-2 (3 June 2021)\n\nAll new indexes proposed in Ritschard, G. Measuring the nature of individual sequences. Sociological Methods & Research. DOI: 10.1177/00491241211036156 — see function seqindic().\nFunction dissdomassoc(), which computes the measures of association between domains proposed in Piccarreta, R. (2017). Joint sequence analysis: Association and clustering. Sociological Methods & Research, 46(2), 252–287. DOI: 10.1177/0049124115591013.\nUpdated seqdist(), which can now compute pairwise dissimilarities between two (sub)sets of state sequences."
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#introduction",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#introduction",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "Introduction",
+    "text": "Introduction\nThis document provides a very quick introduction to the R code needed to use parametric bootstraps for typology validation in sequence analysis. Readers interested in the methods and the exact interpretation of the results are referred to:\n\nStuder, M. (2021). Validating sequence analysis typologies using parametric bootstraps. Sociological Methodology, 51(2), 290–318. https://doi.org/10.1177/00811750211014232"
   },
   {
-    "objectID": "blog/posts/2021-06-07-software-news/index.html#traminerextras-0.6.1-january-2021",
-    "href": "blog/posts/2021-06-07-software-news/index.html#traminerextras-0.6.1-january-2021",
-    "title": "TraMineR and TraMineRextras updates 2020–2021",
-    "section": "TraMineRextras 0.6.1 (January 2021)",
-    "text": "TraMineRextras 0.6.1 (January 2021)\n\nDynamic individual indicators following Pelletier, D., Bignami-Van Assche, S. & Simard-Gendron, A. (2020). Measuring life course complexity with dynamic sequence analysis. Social Indicators Research. DOI: 10.1007/s11205-020-02464-y\nPolyadic distances and their comparison with distances computed on randomly drawn polyads, as described in Liao, T. F. (2021). Using sequence analysis to quantify how strongly life courses are linked. Sociological Science, 8, 48–72. DOI: 10.15195/v8.a3"
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-state-sequence-object",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-state-sequence-object",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "Creating the state sequence object",
+    "text": "Creating the state sequence object\nFor this example, we will use the mvad dataset. Let’s start with the creation of the state sequence object.\n\n## Loading the TraMineR library\nlibrary(TraMineR)\n## Loading the data\ndata(mvad)\n\n## State properties\nmvad.alphabet &lt;- c(\n  \"employment\",\n  \"FE\",\n  \"HE\",\n  \"joblessness\",\n  \"school\",\n  \"training\"\n)\nmvad.lab &lt;- c(\n  \"employment\",\n  \"further education\",\n  \"higher education\",\n  \"joblessness\",\n  \"school\",\n  \"training\"\n)\nmvad.shortlab &lt;- c(\"EM\", \"FE\", \"HE\", \"JL\", \"SC\", \"TR\")\n\n## Creating the state sequence object\nmvad.seq &lt;- seqdef(\n  mvad,\n  17:86,\n  alphabet = mvad.alphabet,\n  states = mvad.shortlab,\n  labels = mvad.lab,\n  xtstep = 6\n)"
   },
   {
-    "objectID": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-and-traminerextras-0.6-april-2020",
-    "href": "blog/posts/2021-06-07-software-news/index.html#traminer-2.2-and-traminerextras-0.6-april-2020",
-    "title": "TraMineR and TraMineRextras updates 2020–2021",
-    "section": "TraMineR 2.2 and TraMineRextras 0.6 (April 2020)",
-    "text": "TraMineR 2.2 and TraMineRextras 0.6 (April 2020)\nTraMineR 2.2 improved the seqdist() function:\n\nvectors of state-dependent indel costs are supported by all distance methods that require an indel value;\nindel has a new default \"auto\", which derives a suitable indel value from the substitution costs;\nrefseq (reference sequence) is supported by all distance methods, including a reference given as a sequence object;\nnormalization is available for all edit distances.\n\nIn addition, seqdef() assigns a default colour palette for alphabets with more than 12 states, and a new rbind() method for state sequence objects makes it easy to merge sequence data.\nTraMineRextras 0.6 added seqCompare(), which implements the likelihood ratio test (LRT) and the BIC difference proposed in Liao, T. F. & Fasang, A. E. (2021). Comparing groups of life-course sequences using the Bayesian information criterion and the likelihood-ratio test. Sociological Methodology, 51(1), 44–85. DOI: 10.1177/0081175020959401. Moreover, seqplot.rf() gained the argument which.plot, and seqgranularity() the methods \"first.valid\" and \"last.valid\" for sequences with missing values."
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-typology",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#creating-the-typology",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "Creating the typology",
+    "text": "Creating the typology\nWe will now create a typology using cluster analysis. Readers interested in more detail are referred to the WeightedCluster library manual, which goes into the details of the creation and computation of cluster quality measures.\nWe start by computing dissimilarities with the seqdist function and the Hamming distance. We then use Ward clustering to create a typology of the trajectories. For this step, we recommend the use of the fastcluster library, which considerably speeds up the computations.\n\n## Using fastcluster for hierarchical clustering\nlibrary(fastcluster)\n## Distance computation\ndiss &lt;- seqdist(mvad.seq, method = \"HAM\")\n## Hierarchical clustering\nhc &lt;- hclust(as.dist(diss), method = \"ward.D\")\n\nWe can now compute several cluster quality indices using the as.clustrange function from two to ten groups.\n\n# Loading the WeightedCluster library\nlibrary(WeightedCluster)\n# Computing cluster quality measures.\nclustqual &lt;- as.clustrange(hc, diss = diss, ncluster = 10)\nclustqual\n\n           PBC   HG HGSD  ASW ASWw     CH   R2   CHsq R2sq   HC\ncluster2  0.55 0.71 0.69 0.39 0.39 184.57 0.21 347.47 0.33 0.14\ncluster3  0.49 0.57 0.57 0.27 0.27 139.53 0.28 261.70 0.42 0.22\ncluster4  0.46 0.58 0.57 0.24 0.24 124.40 0.35 228.94 0.49 0.23\ncluster5  0.51 0.68 0.67 0.27 0.28 118.20 0.40 241.78 0.58 0.18\ncluster6  0.52 0.70 0.70 0.28 0.29 117.08 0.45 241.96 0.63 0.17\ncluster7  0.55 0.78 0.78 0.32 0.32 114.14 0.49 245.83 0.68 0.13\ncluster8  0.56 0.82 0.82 0.32 0.33 109.22 0.52 244.85 0.71 0.11\ncluster9  0.57 0.85 0.85 0.34 0.35 105.74 0.55 255.12 0.74 0.09\ncluster10 0.55 0.85 0.84 0.32 0.33 101.81 0.57 244.05 0.76 0.10"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#parametric-bootstrap",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#parametric-bootstrap",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "Parametric bootstrap",
+    "text": "Parametric bootstrap\nParametric bootstrap aims to provide baseline values obtained by clustering similar but non-clustered data. This can be computed using the seqnullcqi function with the following parameters:\n\nR: number of bootstraps.\nmodel: the null model (see the sections below).\nseqdist.args: list of arguments passed to seqdist (should be identical to the first call to seqdist).\nhclust.method: hierarchical clustering method (should be identical to the original clustering).\nkmedoid: if TRUE, use PAM (and the wcKMedRange function) instead of hierarchical clustering.\nparallel: if TRUE, use parallel computing to speed up the computations.\n\n\nCombined randomization\nThe following R code estimates expected values of the cluster quality indices when clustering similar sequences that are not clustered according to the \"combined\" model, using the Hamming distance and Ward hierarchical clustering. We set parallel = TRUE to use parallel computing. You can use progressbar = TRUE to show a progress bar of the computations (not meaningful here within a document).\n\nset.seed(1)\nbcq.combined &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"combined\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nOnce the parametric bootstrap is computed (may take a while…), the results are stored in the bcq.combined object. Printing the object (just by writing its name) already provides several pieces of information: the standardized cluster quality indices and the inconclusive interval (standardized values).\n\nbcq.combined\n\nParametric bootstrap cluster analysis validation\nSequence analysis null model: list(model = \"combined\") \nNumber of bootstraps: 1000 \nClustering method: hclust with ward.D \nSeqdist arguments: list(method = \"HAM\") \n\n                                   PBC            HG         HGSD           ASW\ncluster2                          6.07          6.01          6.1         15.23\ncluster3                          4.29          4.31          4.4          8.07\ncluster4                          2.31          2.67         2.74          5.31\ncluster5                           2.2          2.52         2.57          6.12\ncluster6                          1.41          1.75         1.78           5.5\ncluster7                           2.4          3.16          3.2          8.44\ncluster8                          3.15          4.15         4.18          9.96\ncluster9                          3.88          4.74         4.77         12.11\ncluster10                          3.3           4.4         4.43         12.04\n                                                                               \nNull Max-T 0.95 interval [-0.13; 2.41] [-0.08; 2.23] [-0.1; 2.24] [-0.22; 2.32]\n                                  ASWw            CH            R2         CHsq\ncluster2                         15.16         27.76         23.55        31.44\ncluster3                          8.03         23.95         19.45        24.36\ncluster4                          5.25         23.43         18.32        20.75\ncluster5                          6.08         24.88          18.7        23.21\ncluster6                          5.45         27.37         19.63        22.99\ncluster7                          8.37         31.69         21.86        27.27\ncluster8                          9.87         34.78          23.4        30.87\ncluster9                         11.99         37.98         24.91        36.88\ncluster10                         11.9         40.41            26        37.98\n                                                                               \nNull Max-T 0.95 interval [-0.21; 2.31] [-1.18; 2.56] [-1.18; 2.49] [-1.1; 2.64]\n                                  R2sq            HC\ncluster2                         23.48         -5.18\ncluster3                         17.19         -4.65\ncluster4                         14.22         -3.23\ncluster5                          14.5         -3.33\ncluster6                         13.69         -2.89\ncluster7                         15.21         -4.91\ncluster8                         16.41         -6.41\ncluster9                         18.21          -7.4\ncluster10                        18.61         -7.42\n                                                    \nNull Max-T 0.95 interval [-1.11; 2.54] [-0.04; 2.69]\n\n\nLooking at the numbers, 2, 9 and 10 groups stand out. To get non-standardized values, use norm = FALSE. Notice that inconclusive ASW intervals are well below the recommended values (over 0.5).\n\nprint(bcq.combined, norm = FALSE)\n\nParametric bootstrap cluster analysis validation\nSequence analysis null model: list(model = \"combined\") \nNumber of bootstraps: 1000 \nClustering method: hclust with ward.D \nSeqdist arguments: list(method = \"HAM\") \n\n                                  PBC           HG         HGSD         ASW\ncluster2                         0.55         0.71         0.69        0.39\ncluster3                         0.49         0.57         0.57        0.27\ncluster4                         0.46         0.58         0.57        0.24\ncluster5                         0.51         0.68         0.67        0.27\ncluster6                         0.52          0.7          0.7        0.28\ncluster7                         0.55         0.78         0.78        0.32\ncluster8                         0.56         0.82         0.82        0.32\ncluster9                         0.57         0.85         0.85        0.34\ncluster10                        0.55         0.85         0.84        0.32\n                                                                           \nNull Max-T 0.95 interval [0.45; 0.54] [0.69; 0.78] [0.68; 0.78] [0.14; 0.2]\n                                 ASWw             CH           R2\ncluster2                         0.39         184.57         0.21\ncluster3                         0.27         139.53         0.28\ncluster4                         0.24          124.4         0.35\ncluster5                         0.28          118.2          0.4\ncluster6                         0.29         117.08         0.45\ncluster7                         0.32         114.14         0.49\ncluster8                         0.33         109.22         0.52\ncluster9                         0.35         105.74         0.55\ncluster10                        0.33         101.81         0.57\n                                                                 \nNull Max-T 0.95 interval [0.15; 0.21] [39.84; 57.15] [0.31; 0.34]\n                                    CHsq         R2sq           HC\ncluster2                          347.47         0.33         0.14\ncluster3                           261.7         0.42         0.22\ncluster4                          228.94         0.49         0.23\ncluster5                          241.78         0.58         0.18\ncluster6                          241.96         0.63         0.17\ncluster7                          245.83         0.68         0.13\ncluster8                          244.85         0.71         0.11\ncluster9                          255.12         0.74         0.09\ncluster10                         244.05         0.76          0.1\n                                                                  \nNull Max-T 0.95 interval [74.91; 100.05] [0.48; 0.53] [0.33; 0.44]\n\n\nSeveral plots can then be used to inspect the results using the plot command and the type argument. First, one can look at the sequences generated by the null model by using type = \"seqdplot\".\n\nplot(bcq.combined, type = \"seqdplot\")\n\n\n\n\n\n\n\n\nThe overall distribution of the CQI values can be plotted using type = \"density\". In this case, one also needs to specify the CQI to be used. All tested numbers of groups are found to be significant. Any CQI computed by as.clustrange() can be used here. To show the density of the average silhouette width (\"ASW\"), one can use:\n\nplot(bcq.combined, stat = \"ASW\", type = \"density\")\n\n\n\n\n\n\n\n\n      2.5%      97.5% \n-0.2176533  2.3174904 \n\n\nBy using type = \"line\", we plot the obtained and bootstrapped CQI values depending on the number of groups.\n\nplot(bcq.combined, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nRandomized sequencing\nTo use another null model, one only needs to change the model argument of the seqnullcqi function. The randomized sequencing keeps the duration attached to each state, but randomizes the ordering of the spells. It can be used to uncover the sequencing structure of the data.\n\nset.seed(2)\nbcq.seq &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"sequencing\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nWe can then plot the results as before. Notice that solutions between 3 and 6 are below the critical line.\n\nplot(bcq.seq, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nRandomized duration\nThe randomized duration keeps the same ordering of the states, but randomizes the time spent in each spell. It can be used to uncover the duration-related structure of the data.\n\nset.seed(3)\nbcq.dur &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"duration\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nWe can then plot the results as before. The 3- and 4-group solutions are below the “significance line”. Otherwise, the ranking of the solutions is the same.\n\nplot(bcq.dur, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nState independence\nThe state independence null model generates sequences, position by position, independently of the previous state. This is a quite unrealistic assumption for longitudinal data.\n\nset.seed(4)\nbcq.stateindep &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"stateindep\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\nBootstrapped CQI values are extremely low compared to our clustering, meaning that we have a strong longitudinal structure (not surprising!).\n\nplot(bcq.stateindep, stat = \"ASW\", type = \"line\")\n\n\n\n\n\n\n\n\n\n\nFirst-order Markov null model\nThe first-order Markov null model generates sequences using time-invariant transition rates. As a result, the generated sequences are often quite similar to the observed ones. This model can uncover structure stemming from time-dependent transition rates.\n\nset.seed(5)\nbcq.Markov &lt;- seqnullcqi(\n  mvad.seq,\n  clustqual,\n  R = 1000,\n  model = \"Markov\",\n  seqdist.args = list(method = \"HAM\"),\n  hclust.method = \"ward.D\",\n  parallel = TRUE\n)\n\n\nplot(bcq.Markov, stat = \"ASW\", type = \"line\")"
+  },
+  {
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#choosing-a-solution",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#choosing-a-solution",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "Choosing a solution",
+    "text": "Choosing a solution\nThe various null models lead to the same conclusions and ranking of the solutions. Solutions between 3 and 6 groups were not always above the critical lines (in the sequencing null model for instance), and can be avoided. We generally saw good clustering quality for a clustering in 9 groups. The solution is shown below.\n\nseqdplot(mvad.seq, clustqual$clustering$cluster9, border = NA)"
+  },
+  {
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#about-the-author",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#about-the-author",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "About the author",
+    "text": "About the author\n\nMatthias Studer is an associate professor of statistics for the social sciences at the Faculty of Social Sciences of the University of Geneva and at the LIVES Centre (“LIVES – Overcoming vulnerability: Life course perspectives”). He is the developer of the R package {WeightedCluster} and one of the developers of {TraMineR}."
+  },
+  {
+    "objectID": "blog/posts/2023-10-19-validating-typologies/index.html#copyright-and-license",
+    "href": "blog/posts/2023-10-19-validating-typologies/index.html#copyright-and-license",
+    "title": "Validating sequence analysis typologies using parametric bootstrap",
+    "section": "Copyright and license",
+    "text": "Copyright and license\n\n© 2023 Matthias Studer\n This post is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0)."
+  },
+  {
+    "objectID": "blog/posts/2025-06-22-linkedin/index.html",
+    "href": "blog/posts/2025-06-22-linkedin/index.html",
+    "title": "SAA now on LinkedIn",
     "section": "",
-    "text": "Welcome to the new SAA website\n\n\n\nassociation\n\n\n\nA fresh look, open to everyone: what changes with the relaunch.\n\n\n\n\n\n16 October 2026\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nNext webinar: 22 October\n\n\n\nevents\n\n\n\nAutumn 2026 Webinar Series — save the date.\n\n\n\n\n\n4 October 2026\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nPre-EPC meeting 2026: Life Course Dynamics\n\n\n\nevents\n\n\n\nA one-day SAA side meeting before the European Population Conference 2026 in Bologna.\n\n\n\n\n\n21 December 2025\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nSAA now on LinkedIn\n\n\n\nassociation\n\n\n\nLinkedIn is now the preferred forum for SAA-related discussion.\n\n\n\n\n\n22 June 2025\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\n2024 General Assembly: voting results\n\n\n\nassociation\n\n\n\nResults of the December 2024 elections and votes.\n\n\n\n\n\n23 December 2024\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nValidating sequence analysis typologies using parametric bootstrap\n\n\n\nsoftware\n\n\n\nA quick introduction to the R code for typology validation with WeightedCluster’s seqnullcqi().\n\n\n\n\n\n19 October 2023\n\n\nMatthias Studer\n\n\n\n\n\n\n\n\n\n\n\n\nThe story of sequence analysis by a dream team of SAA members\n\n\n\npublications\n\n\n\nSequence analysis: Its past, present, and future — an open-access article in Social Science Research.\n\n\n\n\n\n30 August 2022\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nggseqplot: ggplotify sequence plots\n\n\n\nsoftware\n\n\n\nRendering TraMineR sequence plots with ggplot2 — and customising them with the + operator.\n\n\n\n\n\n5 August 2022\n\n\nMarcel Raab\n\n\n\n\n\n\n\n\n\n\n\n\nNew Wikipedia page on sequence analysis\n\n\n\npublications\n\n\n\nThe redesigned article “Sequence analysis in social sciences” replaces the former “Social sequence analysis” page.\n\n\n\n\n\n10 October 2021\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nTraMineR and TraMineRextras updates 2020–2021\n\n\n\nsoftware\n\n\n\nNew dissimilarity options, sequence indicators, domain association, polyadic distances and group comparison tests.\n\n\n\n\n\n7 June 2021\n\n\nSAA Executive Committee\n\n\n\n\n\n\n\n\n\n\n\n\nNew R package: seqhandbook\n\n\n\nsoftware\n\n\n\nData sets, a tutorial and a toolbox of functions accompanying a French-language handbook on sequence analysis.\n\n\n\n\n\n1 September 2020\n\n\nNicolas Robette\n\n\n\n\n\nNo matching items\n Back to top"
+    "text": "Follow the SAA on LinkedIn, which is now the preferred forum for SAA-related news and discussion.\n\n\n\n Back to top"
   },
   {
-    "objectID": "about.html#our-mission",
-    "href": "about.html#our-mission",
-    "title": "About the SAA",
-    "section": "Our mission",
-    "text": "Our mission\nThe Sequence Analysis Association (SAA) aims to promote research, teaching and diffusion of sequence analysis (SA) and its relationships with related methods. To this end, the SAA\n\norganises events such as symposia, webinars and training courses,\ncollects and shares information on SA-related events, and\nprovides links to SA resources — software, books, articles and a shared bibliography."
-  },
-  {
-    "objectID": "about.html#history",
-    "href": "about.html#history",
-    "title": "About the SAA",
-    "section": "History",
-    "text": "History\nThe SAA was founded during the International Symposium on Sequence Analysis and Related Methods (ISSA), held on 10–12 October 2018 at Monte Verità, Ticino, Switzerland. The symposium continued a series of meetings that began with the Lausanne Conference on Sequence Analysis (LaCOSA) in 2012 and LaCOSA II in 2016.\n\n\n\nParticipants of the 2018 symposium at Monte Verità, where the SAA was founded."
-  },
-  {
-    "objectID": "about.html#executive-committee",
-    "href": "about.html#executive-committee",
-    "title": "About the SAA",
-    "section": "Executive Committee",
-    "text": "Executive Committee\n\n\nEmanuela Struffolino University of Milan (IT) · President\n\n\nDanilo Bolano Bocconi University (IT)\n\n\nKevin Emery University of Geneva (CH)\n\n\nBrendan Halpin University of Limerick (IE)\n\n\nSatu Helske University of Turku (FI)\n\n\nTim F. Liao University of Illinois Urbana-Champaign (US) · President 2023–2024\n\n\nRaffaella Piccarreta Bocconi University, Milan (IT)\n\n\nGilbert Ritschard University of Geneva (CH) · President 2018–2020\n\n\nCarla Rowold University of Oxford (UK)\n\n\nDolores Sesma Carlos University of Valencia (ES)\n\n\nMatthias Studer University of Geneva (CH) · President 2021–2022"
-  },
-  {
-    "objectID": "about.html#advisory-board",
-    "href": "about.html#advisory-board",
-    "title": "About the SAA",
-    "section": "Advisory Board",
-    "text": "Advisory Board\n\n\nAndrew Abbott University of Chicago (US) · Honorary President\n\n\nSilke Aisenbrey Yeshiva University, New York (US)\n\n\nTorsten Biemann University of Mannheim (DE)\n\n\nFrancesco Billari Bocconi University, Milan (IT)\n\n\nBenjamin Cornwell Cornell University (US)\n\n\nCees Elzinga VU Amsterdam (NL)\n\n\nAnette Fasang Humboldt University Berlin (DE)\n\n\nJacques-Antoine Gauthier University of Lausanne (CH)\n\n\nLaurent Lesnard CNRS, Sciences Po, Paris (FR)\n\n\nMarcel Raab University of Bamberg (DE)\n\n\nJeroen K. Vermunt Tilburg University (NL)"
-  },
-  {
-    "objectID": "about.html#annual-reports",
-    "href": "about.html#annual-reports",
-    "title": "About the SAA",
-    "section": "Annual reports",
-    "text": "Annual reports\n\n2025 2024 2023 2022 2020 2019"
-  },
-  {
-    "objectID": "about.html#statutes",
-    "href": "about.html#statutes",
-    "title": "About the SAA",
-    "section": "Statutes",
-    "text": "Statutes\nThe SAA is a non-profit association under Swiss law with headquarters in Geneva. Its aims, membership rules and organs — General Assembly, Executive Committee, auditors and Advisory Board — are set out in the statutes.\n Read the statutes  PDF"
-  },
-  {
-    "objectID": "about.html#contact",
-    "href": "about.html#contact",
-    "title": "About the SAA",
-    "section": "Get involved & contact",
-    "text": "Get involved & contact\n Interested in joining? See how to become a member.\nYou can support the SAA community in several ways:\n\n\n Share publications on sequence analysis or related methods — we add them to our Zotero bibliography.\n Tell us about software — new packages and functions in R, Stata, Python or elsewhere that are useful to SA practitioners.\n Propose an event — symposia and workshops can be organised with the support of the SAA; send requests to the Executive Committee.\n Announce events of interest to the community so we can post them on the blog.\n\n\n\n\n\n\ninfo@sequenceanalysis.org\nQuestions, news and event announcements.\n\n\n\n\n\nSAA on LinkedIn\nOur preferred forum for SAA-related discussion."
-  },
-  {
-    "objectID": "blog/posts/2020-09-01-seqhandbook/index.html",
-    "href": "blog/posts/2020-09-01-seqhandbook/index.html",
-    "title": "New R package: seqhandbook",
+    "objectID": "blog/posts/2026-10-04-next-webinar/index.html",
+    "href": "blog/posts/2026-10-04-next-webinar/index.html",
+    "title": "Next webinar: 22 October",
     "section": "",
-    "text": "Hello everyone, I just uploaded a new R package on CRAN, seqhandbook. It is initially intended to accompany a sequence analysis handbook to be published (in French) in 2021 by INED, with some data sets and a tutorial.\nBut it also includes functions for\n\ndescribing episodes in individual sequences,\nmeasuring association between domains in multidimensional sequence analysis,\nheat maps of sequence data,\nGlobally Interdependent Multidimensional Sequence Analysis (GIMSA),\nsmoothing sequences for index plots,\ncoding sequences for Qualitative Harmonic Analysis,\nmeasuring stress from multidimensional scaling factors, and\nsymmetrical (or canonical) Partial Least Squares.\n\nMaybe some of them could be useful for you!\nBest,\nNicolas\n\n\n\n Back to top"
+    "text": "The next session of our Autumn 2026 Webinar Series takes place on Thursday, 22 October, at 4 PM CET. Save the date!\nFor the full programme, see the SAA Webinar Series.\n\n\n\n Back to top"
   },
   {
-    "objectID": "blog/posts/2021-10-10-wikipedia/index.html",
-    "href": "blog/posts/2021-10-10-wikipedia/index.html",
-    "title": "New Wikipedia page on sequence analysis",
-    "section": "",
-    "text": "The Wikipedia page on Sequence analysis in social sciences has been redesigned and replaces the previous Social sequence analysis page. It provides useful background for sequence analysis studies.\nA link to the page is also listed on our Resources page.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "blog/posts/2022-08-30-ssr-article/index.html",
-    "href": "blog/posts/2022-08-30-ssr-article/index.html",
-    "title": "The story of sequence analysis by a dream team of SAA members",
-    "section": "",
-    "text": "Sequence analysis: Its past, present, and future\nby Tim F. Liao, Danilo Bolano, Christian Brzinsky-Fay, Benjamin Cornwell, Anette Eva Fasang, Satu Helske, Raffaella Piccarreta, Marcel Raab, Gilbert Ritschard, Emanuela Struffolino and Matthias Studer\nSocial Science Research, 107, 102772. DOI: 10.1016/j.ssresearch.2022.102772 (open access)\nThe article reviews the development of sequence analysis in the social sciences, takes stock of current methodological practice and outlines directions for future research. See also the overview of community books on our Resources page.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "blog/posts/2024-12-23-ga-results/index.html",
-    "href": "blog/posts/2024-12-23-ga-results/index.html",
-    "title": "2024 General Assembly: voting results",
-    "section": "",
-    "text": "Results of the SAA election and vote held in December 2024:\n\n\n\nItem\nYes\nNo\nAbstain\nTotal\n\n\n\n\nAnnual Report\n51\n1\n\n52\n\n\nPresident: Emanuela Struffolino\n47\n1\n4\n52\n\n\nExecutive Committee\n\n\n\n\n\n\nDanilo Bolano\n40\n1\n8\n49\n\n\nKevin Emery\n42\n\n5\n47\n\n\nBrendan Halpin\n44\n1\n3\n48\n\n\nSatu Helske\n46\n\n3\n49\n\n\nTim F. Liao\n48\n\n2\n50\n\n\nRaffaella Piccarreta\n45\n\n2\n47\n\n\nGilbert Ritschard\n46\n\n4\n50\n\n\nCarla Rowold\n43\n\n4\n47\n\n\nDolores Sesma Carlos\n35\n3\n8\n46\n\n\nMatthias Studer\n48\n\n2\n50\n\n\n\n\n\n\n\n\n\nDraft note: the No/Abstain split was reconstructed from the flattened table on the old website (ambiguous for the Annual Report row) — please check against the original before publishing.\n\n\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "blog/posts/2025-12-21-pre-epc/index.html",
-    "href": "blog/posts/2025-12-21-pre-epc/index.html",
-    "title": "Pre-EPC meeting 2026: Life Course Dynamics",
-    "section": "",
-    "text": "We are happy to announce that the SAA is organising a one-day side meeting before the 2026 European Population Conference (EPC) in Bologna, entitled “Life Course Dynamics: Insights from Sequence Analysis”.\nThe meeting will take place on 3 June 2026 (approx. 9 am – 5 pm).\nMore information on our Events page.\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "blog/posts/2026-10-16-new-website/index.html",
-    "href": "blog/posts/2026-10-16-new-website/index.html",
+    "objectID": "blog/posts/2026-10-28-new-website/index.html",
+    "href": "blog/posts/2026-10-28-new-website/index.html",
     "title": "Welcome to the new SAA website",
     "section": "",
     "text": "We are relaunching the website of the Sequence Analysis Association. The new site is built with Quarto and is open to everyone — there is no longer a member area, and all content, from the webinar programme to the annual reports, is available to all visitors.\nWhat’s new:\n\nA new logo and visual identity: the signet is a small sequence index plot, and colours and fonts are defined once in a brand.yml file that can be reused for slides, reports and other formats.\nA simpler structure: About, Events, Resources and this blog.\nAn RSS feed so you can follow SAA news in your favourite reader.\n\nFeedback is very welcome at info@sequenceanalysis.org.\n\n\n\n Back to top"
