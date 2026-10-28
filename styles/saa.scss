@@ -50,6 +50,23 @@ h2 { margin-top: 2.5rem; }
   border-radius: 2px;
 }
 
+// Title banner of blog posts: the same strip on its own row above the category
+// tags. The banner is dark in both modes, so the last episode always uses the
+// light violet replacement.
+.quarto-title-banner .quarto-categories::before {
+  content: "";
+  flex: 0 0 100%;
+  height: 7px;
+  margin: 0.4rem 0 0.2rem;
+  background: linear-gradient(90deg,
+    $state-1 0 16%,     transparent 16% 18%,
+    $state-2 18% 38%,   transparent 38% 40%,
+    $state-3 40% 59%,   transparent 59% 61%,
+    $state-4 61% 80%,   transparent 80% 82%,
+    #B3A4E0 82% 100%) no-repeat left / 10rem 100%;   // violet-300
+  border-radius: 2px;
+}
+
 // --- Hero (home page) ----------------------------------------------------
 .hero {
   position: relative;
