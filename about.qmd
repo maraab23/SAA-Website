@@ -20,7 +20,7 @@ The Sequence Analysis Association (SAA) aims to promote research, teaching and d
 
 The SAA was founded during the *International Symposium on Sequence Analysis and Related Methods* (ISSA), held on 10–12 October 2018 at Monte Verità, Ticino, Switzerland. The symposium continued a series of meetings that began with the *Lausanne Conference on Sequence Analysis* (LaCOSA) in 2012 and LaCOSA II in 2016.
 
-![Participants of the 2018 symposium at Monte Verità, where the SAA was founded.](https://sequenceanalysis.org/wp-content/uploads/2018/12/ISSAGroup_s.jpg){fig-alt="Group photo of the participants of the International Symposium on Sequence Analysis 2018 at Monte Verità."}
+![Participants of the 2018 symposium at Monte Verità, where the SAA was founded.](resources/images/issa-2018-group.jpg){fig-alt="Group photo of the participants of the International Symposium on Sequence Analysis 2018 at Monte Verità."}
 
 ## Executive Committee
 
@@ -123,12 +123,12 @@ The SAA was founded during the *International Symposium on Sequence Analysis and
 ## Annual reports
 
 ::: {.report-list}
-[[]{.bi .bi-file-earmark-pdf}2025](https://sequenceanalysis.org/wp-content/uploads/2025/12/SAA-Annual-Report-2025-1.pdf)
-[[]{.bi .bi-file-earmark-pdf}2024](https://sequenceanalysis.org/wp-content/uploads/2024/12/SAA-Annual-Report-2024.pdf)
-[[]{.bi .bi-file-earmark-pdf}2023](https://sequenceanalysis.org/wp-content/uploads/2023/12/SAA-Annual-Report-2023.pdf)
-[[]{.bi .bi-file-earmark-pdf}2022](https://sequenceanalysis.org/wp-content/uploads/2022/12/SAA-Annual-report-2022.pdf)
-[[]{.bi .bi-file-earmark-pdf}2020](https://sequenceanalysis.org/wp-content/uploads/2020/11/SAA-Annual-report-2020.pdf)
-[[]{.bi .bi-file-earmark-pdf}2019](https://sequenceanalysis.org/wp-content/uploads/2020/01/SAA-Annual-report-2019.pdf)
+[[]{.bi .bi-file-earmark-pdf}2025](resources/reports/saa-annual-report-2025.pdf)
+[[]{.bi .bi-file-earmark-pdf}2024](resources/reports/saa-annual-report-2024.pdf)
+[[]{.bi .bi-file-earmark-pdf}2023](resources/reports/saa-annual-report-2023.pdf)
+[[]{.bi .bi-file-earmark-pdf}2022](resources/reports/saa-annual-report-2022.pdf)
+[[]{.bi .bi-file-earmark-pdf}2020](resources/reports/saa-annual-report-2020.pdf)
+[[]{.bi .bi-file-earmark-pdf}2019](resources/reports/saa-annual-report-2019.pdf)
 :::
 
 ## Statutes {#statutes}

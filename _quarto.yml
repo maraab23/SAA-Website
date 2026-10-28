@@ -6,6 +6,8 @@ project:
     - favicons/
     - social/
     - resources/covers/
+    - resources/images/
+    - resources/reports/
     - fonts/woff2/       # self-hosted web fonts (fonts/ttf is only for the PDF)
   render:
     - "*.qmd"

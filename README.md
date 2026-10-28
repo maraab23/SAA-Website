@@ -36,9 +36,7 @@ Blog categories are limited to four: `association`, `events`, `publications`, `s
 
 ## Open points
 
-- The 2018 group photo is still hot-linked from the old site; copy it into the repo before going live.
-- Verify the 2024 voting-results table (No/Abstain columns) against the original.
-- Annual-report PDFs and the statutes still link to the old WordPress site; copy them over before shutting it down.
+- The site no longer depends on the old WordPress site: the 2018 group photo (`resources/images/`) and the annual reports 2019–2025 (`resources/reports/`) are copies in the repository; the statutes are a page of their own (`statutes.qmd`).
 
 ## Third-party logos
 
