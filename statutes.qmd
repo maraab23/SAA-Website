@@ -131,6 +131,10 @@ The Executive Committee shall inform the members in writing of the date of the G
 
 General Assemblies can be organized in any country or using an online platform.
 
+```{=typst}
+#pagebreak(weak: true)
+```
+
 ### Article 8 {#article-8 .article}
 
 The General Assembly:
