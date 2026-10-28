@@ -4,6 +4,7 @@ description: "Results of the December 2024 elections and votes."
 image: thumbnail.png
 image-alt: "Bar chart and ballot box"
 date: 2024-12-23
+author: "SAA Executive Committee"
 categories: [association]
 ---
 

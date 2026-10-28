@@ -1,0 +1,13 @@
+# Keep LF line endings in this project, also on Windows.
+# Quarto's freeze hashes the source files: with CRLF in the working copy the
+# hashes in _freeze/ would not match, and R code would be re-run (locally and in CI).
+* text=auto eol=lf
+
+# Binary files: never convert
+*.png binary
+*.jpg binary
+*.gif binary
+*.pdf binary
+*.ico binary
+*.woff2 binary
+*.ttf binary

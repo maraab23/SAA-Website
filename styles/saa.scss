@@ -454,3 +454,46 @@ h3.article, .article > h3 {
   margin: 1.6rem 0 0.4rem;
 }
 
+
+// --- Blog post appendix (about the author, copyright and license, how to cite)
+// Compact block between two hairlines; CC icons come from the cc-by shortcode,
+// the BibTeX block is replaced by a download button (scripts/cite-download.html).
+#quarto-appendix.default {
+  border-top: 1px solid rgba($body-color, 0.25);
+  border-bottom: 1px solid rgba($body-color, 0.25);
+  margin-top: 2.5rem;
+  padding: 1.5rem 0 0.75rem;
+  font-size: 0.95rem;
+  section { margin-bottom: 1.1rem; }
+  h2.quarto-appendix-heading {
+    font-family: $headings-font-family;
+    font-size: 1rem;
+    font-weight: 600;
+    color: $body-color;
+    border-bottom: none;
+    margin: 0 0 0.3rem;
+    padding: 0;
+    &::after { content: none; }
+  }
+  .quarto-appendix-contents > :not(h2) { font-size: inherit; }   // Quarto: 0.9em
+  .quarto-appendix-contents p { margin-bottom: 0.3rem; }
+  .cc-icons {
+    display: inline-flex;
+    gap: 3px;
+    margin-right: 0.3rem;
+    vertical-align: -0.3em;
+    color: $body-color;
+  }
+  .cc-icon { width: 1.4em; height: 1.4em; }
+  .quarto-appendix-citeas {
+    font-size: inherit;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+  .bibtex-as-download {
+    .quarto-appendix-secondary-label, pre.quarto-appendix-bibtex { display: none; }
+  }
+  .cite-download { margin-top: 0.6rem; font-size: 0.85rem; }
+}

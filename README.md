@@ -24,7 +24,7 @@ quarto preview   # live preview
 quarto render    # output in _site/
 ```
 
-Two blog posts contain executable R code (ggseqplot, parametric bootstrap). With `execute: freeze: auto` their results are stored in `_freeze/` — commit that folder, so the site can be built without R (e.g. on GitHub). R only runs again when one of these posts is edited; the bootstrap post then takes several minutes. Required packages: TraMineR, WeightedCluster, fastcluster, ggseqplot, ggplot2, colorspace, ggh4x, patchwork. If Quarto does not find R, set `QUARTO_R` to R's `bin` folder.
+Three blog posts contain executable R code (ggseqplot 2022, ggseqplot 1.0.0 release, parametric bootstrap). With `execute: freeze: auto` their results are stored in `_freeze/` — commit that folder, so the site can be built without R (e.g. on GitHub). R only runs again when one of these posts is edited; the bootstrap post then takes several minutes. Required packages: TraMineR, TraMineRextras, WeightedCluster, fastcluster, ggseqplot, ggplot2, colorspace, ggh4x, patchwork, paletteer. If Quarto does not find R, set `QUARTO_R` to R's `bin` folder. Line endings are fixed to LF via `.gitattributes`, because freeze hashes the source files (CRLF would invalidate them).
 
 **Test phase — before going live:** remove the `noindex` meta in `_quarto.yml` (`include-in-header`) and the "Test version" callout at the top of `index.qmd`, and switch `site-url`.
 
@@ -32,7 +32,9 @@ Two blog posts contain executable R code (ggseqplot, parametric bootstrap). With
 
 Fonts are self-hosted (no Google Fonts requests): `fonts/fonts.css` + `fonts/woff2/` (latin and latin-ext subsets) for the website, `fonts/ttf/` for the Typst PDF (`font-paths` in `statutes.qmd`, not published). In `_brand.yml` the fonts are declared with `source: system`. Licences: `fonts/OFL-*.txt` (SIL Open Font License 1.1).
 
-Blog categories are limited to four: `association`, `events`, `publications`, `software`. An overview of the posts on the old site and what was ported is in `blog-migration-overview.md`.
+Blog categories are limited to five: `association`, `events`, `publications`, `software`, `tutorials` (posts with R code get `[software, tutorials]`). An overview of the posts on the old site and what was ported is in `blog-migration-overview.md`.
+
+Content posts (tutorials, software) end with an appendix: author with `orcid:` in the YAML, a `citation:` block with `type: post-weblog` (Quarto builds the citation in APA 7 style, `styles/apa.csl` from the official CSL repository, set in `blog/posts/_metadata.yml`; `scripts/cite-download.html` turns the BibTeX into a download button), and the sections `## About the author {.appendix}` and `## Copyright and license {.appendix}` with `© year name\` plus `{{< cc-by >}}` (`shortcodes/cc-by.lua`). Use one of the ggseqplot posts as a template. Other posts get no appendix (`citation: false` in `blog/posts/_metadata.yml`).
 
 ## Open points
 

@@ -1,5 +1,5 @@
 # Defaults for all blog posts
-author: "SAA Executive Committee"
 toc: false
-title-block-banner: false
+title-block-banner: true   # colours: $title-banner-* in styles/navbar-{light,dark}.scss
 citation: false
+csl: ../../styles/apa.csl   # citation appendix of content posts: APA 7

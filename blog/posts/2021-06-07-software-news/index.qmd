@@ -4,6 +4,7 @@ description: "New dissimilarity options, sequence indicators, domain association
 image: thumbnail.png
 image-alt: "Package release tags on a sequence strip"
 date: 2021-06-07
+author: "SAA Executive Committee"
 categories: [software]
 ---
 

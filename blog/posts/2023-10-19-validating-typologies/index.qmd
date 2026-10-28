@@ -4,8 +4,13 @@ description: "A quick introduction to the R code for typology validation with We
 image: thumbnail.png
 image-alt: "Average silhouette width of the observed clustering compared with bootstrapped null-model values"
 date: 2023-10-19
-author: "Matthias Studer"
-categories: [software]
+author:
+  - name: "Matthias Studer"
+    orcid: 0000-0002-6269-1412
+categories: [software, tutorials]
+citation:
+  container-title: "Sequence Analysis Association Blog"
+  type: post-weblog
 toc: true
 execute:
   message: false
@@ -266,3 +271,12 @@ The various null models lead to the same conclusions and ranking of the solution
 #| fig-asp: 0.9
 seqdplot(mvad.seq, clustqual$clustering$cluster9, border = NA)
 ```
+
+## About the author {.appendix}
+
+**Matthias Studer** is an associate professor of statistics for the social sciences at the Faculty of Social Sciences of the University of Geneva and at the LIVES Centre ("LIVES – Overcoming vulnerability: Life course perspectives"). He is the developer of the R package `{WeightedCluster}` and one of the developers of `{TraMineR}`.
+
+## Copyright and license {.appendix}
+
+© 2023 Matthias Studer\
+{{< cc-by >}}

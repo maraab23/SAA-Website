@@ -4,8 +4,14 @@ description: "Rendering TraMineR sequence plots with ggplot2 — and customising
 image: thumbnail.png
 image-alt: "Index plot of activity sequences rendered with ggseqplot"
 date: 2022-08-05
-author: "Marcel Raab"
-categories: [software]
+author:
+  - name: "Marcel Raab"
+    orcid: 0000-0002-3097-1591
+categories: [software, tutorials]
+citation:
+  container-title: "Sequence Analysis Association Blog"
+  type: post-weblog
+  title: "ggseqplot: ggplotify sequence plots"
 execute:
   message: false
   warning: false
@@ -174,3 +180,12 @@ I like to thank Gilbert Ritschard, Tim Liao, and Emanuela Struffolino for their 
 ## Notes
 
 - If you find issues, please let me know: <https://github.com/maraab23/ggseqplot/issues>
+
+## About the author {.appendix}
+
+**Marcel Raab** is a senior researcher at the State Institute for Family Research at the University of Bamberg and co-editor of the *Journal of Family Research*. He develops and maintains the R package [`{ggseqplot}`](https://maraab23.github.io/ggseqplot/) and, together with Emanuela Struffolino, wrote the book *Sequence Analysis* (SAGE, Quantitative Applications in the Social Sciences).
+
+## Copyright and license {.appendix}
+
+© 2022 Marcel Raab\
+{{< cc-by >}}

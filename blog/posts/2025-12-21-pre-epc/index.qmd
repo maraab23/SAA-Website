@@ -4,6 +4,7 @@ description: "A one-day SAA side meeting before the European Population Conferen
 image: thumbnail.png
 image-alt: "Arcades of Bologna drawn above a sequence strip"
 date: 2025-12-21
+author: "SAA Executive Committee"
 categories: [events]
 ---
 

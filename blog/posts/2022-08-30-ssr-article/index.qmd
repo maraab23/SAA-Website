@@ -4,6 +4,7 @@ description: "Sequence analysis: Its past, present, and future — an open-acces
 image: thumbnail.png
 image-alt: "Article cover with a timeline of sequence episodes"
 date: 2022-08-30
+author: "SAA Executive Committee"
 categories: [publications]
 ---
 

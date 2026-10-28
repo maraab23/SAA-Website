@@ -90,3 +90,12 @@ format:
       - favicons/head-snippet.html
       - text: |   # TEST PHASE: keep search engines out; remove before going live
           <meta name="robots" content="noindex, nofollow">
+    include-after-body: scripts/cite-download.html   # BibTeX block -> download button (blog posts)
+
+shortcodes:
+  - shortcodes/cc-by.lua   # {{< cc-by >}}: license notice with CC icons (blog posts)
+
+# Labels of the citation appendix (blog posts with `citation:`)
+language:
+  section-title-citation: "How to cite"
+  appendix-attribution-cite-as: "Please cite this post as:"

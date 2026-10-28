@@ -1,0 +1,18 @@
+<script>
+// Blog posts with `citation:` metadata: Quarto prints a BibTeX block in the
+// appendix. Replace it with a download button (without JS, the block stays visible).
+document.addEventListener("DOMContentLoaded", function () {
+  const section = document.getElementById("quarto-citation");
+  const pre = section && section.querySelector("pre.quarto-appendix-bibtex");
+  if (!pre) return;
+  const bib = pre.querySelector("code").textContent;
+  const key = (bib.match(/^@\w+\{([^,]+),/) || [, "citation"])[1];
+  const btn = document.createElement("a");
+  btn.className = "btn btn-sm btn-outline-primary cite-download";
+  btn.href = URL.createObjectURL(new Blob([bib], { type: "application/x-bibtex" }));
+  btn.download = key + ".bib";
+  btn.innerHTML = '<i class="bi bi-download"></i> BibTeX';
+  section.querySelector(".quarto-appendix-citeas").after(btn);
+  section.classList.add("bibtex-as-download");
+});
+</script>

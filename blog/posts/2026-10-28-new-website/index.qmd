@@ -3,7 +3,8 @@ title: "Welcome to the new SAA website"
 description: "A fresh look, open to everyone: what changes with the relaunch."
 image: thumbnail.png
 image-alt: "Browser window showing the new SAA website"
-date: 2026-10-16
+date: 2026-10-28
+author: "SAA Executive Committee"
 categories: [association]
 draft: false
 ---

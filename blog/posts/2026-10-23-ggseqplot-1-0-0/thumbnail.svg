@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" role="img" aria-label="Stylised regression tree with small state distribution plots in its nodes">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#14284B"/><stop offset="1" stop-color="#0F1F3A"/></linearGradient>
+    <!-- node card: white box, header line, mini state distribution plot below -->
+    <g id="card">
+      <rect x="-38" y="-24" width="76" height="48" rx="6" fill="#FFFFFF"/>
+      <rect x="-30" y="-17" width="34" height="4" rx="1" fill="#14284B"/>
+      <rect x="8" y="-17" width="22" height="4" rx="1" fill="#D6E6F3"/>
+    </g>
+  </defs>
+  <rect width="400" height="225" fill="url(#bg)"/>
+
+  <!-- edges -->
+  <g stroke="#6F9FD6" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <path d="M200 66 L110 106"/><path d="M200 66 L290 106"/>
+    <path d="M290 154 L240 177"/><path d="M290 154 L340 177"/>
+  </g>
+
+  <g transform="translate(200 42)"><use href="#card"/><g transform="translate(-30 -8)"><path d="M0 9 L12 8 L24 6 L36 5 L48 4 L60 3 L60 0 L0 0Z" fill="#8A78BE"/> <path d="M0 9 L12 8 L24 6 L36 5 L48 4 L60 3 L60 7 L48 8 L36 9 L24 11 L12 13 L0 15 Z" fill="#4A86C5"/> <path d="M0 15 L12 13 L24 11 L36 9 L48 8 L60 7 L60 24 L0 24Z" fill="#1F4E8C"/> </g></g>
+  <g transform="translate(110 130)"><use href="#card"/><g transform="translate(-30 -8)"><path d="M0 12 L12 11 L24 9 L36 8 L48 8 L60 7 L60 0 L0 0Z" fill="#8A78BE"/> <path d="M0 12 L12 11 L24 9 L36 8 L48 8 L60 7 L60 10 L48 11 L36 12 L24 14 L12 15 L0 16 Z" fill="#9CC9E2"/> <path d="M0 16 L12 15 L24 14 L36 12 L48 11 L60 10 L60 24 L0 24Z" fill="#1F4E8C"/> </g></g>
+  <g transform="translate(290 130)"><use href="#card"/><g transform="translate(-30 -8)"><path d="M0 7 L12 5 L24 3 L36 2 L48 2 L60 1 L60 0 L0 0Z" fill="#B3A4E0"/> <path d="M0 7 L12 5 L24 3 L36 2 L48 2 L60 1 L60 10 L48 11 L36 12 L24 13 L12 16 L0 18 Z" fill="#4A86C5"/> <path d="M0 18 L12 16 L24 13 L36 12 L48 11 L60 10 L60 24 L0 24Z" fill="#1F4E8C"/> </g></g>
+  <g transform="translate(240 196) scale(.8)"><use href="#card"/><g transform="translate(-30 -8)"><path d="M0 9 L12 7 L24 6 L36 4 L48 3 L60 3 L60 0 L0 0Z" fill="#B3A4E0"/> <path d="M0 9 L12 7 L24 6 L36 4 L48 3 L60 3 L60 8 L48 9 L36 10 L24 12 L12 14 L0 16 Z" fill="#4A86C5"/> <path d="M0 16 L12 14 L24 12 L36 10 L48 9 L60 8 L60 24 L0 24Z" fill="#3E2470"/> </g></g>
+  <g transform="translate(340 196) scale(.8)"><use href="#card"/><g transform="translate(-30 -8)"><path d="M0 4 L12 3 L24 2 L36 2 L48 1 L60 1 L60 0 L0 0Z" fill="#9CC9E2"/> <path d="M0 4 L12 3 L24 2 L36 2 L48 1 L60 1 L60 11 L48 12 L36 13 L24 15 L12 18 L0 20 Z" fill="#4A86C5"/> <path d="M0 20 L12 18 L24 15 L36 13 L48 12 L60 11 L60 24 L0 24Z" fill="#1F4E8C"/> </g></g>
+
+  <text x="28" y="38" font-family="Saira, Segoe UI, Arial, sans-serif" font-size="17" font-weight="600" fill="#FFFFFF">ggseqplot 1.0.0</text>
+  <g font-family="'Fira Code', Consolas, monospace" font-size="9" fill="#9CC9E2">
+    <text x="28" y="58" font-weight="600" fill="#D6E6F3">ggseqtreeplot()</text>
+    <text x="28" y="71" font-weight="400">ggseqpcplot()</text>
+    <text x="28" y="84" font-weight="400">ggseqimplicplot()</text>
+  </g>
+  <g transform="translate(28 196)">
+    <rect width="14" height="8" rx="2" fill="#1F4E8C"/><rect x="18" width="14" height="8" rx="2" fill="#4A86C5"/>
+    <rect x="36" width="14" height="8" rx="2" fill="#9CC9E2"/><rect x="54" width="14" height="8" rx="2" fill="#8A78BE"/>
+    <rect x="72" width="14" height="8" rx="2" fill="#B3A4E0"/><rect x="90" width="14" height="8" rx="2" fill="#3E2470" stroke="#6F9FD6" stroke-width=".6"/>
+  </g>
+</svg>

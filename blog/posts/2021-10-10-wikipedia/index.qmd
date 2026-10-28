@@ -4,6 +4,7 @@ description: "The redesigned article “Sequence analysis in social sciences” 
 image: thumbnail.png
 image-alt: "Wikipedia globe made of puzzle pieces next to a sequence strip"
 date: 2021-10-10
+author: "SAA Executive Committee"
 categories: [publications]
 ---
 
