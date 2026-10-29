@@ -28,7 +28,7 @@ Three blog posts contain executable R code (ggseqplot 2022, ggseqplot 1.0.0 rele
 
 **Test phase — before going live:** remove the `noindex` meta in `_quarto.yml` (`include-in-header`) and the "Test version" callout at the top of `index.qmd`, and switch `site-url`.
 
-`site-url` in `_quarto.yml` currently points to the test deployment `https://maraab23.github.io/SAA-Website`; switch it to `https://sequenceanalysis.org` when going live. All paths are relative, so the site works under a subpath as well as at a domain root (the favicon links in `favicons/head-snippet.html` are built from Quarto's `quarto:offset`). To test the subpath locally, `.claude/launch.json` has a `site-subpath` server (serves `_site` at `/SAA-Website/`).
+`site-url` in `_quarto.yml` currently points to the test deployment `https://sequenceanalysis-association.github.io` (organisation site: repository `sequenceanalysis-association/sequenceanalysis-association.github.io`, published from the `gh-pages` branch); switch it to `https://sequenceanalysis.org` when going live. All paths are relative, so the site works under a subpath as well as at a domain root (the favicon links in `favicons/head-snippet.html` are built from Quarto's `quarto:offset`). To test the subpath locally, `.claude/launch.json` has a `site-subpath` server (serves `_site` at `/SAA-Website/`).
 
 Fonts are self-hosted (no Google Fonts requests): `fonts/fonts.css` + `fonts/woff2/` (latin and latin-ext subsets) for the website, `fonts/ttf/` for the Typst PDF (`font-paths` in `statutes.qmd`, not published). In `_brand.yml` the fonts are declared with `source: system`. Licences: `fonts/OFL-*.txt` (SIL Open Font License 1.1).
 

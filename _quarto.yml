@@ -16,7 +16,7 @@ project:
 website:
   title: "Sequence Analysis Association"
   description: "Promoting research, teaching and diffusion of sequence analysis and related methods."
-  site-url: https://maraab23.github.io/SAA-Website   # test deployment; later: https://sequenceanalysis.org
+  site-url: https://sequenceanalysis-association.github.io   # test deployment; later: https://sequenceanalysis.org
   favicon: favicons/favicon.svg
   image: social/og-image.png
   page-navigation: true
