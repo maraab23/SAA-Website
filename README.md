@@ -36,10 +36,6 @@ Blog categories are limited to five: `association`, `events`, `publications`, `s
 
 Content posts (tutorials, software) end with an appendix: author with `orcid:` in the YAML, a `citation:` block with `type: post-weblog` (Quarto builds the citation in APA 7 style, `styles/apa.csl` from the official CSL repository, set in `blog/posts/_metadata.yml`; `scripts/cite-download.html` turns the BibTeX into a download button), and the sections `## About the author {.appendix}` and `## Copyright and license {.appendix}` with `© year name\` plus `{{< cc-by >}}` (`shortcodes/cc-by.lua`). Use one of the ggseqplot posts as a template. Other posts get no appendix (`citation: false` in `blog/posts/_metadata.yml`).
 
-## Open points
-
-- The site no longer depends on the old WordPress site: the 2018 group photo (`resources/images/`) and the annual reports 2019–2025 (`resources/reports/`) are copies in the repository; the statutes are a page of their own (`statutes.qmd`).
-
 ## Third-party logos
 
 `logos/software/` holds the software logos used on the Resources page, taken from the workshop slides in `material/`:
