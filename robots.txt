@@ -1,1 +1,1 @@
-Sitemap: https://maraab23.github.io/SAA-Website/sitemap.xml
+Sitemap: https://sequenceanalysis-association.github.io/sitemap.xml

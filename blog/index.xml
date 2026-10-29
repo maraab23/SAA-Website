@@ -6,13 +6,13 @@
       version="2.0">
 <channel>
 <title>Sequence Analysis Association</title>
-<link>https://maraab23.github.io/SAA-Website/blog/</link>
-<atom:link href="https://maraab23.github.io/SAA-Website/blog/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://sequenceanalysis-association.github.io/blog/</link>
+<atom:link href="https://sequenceanalysis-association.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Promoting research, teaching and diffusion of sequence analysis and related methods.</description>
 <image>
-<url>https://maraab23.github.io/SAA-Website/social/og-image.png</url>
+<url>https://sequenceanalysis-association.github.io/social/og-image.png</url>
 <title>Sequence Analysis Association</title>
-<link>https://maraab23.github.io/SAA-Website/blog/</link>
+<link>https://sequenceanalysis-association.github.io/blog/</link>
 <height>76</height>
 <width>144</width>
 </image>
@@ -21,7 +21,7 @@
 <item>
   <title>Welcome to the new SAA website</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-28-new-website/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2026-10-28-new-website/</link>
   <description><![CDATA[ 
 
 
@@ -42,14 +42,14 @@
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>association</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-28-new-website/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2026-10-28-new-website/</guid>
   <pubDate>Tue, 27 Oct 2026 23:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-28-new-website/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2026-10-28-new-website/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>ggseqplot 1.0.0 on CRAN</title>
   <dc:creator>Marcel Raab</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/</link>
   <description><![CDATA[ 
 
 
@@ -231,7 +231,7 @@ font-style: inherit;">ggseqtreeplot</span>(mvad.tree)</span></code></pre></div><
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/tree-default-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/tree-default-1.png" class="img-fluid figure-img" width="1500"></p>
 <figcaption>ggseqtreeplot() with default settings</figcaption>
 </figure>
 </div>
@@ -355,7 +355,7 @@ font-style: inherit;">"vertical"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/tree-traminer-style-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/tree-traminer-style-1.png" class="img-fluid figure-img" width="1500"></p>
 <figcaption>ggseqtreeplot() adjusted to resemble TraMineR::seqtreedisplay</figcaption>
 </figure>
 </div>
@@ -437,7 +437,7 @@ font-style: inherit;">"time"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/pc-default-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/pc-default-1.png" class="img-fluid figure-img" width="1500"></p>
 <figcaption>ggseqpcplot() with default settings</figcaption>
 </figure>
 </div>
@@ -548,7 +548,7 @@ font-style: inherit;">11</span>))</span></code></pre></div></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/pc-adjusted-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/pc-adjusted-1.png" class="img-fluid figure-img" width="1500"></p>
 <figcaption>ggseqpcplot() with distinct successive states, groups and highlighted patterns</figcaption>
 </figure>
 </div>
@@ -572,7 +572,7 @@ font-style: inherit;">$</span>gcse5eq)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/implic-default-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/implic-default-1.png" class="img-fluid figure-img" width="1500"></p>
 <figcaption>ggseqimplicplot() with default settings</figcaption>
 </figure>
 </div>
@@ -765,7 +765,7 @@ font-style: inherit;">"bold"</span>))</span></code></pre></div></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/implic-styled-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/index_files/figure-html/implic-styled-1.png" class="img-fluid figure-img" width="1500"></p>
 <figcaption>ggseqimplicplot() with ggplot2 design adjustments</figcaption>
 </figure>
 </div>
@@ -796,23 +796,23 @@ font-style: inherit;">"bold"</span>))</span></code></pre></div></div>
   author = {Raab, Marcel},
   title = {Ggseqplot 1.0.0 on {CRAN}},
   date = {2026-10-23},
-  url = {https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/},
+  url = {https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Please cite this post as:</div><div id="ref-raab2026" class="csl-entry quarto-appendix-citeas">
 Raab, M. (2026, October 23). ggseqplot 1.0.0 on CRAN. <em>Sequence
-Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/">https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/</a>
+Analysis Association Blog</em>. <a href="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/">https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/</a>
 </div></div></section></div> ]]></description>
   <category>software</category>
   <category>tutorials</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/</guid>
   <pubDate>Thu, 22 Oct 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-23-ggseqplot-1-0-0/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2026-10-23-ggseqplot-1-0-0/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Next webinar: 22 October</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2026-10-04-next-webinar/</link>
   <description><![CDATA[ 
 
 
@@ -827,14 +827,14 @@ Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>events</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2026-10-04-next-webinar/</guid>
   <pubDate>Sat, 03 Oct 2026 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2026-10-04-next-webinar/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2026-10-04-next-webinar/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Pre-EPC meeting 2026: Life Course Dynamics</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2025-12-21-pre-epc/</link>
   <description><![CDATA[ 
 
 
@@ -850,14 +850,14 @@ Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>events</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2025-12-21-pre-epc/</guid>
   <pubDate>Sat, 20 Dec 2025 23:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2025-12-21-pre-epc/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2025-12-21-pre-epc/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>SAA now on LinkedIn</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2025-06-22-linkedin/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2025-06-22-linkedin/</link>
   <description><![CDATA[ 
 
 
@@ -871,14 +871,14 @@ Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>association</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2025-06-22-linkedin/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2025-06-22-linkedin/</guid>
   <pubDate>Sat, 21 Jun 2025 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2025-06-22-linkedin/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2025-06-22-linkedin/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>2024 General Assembly: voting results</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2024-12-23-ga-results/</link>
   <description><![CDATA[ 
 
 
@@ -1006,14 +1006,14 @@ Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>association</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2024-12-23-ga-results/</guid>
   <pubDate>Sun, 22 Dec 2024 23:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2024-12-23-ga-results/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2024-12-23-ga-results/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Validating sequence analysis typologies using parametric bootstrap</title>
   <dc:creator>Matthias Studer</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/</link>
   <description><![CDATA[ 
 
 
@@ -1404,7 +1404,7 @@ font-style: inherit;">"seqdplot"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-seqdplot-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-seqdplot-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1425,7 +1425,7 @@ font-style: inherit;">"density"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-density-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-density-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1450,7 +1450,7 @@ font-style: inherit;">"line"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-combined-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-combined-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1519,7 +1519,7 @@ font-style: inherit;">"line"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-sequencing-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-sequencing-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1588,7 +1588,7 @@ font-style: inherit;">"line"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-duration-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-duration-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1657,7 +1657,7 @@ font-style: inherit;">"line"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-stateindep-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-stateindep-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1725,7 +1725,7 @@ font-style: inherit;">"line"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-markov-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/plot-line-markov-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1750,7 +1750,7 @@ font-style: inherit;">NA</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/final-solution-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/index_files/figure-html/final-solution-1.png" class="img-fluid figure-img" width="1500"></p>
 </figure>
 </div>
 </div>
@@ -1773,24 +1773,24 @@ font-style: inherit;">NA</span>)</span></code></pre></div></div>
   title = {Validating Sequence Analysis Typologies Using Parametric
     Bootstrap},
   date = {2023-10-19},
-  url = {https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/},
+  url = {https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Please cite this post as:</div><div id="ref-studer2023" class="csl-entry quarto-appendix-citeas">
 Studer, M. (2023, October 19). Validating sequence analysis typologies
 using parametric bootstrap. <em>Sequence Analysis Association Blog</em>.
-<a href="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/">https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</a>
+<a href="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/">https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/</a>
 </div></div></section></div> ]]></description>
   <category>software</category>
   <category>tutorials</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/</guid>
   <pubDate>Wed, 18 Oct 2023 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2023-10-19-validating-typologies/thumbnail.png" medium="image" type="image/png" height="89" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2023-10-19-validating-typologies/thumbnail.png" medium="image" type="image/png" height="89" width="144"/>
 </item>
 <item>
   <title>The story of sequence analysis by a dream team of SAA members</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2022-08-30-ssr-article/</link>
   <description><![CDATA[ 
 
 
@@ -1798,7 +1798,7 @@ using parametric bootstrap. <em>Sequence Analysis Association Blog</em>.
 
 
 
-<p><img src="https://maraab23.github.io/SAA-Website/resources/covers/ssr-2022.jpg" class="img-fluid" style="float:right; margin: 0 0 1rem 1.5rem;" alt="Cover of the article in Social Science Research" width="140"></p>
+<p><img src="https://sequenceanalysis-association.github.io/resources/covers/ssr-2022.jpg" class="img-fluid" style="float:right; margin: 0 0 1rem 1.5rem;" alt="Cover of the article in Social Science Research" width="140"></p>
 <p><strong>Sequence analysis: Its past, present, and future</strong></p>
 <p>by Tim F. Liao, Danilo Bolano, Christian Brzinsky-Fay, Benjamin Cornwell, Anette Eva Fasang, Satu Helske, Raffaella Piccarreta, Marcel Raab, Gilbert Ritschard, Emanuela Struffolino and Matthias Studer</p>
 <p><em>Social Science Research</em>, <strong>107</strong>, 102772. DOI: <a href="https://doi.org/10.1016/j.ssresearch.2022.102772">10.1016/j.ssresearch.2022.102772</a> (open access)</p>
@@ -1808,14 +1808,14 @@ using parametric bootstrap. <em>Sequence Analysis Association Blog</em>.
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>publications</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2022-08-30-ssr-article/</guid>
   <pubDate>Mon, 29 Aug 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-30-ssr-article/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2022-08-30-ssr-article/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>ggseqplot: ggplotify sequence plots</title>
   <dc:creator>Marcel Raab</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/</link>
   <description><![CDATA[ 
 
 
@@ -1930,7 +1930,7 @@ font-style: inherit;">"from.end"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex1-traminer-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex1-traminer-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -1949,7 +1949,7 @@ font-style: inherit;">"from.end"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex1-ggseqplot-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex1-ggseqplot-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2051,7 +2051,7 @@ font-style: inherit;">"plot"</span></span>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex2-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex2-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2114,7 +2114,7 @@ font-style: inherit;">group =</span> grp)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-base-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-base-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2135,7 +2135,7 @@ font-style: inherit;">"fixed"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-fixed-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-fixed-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2190,7 +2190,7 @@ font-style: inherit;">"lines"</span>))</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-ggh4x-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex3-ggh4x-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2213,7 +2213,7 @@ font-style: inherit;">$</span>sex)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex4-stacked-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex4-stacked-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2233,7 +2233,7 @@ font-style: inherit;">"row"</span>)</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex4-dissect-1.png" class="img-fluid figure-img" width="1200"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex4-dissect-1.png" class="img-fluid figure-img" width="1200"></p>
 </figure>
 </div>
 </div>
@@ -2294,7 +2294,7 @@ font-style: inherit;">18</span>))</span></code></pre></div></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex5-1.png" class="img-fluid figure-img" width="1500"></p>
+<p><img src="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/index_files/figure-html/ex5-1.png" class="img-fluid figure-img" width="1500"></p>
 </figure>
 </div>
 </div>
@@ -2331,23 +2331,23 @@ font-style: inherit;">18</span>))</span></code></pre></div></div>
   author = {Raab, Marcel},
   title = {Ggseqplot: Ggplotify Sequence Plots},
   date = {2022-08-05},
-  url = {https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/},
+  url = {https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/},
   langid = {en}
 }
 </code></pre><div class="quarto-appendix-secondary-label">Please cite this post as:</div><div id="ref-raab2022" class="csl-entry quarto-appendix-citeas">
 Raab, M. (2022, August 5). ggseqplot: ggplotify sequence plots.
-<em>Sequence Analysis Association Blog</em>. <a href="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/">https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</a>
+<em>Sequence Analysis Association Blog</em>. <a href="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/">https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/</a>
 </div></div></section></div> ]]></description>
   <category>software</category>
   <category>tutorials</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/</guid>
   <pubDate>Thu, 04 Aug 2022 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2022-08-05-ggseqplot/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2022-08-05-ggseqplot/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>New Wikipedia page on sequence analysis</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2021-10-10-wikipedia/</link>
   <description><![CDATA[ 
 
 
@@ -2362,14 +2362,14 @@ Raab, M. (2022, August 5). ggseqplot: ggplotify sequence plots.
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>publications</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2021-10-10-wikipedia/</guid>
   <pubDate>Sat, 09 Oct 2021 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2021-10-10-wikipedia/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2021-10-10-wikipedia/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>TraMineR and TraMineRextras updates 2020–2021</title>
   <dc:creator>SAA Executive Committee</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2021-06-07-software-news/</link>
   <description><![CDATA[ 
 
 
@@ -2410,14 +2410,14 @@ Raab, M. (2022, August 5). ggseqplot: ggplotify sequence plots.
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2021-06-07-software-news/</guid>
   <pubDate>Sun, 06 Jun 2021 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2021-06-07-software-news/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2021-06-07-software-news/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>New R package: seqhandbook</title>
   <dc:creator>Nicolas Robette</dc:creator>
-  <link>https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/</link>
+  <link>https://sequenceanalysis-association.github.io/blog/posts/2020-09-01-seqhandbook/</link>
   <description><![CDATA[ 
 
 
@@ -2445,9 +2445,9 @@ Nicolas</p>
 
 <a onclick="window.scrollTo(0, 0); return false;" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a> ]]></description>
   <category>software</category>
-  <guid>https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/</guid>
+  <guid>https://sequenceanalysis-association.github.io/blog/posts/2020-09-01-seqhandbook/</guid>
   <pubDate>Mon, 31 Aug 2020 22:00:00 GMT</pubDate>
-  <media:content url="https://maraab23.github.io/SAA-Website/blog/posts/2020-09-01-seqhandbook/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://sequenceanalysis-association.github.io/blog/posts/2020-09-01-seqhandbook/thumbnail.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 </channel>
 </rss>
